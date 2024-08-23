@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import Navbar from "../../components/blocks/navbar/navbar-1";
 import { Blog5 } from "../../components/blocks/blog";
 import { About24 } from "../../components/blocks/about";
-import { Footer9 } from "../../components/blocks/footer";
+import Footer from "../iceup/Footer";
 import { Banner5 } from "../../components/blocks/banner";
 import { Services26 } from "../../components/blocks/services";
 import { CTA9 } from "../../components/blocks/call-to-action";
@@ -53,7 +53,7 @@ export default function Main() {
             </main>
 
             {/* ========== footer section ========== */}
-            <Footer9 />
+            <Footer />
         </Fragment>
     );
 }
