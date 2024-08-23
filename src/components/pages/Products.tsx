@@ -12,7 +12,18 @@ export default function Products() {
             {/* ========== main content ========== */}
             <main className="content-wrapper">
                 <div className="container">
-                    <div className="pt-10">test</div>
+                    <div className="row">
+                        <aside className="col-xl-2 sidebar doc-sidebar mt-md-0 py-16 d-none d-xl-block">
+                            <div className="widget pb-3">
+                                <h6 className="widget-title fs-17 mb-2">test</h6>
+                                <nav>
+                                    <ul className="list-unstyled fs-sm lh-sm text-reset">
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </main>
 
