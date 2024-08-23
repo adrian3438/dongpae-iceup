@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
-import Navbar from "../../components/blocks/navbar/navbar-1";
+import Navbar from "../../components/iceup/Navbar";
 import { Blog5 } from "../../components/blocks/blog";
 import { About24 } from "../../components/blocks/about";
 import Footer from "../iceup/Footer";
@@ -10,6 +10,7 @@ import { CTA9 } from "../../components/blocks/call-to-action";
 import { Portfolio4 } from "../../components/blocks/portfolio";
 import { Testimonial18 } from "../../components/blocks/testimonial";
 import MainBanner from "../iceup/MainBanner";
+import NextLink from "../reuseable/links/NextLink";
 
 export default function Main() {
     return (
@@ -17,11 +18,8 @@ export default function Main() {
             {/* ========== header ========== */}
             <header className="wrapper bg-soft-primary">
                 <Navbar
-                    info
-                    search
-                    stickyBox={false}
                     logoAlt="logo-light"
-                    navClassName="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none"
+                    navClassName="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none bg-dark"
                 />
             </header>
 

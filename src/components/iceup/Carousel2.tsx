@@ -12,7 +12,7 @@ export default function Carousel2() {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
   const slideImages = [
-    { id: 1, url: "/img/photos/bg28.jpg" }
+    { id: 1, url: "/img/iceup/main-banner.png" }
   ];
 
   return (

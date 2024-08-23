@@ -10,20 +10,18 @@ export default function Footer() {
             <div className="container pt-8">
                 <div className="row">
                     <div className="col-lg-5">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-auto lh-1">
-                                    <NextLink title="개인정보처리방침" href="#"/>
-                                </div>
-                                <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="이용약관" href="#"/>
-                                </div>
-                                <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="제품구매안내" href="#"/>
-                                </div>
-                                <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="문의하기" href="#"/>
-                                </div>
+                        <div className="row">
+                            <div className="col-md-auto lh-1">
+                                <NextLink title="개인정보처리방침" href="#"/>
+                            </div>
+                            <div className="col-md-auto border-start lh-1">
+                                <NextLink title="이용약관" href="#"/>
+                            </div>
+                            <div className="col-md-auto border-start lh-1">
+                                <NextLink title="제품구매안내" href="#"/>
+                            </div>
+                            <div className="col-md-auto border-start lh-1">
+                                <NextLink title="문의하기" href="#"/>
                             </div>
                         </div>
                     </div>
@@ -35,7 +33,7 @@ export default function Footer() {
 
                     <div className="col-lg-4">
                         <div className="widget">
-                            <p className="text-white fw-bold fs-40">ICEUP</p>
+                            <p className="text-white fw-bold fs-30">ICEUP</p>
 
                             <p className="mb-4">
                                 대표이사: 장성환 <br className="d-none d-lg-block"/>
