@@ -19,7 +19,7 @@
     "glightbox": "^3.2.0",
     "isotope-layout": "^3.0.6",
     "itooltip": "^1.1.1",
-    "next": "14.1.0",
+    "next": "^14.2.6",
     "plyr-react": "^5.3.0",
     "progressbar.js": "^1.1.1",
     "react": "^18",
@@ -35,14 +35,14 @@
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
     "@types/isotope-layout": "^3.0.12",
-    "@types/node": "^20",
+    "@types/node": "20.16.1",
     "@types/progressbar.js": "^1.1.7",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-scroll": "^1.8.10",
     "@types/react-syntax-highlighter": "^15.5.11",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "^0.2.4",
     "sass": "^1.70.0",
     "typescript": "^5"
   }
