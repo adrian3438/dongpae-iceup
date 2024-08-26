@@ -1,28 +1,40 @@
 // GLOBAL CUSTOM COMPONENTS
 import NextLink from "components/reuseable/links/NextLink";
-import SocialLinks from "components/reuseable/SocialLinks";
-// CUSTOM DATA
-import footerNav, { helps } from "data/footer";
 
 export default function Footer() {
     return (
         <footer className="bg-dark text-inverse">
             <div className="container pt-8">
                 <div className="row">
-                    <div className="col-lg-5">
-                        <div className="row">
-                            <div className="col-md-auto lh-1">
-                                <NextLink title="개인정보처리방침" href="#"/>
+                    <div className="row justify-content-between align-content-center">
+                        <div className="col-md-auto">
+                            <div className="row mt-2">
+                                <div className="col-md-auto lh-1">
+                                    <NextLink title="개인정보처리방침" href="#"/>
+                                </div>
+                                <div className="col-md-auto border-start lh-1">
+                                    <NextLink title="이용약관" href="#"/>
+                                </div>
+                                <div className="col-md-auto border-start lh-1">
+                                    <NextLink title="제품구매안내" href="#"/>
+                                </div>
+                                <div className="col-md-auto border-start lh-1">
+                                    <NextLink title="문의하기" href="#"/>
+                                </div>
                             </div>
-                            <div className="col-md-auto border-start lh-1">
-                                <NextLink title="이용약관" href="#"/>
-                            </div>
-                            <div className="col-md-auto border-start lh-1">
-                                <NextLink title="제품구매안내" href="#"/>
-                            </div>
-                            <div className="col-md-auto border-start lh-1">
-                                <NextLink title="문의하기" href="#"/>
-                            </div>
+                        </div>
+                        <div className="col-md-auto">
+                            <nav className="nav social social-white">
+                                <a href="#" target="_blank" rel="noreferrer">
+                                    <i className="uil uil-facebook-f"/>
+                                </a>
+                                <a href="#" target="_blank" rel="noreferrer">
+                                    <i className="uil uil-instagram"/>
+                                </a>
+                                <a href="#" target="_blank" rel="noreferrer">
+                                    <i className="uil uil-twitter"/>
+                                </a>
+                            </nav>
                         </div>
                     </div>
                 </div>

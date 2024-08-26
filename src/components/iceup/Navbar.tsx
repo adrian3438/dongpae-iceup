@@ -6,7 +6,6 @@ import useSticky from "hooks/useSticky";
 import useNestedDropdown from "hooks/useNestedDropdown";
 // -------- CUSTOM COMPONENTS -------- //
 import NextLink from "components/reuseable/links/NextLink";
-import SocialLinks from "components/reuseable/SocialLinks";
 // LOCAL CUSTOM COMPONENTS
 import FancyHeader from "../../components/blocks/navbar/components/fancy-header";
 
@@ -66,7 +65,7 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/products/iceup" title="ICEUP제빙기"/>
+                    <NextLink className="dropdown-item" href="/brand/brand01" title="ICEUP제빙기"/>
                   </li>
                 </ul>
               </li>
@@ -82,7 +81,7 @@ export default function Navbar({
                 </ul>
               </li>
 
-              <li className="nav-item dropdown">
+              {/*<li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
                   사업영역
                 </a>
@@ -112,7 +111,7 @@ export default function Navbar({
                     <NextLink className="dropdown-item" href="#" title="기타"/>
                   </li>
                 </ul>
-              </li>
+              </li>*/}
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
@@ -120,13 +119,13 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="카탈로그"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/catalogue" title="카탈로그"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="영상"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/promotion-videos" title="영상"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="블로그"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/blog" title="블로그"/>
                   </li>
                 </ul>
               </li>
@@ -137,16 +136,16 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="설치 가이드"/>
+                    <NextLink className="dropdown-item" href="/guide/guide01" title="설치 가이드"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="유지보수 팁"/>
+                    <NextLink className="dropdown-item" href="/guide/guide02" title="유지보수 팁"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="보증 및 서비스 정책"/>
+                    <NextLink className="dropdown-item" href="/guide/guide03" title="보증 및 서비스 정책"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="안전 지침"/>
+                    <NextLink className="dropdown-item" href="/guide/guide04" title="안전 지침"/>
                   </li>
                 </ul>
               </li>
@@ -157,13 +156,13 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="자주찾는 질문"/>
+                    <NextLink className="dropdown-item" href="/customer/faq" title="자주찾는 질문"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="문의하기"/>
+                    <NextLink className="dropdown-item" href="/customer/inquiry" title="문의하기"/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="구매방법"/>
+                    <NextLink className="dropdown-item" href="/customer/buy" title="구매방법"/>
                   </li>
                 </ul>
               </li>

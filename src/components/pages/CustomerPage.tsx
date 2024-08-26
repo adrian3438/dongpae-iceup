@@ -2,8 +2,16 @@ import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
 import Footer from "components/iceup/Footer";
+import Sidebar from "../iceup/Sidebar";
+import Customer from "../iceup/Customer";
 
-export default function Products() {
+const customer = [
+    { id: 1, title: '자주 찾는 질문', url: '/customer/faq' },
+    { id: 2, title: '문의하기', url: '/customer/inquiry' },
+    { id: 3, title: '구매방법', url: '/customer/buy' }
+];
+
+export default function CustomerPage() {
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -13,16 +21,12 @@ export default function Products() {
             <main className="content-wrapper">
                 <div className="container">
                     <div className="row">
-                        <aside className="col-xl-2 sidebar doc-sidebar mt-md-0 py-16 d-none d-xl-block">
-                            <div className="widget pb-3">
-                                <h6 className="widget-title fs-17 mb-2">test</h6>
-                                <nav>
-                                    <ul className="list-unstyled fs-sm lh-sm text-reset">
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                        <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
+                            <Sidebar title="브랜드 소개" sidebarList={customer}/>
                         </aside>
+                        <div className="col-lg-9 mt-8">
+                            <Customer/>
+                        </div>
                     </div>
                 </div>
             </main>

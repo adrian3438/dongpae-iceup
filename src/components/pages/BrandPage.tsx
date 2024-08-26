@@ -2,8 +2,13 @@ import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
 import Footer from "components/iceup/Footer";
+import Sidebar from "../iceup/Sidebar";
+import Brands from "../iceup/Brands";
+const brands = [
+    { id: 1, title: 'ICEUP', url: '/brand/brand01'}
+];
 
-export default function Customer() {
+export default function BrandPage() {
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -12,7 +17,14 @@ export default function Customer() {
             {/* ========== main content ========== */}
             <main className="content-wrapper">
                 <div className="container">
-                    <div className="pt-10">test</div>
+                    <div className="row">
+                        <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
+                            <Sidebar title="브랜드 소개" sidebarList={brands} />
+                        </aside>
+                        <div className="col-lg-9 mt-8">
+                            <Brands />
+                        </div>
+                    </div>
                 </div>
             </main>
 
