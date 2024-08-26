@@ -39,7 +39,6 @@ export default function Navbar({
 
   // dynamically render the logo
   const logo = sticky ? "logo-dark" : logoAlt ?? "logo-dark";
-  console.log('logo : ', logo);
 
   // dynamically added navbar className
   const fixedClassName = "navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed";
@@ -169,30 +168,19 @@ export default function Navbar({
                 </ul>
               </li>
             </ul>
-
-            {/* ============= show contact info in the small device sidebar ============= */}
-            <div className="offcanvas-footer d-lg-none">
-              <div>
-                <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com"/>
-                <br/>
-                <NextLink href="tel:0123456789" title="00 (123) 456 78 90"/>
-                <br/>
-                <SocialLinks/>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* ============= right side header content ============= */}
         <div className={navOtherClass}>
           <ul className="navbar-nav flex-row align-items-center ms-auto">
-            <li className="nav-item dropdown language-select text-uppercase">
+            <li className="nav-item dropdown language-select">
               <a
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                className="nav-link dropdown-item dropdown-toggle">
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  className="nav-link dropdown-item dropdown-toggle">
                 Ko
               </a>
               <ul className="dropdown-menu">
@@ -208,14 +196,19 @@ export default function Navbar({
                 </li>
               </ul>
             </li>
+            <li className="nav-item">
+              <a href="#" data-bs-toggle="dropdown" className="nav-link">
+                SITEMAP
+              </a>
+            </li>
           </ul>
         </div>
       </Fragment>
-  );
+);
 
-  return (
-      <Fragment>
-        {stickyBox ? <div style={{paddingTop: sticky ? navbarRef.current?.clientHeight : 0}}/> : null}
+return (
+  <Fragment>
+    {stickyBox ? <div style={{paddingTop: sticky ? navbarRef.current?.clientHeight : 0}}/> : null}
 
         <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
           {fancy ? (

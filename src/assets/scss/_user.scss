@@ -148,3 +148,13 @@ body {
   background-color: #3f78e0;
   color: #fff;
 }
+
+
+
+/* Color */
+.dots-bg-color1 {
+  background-color: #222;
+  * {
+    border-color: rgba(164, 174, 198, 0.2) !important;
+  }
+}
