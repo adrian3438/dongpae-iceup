@@ -12,7 +12,7 @@ export default function PromotionCenter() {
         <>
             {pathName === '/promotion-center/catalogue' && (<>
                 <section className="row mb-10">
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -34,7 +34,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -56,7 +56,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -78,7 +78,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -100,7 +100,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -122,7 +122,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="#">
@@ -192,7 +192,7 @@ export default function PromotionCenter() {
 
             {pathName === '/promotion-center/blog' && (<>
                 <section className="row mb-10">
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
@@ -214,7 +214,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
@@ -236,7 +236,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
@@ -258,7 +258,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
@@ -280,7 +280,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
@@ -302,7 +302,7 @@ export default function PromotionCenter() {
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4">
+                    <article className="item post col-md-4 mb-5">
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
