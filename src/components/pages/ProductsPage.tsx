@@ -5,6 +5,7 @@ import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import Product from "../iceup/Product";
 
+
 const ProductList = [
     { id: 1, title: 'ICEUP', url: '/product/product01' },
 ];

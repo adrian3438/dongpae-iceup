@@ -196,7 +196,7 @@ export default function Navbar({
               </ul>
             </li>
             <li className="nav-item">
-              <a href="#" data-bs-toggle="dropdown" className="nav-link">
+              <a href="/sitemap" className="nav-link">
                 SITEMAP
               </a>
             </li>
