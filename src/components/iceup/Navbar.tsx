@@ -76,7 +76,7 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="#" title="ICEUP"/>
+                    <NextLink className="dropdown-item" href="/product/product01" title="ICEUP"/>
                   </li>
                 </ul>
               </li>

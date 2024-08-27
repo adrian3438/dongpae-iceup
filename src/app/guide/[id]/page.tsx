@@ -1,6 +1,6 @@
 import GuidePage from "../../../components/pages/GuidePage";
 
-export default function PromotionCenter() {
+export default function Guides() {
     return (
         <>
             <GuidePage />

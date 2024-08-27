@@ -22,7 +22,7 @@ export default function GuidePage() {
             <div className="container">
                 <div className="row">
                     <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
-                        <Sidebar title="홍보센터" sidebarList={guide}/>
+                        <Sidebar title="사용안내" sidebarList={guide}/>
                     </aside>
                     <div className="col-lg-9 mt-8">
                         <Guide/>
