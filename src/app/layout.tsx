@@ -22,7 +22,10 @@ import "glightbox/dist/css/glightbox.css";
 import "plugins/scrollcue/scrollCue.css";
 // Bootstrap and custom scss
 import "assets/scss/style.scss";
+import '/public/css/admin.css'
+import Container from "components/Container";
 
+import Script from "next/script";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -35,10 +38,26 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={manrope.className}>
         <ScrollCue>
-          <ThemeProvider>{children}</ThemeProvider>
+          <Container>
+            <ThemeProvider>{children}</ThemeProvider>
+          </Container>
         </ScrollCue>
 
         <PageProgress />
+        <Script
+          src="https://code.jquery.com/jquery-3.7.1.js"
+          strategy="afterInteractive"
+        />
+        {/* Bootstrap */}
+        <Script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+          strategy="afterInteractive"
+        />
+        {/* Summernote */}
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -1,7 +1,10 @@
 // GLOBAL CUSTOM COMPONENTS
+'use client'
 import NextLink from "components/reuseable/links/NextLink";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const {t} = useTranslation()
     return (
         <footer className="bg-dark text-inverse">
             <div className="container pt-8">
@@ -10,16 +13,16 @@ export default function Footer() {
                         <div className="col-md-auto">
                             <div className="row mt-2">
                                 <div className="col-md-auto lh-1">
-                                    <NextLink title="개인정보처리방침" href="#"/>
+                                    <NextLink title={t("footer_1")} href="#"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="이용약관" href="#"/>
+                                    <NextLink title={t("footer_2")} href="#"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="제품구매안내" href="#"/>
+                                    <NextLink title={t("footer_3")} href="#"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
-                                    <NextLink title="문의하기" href="#"/>
+                                    <NextLink title={t("footer_4")} href="#"/>
                                 </div>
                             </div>
                         </div>
@@ -48,10 +51,10 @@ export default function Footer() {
                             <p className="text-white fw-bold fs-30">ICEUP</p>
 
                             <p className="mb-4">
-                                대표이사: 장성환 <br className="d-none d-lg-block"/>
-                                10049 경기도 김포시 얀촌읍 황금로 324번길 38<br className="d-none d-lg-block"/>
-                                이메일: ice@dongpae.co.kr<br className="d-none d-lg-block"/>
-                                전화번호: 070-4700-0111
+                            {t("footer_5")} <br className="d-none d-lg-block"/>
+                            {t("footer_6")}<br className="d-none d-lg-block"/>
+                            {t("footer_7")}<br className="d-none d-lg-block"/>
+                            {t("footer_8")}
                             </p>
 
                             {/*<SocialLinks className="nav social social-white"/>*/}
