@@ -22,8 +22,8 @@ import "glightbox/dist/css/glightbox.css";
 import "plugins/scrollcue/scrollCue.css";
 // Bootstrap and custom scss
 import "assets/scss/style.scss";
-import Container from "components/Container";
 import '/public/css/admin.css'
+import Container from "components/Container";
 
 import Script from "next/script";
 const manrope = Manrope({ subsets: ["latin"] });

@@ -11,7 +11,7 @@ export default function AdminSideBar () {
         {/* members. product. content. pr_video. certificate. inquiry. settings */}
         <aside>
             <h2>
-                <img src="/images/smilelab/smilelab-logo-green.png" alt="smilelab"/>
+                <img src="/img/iceup/logo-light.svg" alt="smilelab"/>
             </h2>
             <ul className="mainMenu">
 
@@ -27,7 +27,7 @@ export default function AdminSideBar () {
                 <li className={splitPath[2] === 'contents-management' ? 'content active' : 'content'}>
                     <span onClick={()=>router.push(`/admin/contents-management/contents-list/`)}>콘텐츠 관리</span>
                     <ul className="subMenu">
-                        <li className={splitPath[3]==='common-code-list'? 'active' : ''} onClick={()=>router.push(`/admin/contents-management/contents-list/`)}>
+                        <li className={splitPath[3]==='contents-list' || splitPath[3]==='contents'? 'active' : ''} onClick={()=>router.push(`/admin/contents-management/contents-list/`)}>
                             <span>콘텐츠</span>
                         </li>
                     </ul>
