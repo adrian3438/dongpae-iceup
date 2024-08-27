@@ -1,9 +1,11 @@
+'use client'
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
 import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import Customer from "../iceup/Customer";
+import { useTranslation } from "react-i18next";
 
 const customer = [
     { id: 1, title: '자주 찾는 질문', url: '/customer/faq' },
@@ -12,6 +14,7 @@ const customer = [
 ];
 
 export default function CustomerPage() {
+    const {t} = useTranslation()
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -22,7 +25,7 @@ export default function CustomerPage() {
                 <div className="container">
                     <div className="row">
                         <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
-                            <Sidebar title="브랜드 소개" sidebarList={customer}/>
+                            <Sidebar title={t("header_1")} sidebarList={customer}/>
                         </aside>
                         <div className="col-lg-9 mt-8">
                             <Customer/>

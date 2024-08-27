@@ -1,3 +1,4 @@
+'use client'
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "../../components/iceup/Navbar";
@@ -6,8 +7,10 @@ import MainBanner from "../iceup/MainBanner";
 import NextLink from "../reuseable/links/NextLink";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
-export default function Main() {
+export default function Main() { 
+    const {t} = useTranslation()
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -84,7 +87,7 @@ export default function Main() {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Full Cube</p>
-                                            <p className="mb-0 fs-16">가장 일반적인 형태로<br/>얼음이 녹는 속도가 느림</p>
+                                            <p className="mb-0 fs-16">{t("main_1")}<br/>{t("main_2")}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
@@ -98,7 +101,7 @@ export default function Main() {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Half Cube</p>
-                                            <p className="mb-0 fs-16">만들어지는 데 소요되는 시간이<br/>다른 형태에 비해 가장 짧음</p>
+                                            <p className="mb-0 fs-16">{t("main_3")}<br/>{t("main_4")}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
@@ -117,36 +120,36 @@ export default function Main() {
                             </div>
 
                             <div className="col-lg-6">
-                                <h2 className="display-4 mb-3">얼음 형태에 따른 특징 알아보기</h2>
+                                <h2 className="display-4 mb-3">{t("main_5")}</h2>
                                 <p className="lead fs-lg mb-8 pe-xxl-2">
-                                    제빙기는 다양한 목적으로 얼음을 생산하도록 설계된 장치로, 냉장과정을 통해 물을 각얼음이나 으깬 얼음으로 얼려서 작동합니다.
-                                    이렇게 만들어진 얼음은 형태에 따라 사용 용도가 달라져 제빙기를 구매하시기 전에 형태에 따른 특징을 잘 파악해야 합니다.
+                                {t("main_6")}
+                                {t("main_7")}
                                 </p>
-                                <Link href="/" className="btn btn-primary">더 자세히 보기 <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="wrapper my-10">
                     <div className="container">
-                        <h2 className="mb-6">보관방식</h2>
+                        <h2 className="mb-6">{t("main_8")}</h2>
                         <div className="row">
                             <div className="col-md-5 bg-blue rounded px-5 py-10"
                                  style={{background: 'url(/img/iceup/icebox.png) no-repeat 90% 100%'}}
                             >
-                                <h3 className="text-white">아이스박스</h3>
+                                <h3 className="text-white">{t("main_9")}</h3>
                                 <p className="text-white">얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">더 자세히 보기 <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>호텔용 ice bin</h3>
+                                <h3>{t("main_11")}</h3>
                                 <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">더 자세히 보기 <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>비닐팩</h3>
+                                <h3>{t("main_12")}</h3>
                                 <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">더 자세히 보기 <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -154,7 +157,7 @@ export default function Main() {
                 <div className="wrapper">
                     <div className="container">
                         <div className="row">
-                            <h2 className="mb-6">아이스업 제품</h2>
+                            <h2 className="mb-6">{t("main_13")}</h2>
                             <div className="blog grid grid-view">
                                 <div className="row isotope gx-md-8 gy-8 mb-8">
                                     <div className="col-md-3">
@@ -200,7 +203,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title="제빙기 화이트타입" className="link-dark" href="#"/>
+                                                    <NextLink title={t("main_14")} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -228,7 +231,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title="제빙기 물받침대 (단품)" className="link-dark" href="#"/>
+                                                    <NextLink title={t("main_15")} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -256,7 +259,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title="제빙기 전면 패널 (단품)" className="link-dark" href="#"/>
+                                                    <NextLink title={t("main_16")} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -282,7 +285,7 @@ export default function Main() {
                             <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
                             </p>
                             <div>
-                                <Link href="/" className="btn btn-outline-primary">더 자세히 보기 <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-outline-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>

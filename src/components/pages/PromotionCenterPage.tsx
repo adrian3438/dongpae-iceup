@@ -1,9 +1,11 @@
+'use client'
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
 import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import PromotionCenter from "../iceup/PromotionCenter";
+import { useTranslation } from "react-i18next";
 const promotions = [
     { id: 1, title: '카탈로그', url: '/promotion-center/catalogue'},
     { id: 2, title: '영상', url: '/promotion-center/promotion-videos'},
@@ -11,6 +13,7 @@ const promotions = [
 ];
 
 export default function PromotionCenterPage() {
+    const {t} = useTranslation()
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -21,7 +24,7 @@ export default function PromotionCenterPage() {
                 <div className="container">
                     <div className="row">
                         <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
-                            <Sidebar title="홍보센터" sidebarList={promotions} />
+                            <Sidebar title={t("header_4")} sidebarList={promotions} />
                         </aside>
                         <div className="col-lg-9 mt-8">
                             <PromotionCenter />

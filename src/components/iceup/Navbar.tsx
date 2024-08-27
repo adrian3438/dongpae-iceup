@@ -8,6 +8,8 @@ import useNestedDropdown from "hooks/useNestedDropdown";
 import NextLink from "components/reuseable/links/NextLink";
 // LOCAL CUSTOM COMPONENTS
 import FancyHeader from "../../components/blocks/navbar/components/fancy-header";
+import LangBox from "./Langbox";
+import { useTranslation } from "react-i18next";
 
 // ===================================================================
 interface NavbarProps {
@@ -41,7 +43,7 @@ export default function Navbar({
 
   // dynamically added navbar className
   const fixedClassName = "navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed";
-
+  const {t} = useTranslation()
   // all main header contents
   const headerContent = (
       <Fragment>
@@ -61,18 +63,18 @@ export default function Navbar({
               {/* ===================== nav ===================== */}
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  브랜드 소개
+                  {t("header_1")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/brand/brand01" title="ICEUP제빙기"/>
+                    <NextLink className="dropdown-item" href="/brand/brand01" title={t("header_2")}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  제품소개
+                {t("header_3")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -115,54 +117,54 @@ export default function Navbar({
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  홍보센터
+                {t("header_4")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/catalogue" title="카탈로그"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/catalogue" title={t("header_5")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/promotion-videos" title="영상"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/promotion-videos" title={t("header_6")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/blog" title="블로그"/>
+                    <NextLink className="dropdown-item" href="/promotion-center/blog" title={t("header_7")}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  사용안내
+                {t("header_8")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide01" title="설치 가이드"/>
+                    <NextLink className="dropdown-item" href="/guide/guide01" title={t("header_9")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide02" title="유지보수 팁"/>
+                    <NextLink className="dropdown-item" href="/guide/guide02" title={t("header_10")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide03" title="보증 및 서비스 정책"/>
+                    <NextLink className="dropdown-item" href="/guide/guide03" title={t("header_11")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide04" title="안전 지침"/>
+                    <NextLink className="dropdown-item" href="/guide/guide04" title={t("header_12")}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  고객지원
+                {t("header_13")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/faq" title="자주찾는 질문"/>
+                    <NextLink className="dropdown-item" href="/customer/faq" title={t("header_14")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/inquiry" title="문의하기"/>
+                    <NextLink className="dropdown-item" href="/customer/inquiry" title={t("header_15")}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/buy" title="구매방법"/>
+                    <NextLink className="dropdown-item" href="/customer/buy" title={t("header_16")}/>
                   </li>
                 </ul>
               </li>
@@ -173,28 +175,9 @@ export default function Navbar({
         {/* ============= right side header content ============= */}
         <div className={navOtherClass}>
           <ul className="navbar-nav flex-row align-items-center ms-auto">
-            <li className="nav-item dropdown language-select">
-              <a
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  data-bs-toggle="dropdown"
-                  className="nav-link dropdown-item dropdown-toggle">
-                Ko
-              </a>
-              <ul className="dropdown-menu">
-                <li className="nav-item">
-                  <button className="dropdown-item">
-                    Ko
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="dropdown-item">
-                    En
-                  </button>
-                </li>
-              </ul>
-            </li>
+
+            <LangBox/>
+            
             <li className="nav-item">
               <a href="/sitemap" className="nav-link">
                 SITEMAP
