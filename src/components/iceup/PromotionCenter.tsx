@@ -173,18 +173,6 @@ export default function PromotionCenter() {
                                     </iframe>
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/995299128?autoplay=1&loop=1&title=0&background=1&muted=1" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/995299128?autoplay=1&loop=1&title=0&background=1&muted=1" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
