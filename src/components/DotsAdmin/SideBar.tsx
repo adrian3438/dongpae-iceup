@@ -1,11 +1,23 @@
 'use client'
 
+import api from "lib/api"
 import { usePathname, useRouter } from "next/navigation"
+import { useEffect } from "react"
+import { useAppDispatch } from "store/hooks"
+import { setContentType } from "store/Slices/contentsTypeSlice"
 
 export default function AdminSideBar () {
     const pathname = usePathname()
     const splitPath = pathname?.split('/')
     const router = useRouter()
+    const dispatch = useAppDispatch()
+    async function getContentsLTypeList () {
+        const response = await api.get(`/admin/code/getContentsTypeList.php`)
+        if(response?.data?.result === true) {
+            dispatch(setContentType({contentType : response?.data?.List}))
+        }
+    }
+    useEffect(()=> {getContentsLTypeList()}, [])
     return(
         <>
         {/* members. product. content. pr_video. certificate. inquiry. settings */}

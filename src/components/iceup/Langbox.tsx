@@ -38,12 +38,12 @@ export default function LangBox () {
             <ul className="dropdown-menu">
             <li className="nav-item">
                 <button className="dropdown-item" onClick={(e)=>handleLang(e,'kr')}>
-                Ko
+                KO
                 </button>
             </li>
             <li className="nav-item">
                 <button className="dropdown-item" onClick={(e)=>handleLang(e,'en')}>
-                En
+                EN
                 </button>
             </li>
             </ul>

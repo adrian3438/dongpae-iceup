@@ -6,14 +6,14 @@ import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import PromotionCenter from "../iceup/PromotionCenter";
 import { useTranslation } from "react-i18next";
-const promotions = [
-    { id: 1, title: '카탈로그', url: '/promotion-center/catalogue'},
-    { id: 2, title: '영상', url: '/promotion-center/promotion-videos'},
-    { id: 3, title: '블로그', url: '/promotion-center/blog'},
-];
 
 export default function PromotionCenterPage() {
     const {t} = useTranslation()
+    const promotions = [
+        { id: 1, title: t("header_5"), url: '/promotion-center/catalogue'},
+        { id: 2, title: t("header_6"), url: '/promotion-center/promotion-videos'},
+        { id: 3, title: t("header_7"), url: '/promotion-center/blog'},
+    ];
     return (
         <Fragment>
             {/* ========== header ========== */}

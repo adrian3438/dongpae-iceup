@@ -20,6 +20,8 @@ export default function ContentsPage ({
     const router = useRouter()
     const query = useSearchParams()
     const managerInfo = useAppSelector((state) => state.userData.users.users)
+    const contentTypeList = useAppSelector((state) => (state.contentTypeData.contentType.contentType))
+    console.log(contentTypeList)
     const [data, setData] = useState<any>({
         // 컨텐츠 유형 , 우선공지 , 공지상단 , 검색키워드 , 제목
         contentType : '1', prirorityNews : 'N', noticePrirority : 'N', searchKeyword : [], subject : '',
@@ -172,11 +174,10 @@ export default function ContentsPage ({
                                 <div className="selectContainer">
                                     <div className="selectWrap">
                                         <div className="selectBox">
-                                        <select name="" id="">
-                                            <option selected disabled>블로그</option>
-                                            {/* {contents?.map((list:any)=>(
+                                        <select value={data?.contentType} onChange={(e)=>setData((prev:any)=>({...prev, contentType : e.target.value}))} name="" id="">
+                                            {contentTypeList?.map((list:any)=>(
                                                 <option value={list?.codeId}>{list?.codeName}</option>
-                                            ))} */}
+                                            ))}
                                         </select>
                                         </div>
                                     </div>

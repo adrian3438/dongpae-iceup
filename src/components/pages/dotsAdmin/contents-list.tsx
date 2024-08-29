@@ -7,6 +7,7 @@ import ListSizeBox from "components/DotsAdmin/List/ListSizeBox";
 import api from "lib/api";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useAppSelector } from "store/hooks";
 
 interface Props {
     contentsType : any,
@@ -26,6 +27,9 @@ export default function ContentsListPage ({
     const [data, setData] = useState<any>([])
     const [totalCount, setTotalCount] = useState<number>(0)
     const [popup, setPopup] = useState<any>({id : '', lang : '', contentType : '', status : '', masterId : ''})
+    
+    const contentTypeList = useAppSelector((state) => (state.contentTypeData.contentType.contentType))
+    
     async function getList () {
         try{
             const response = await api.get(`/admin/contents/getContentsList.php?contentsType=${contentsType}&page=${page}&size=${size}&keyword=${keyword}&sortColumn=${column}&sortOrder=${order}`)
