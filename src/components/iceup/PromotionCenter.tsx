@@ -151,7 +151,7 @@ export default function PromotionCenter() {
             {pathName === '/promotion-center/promotion-videos' && (<>
                 <section className="row mb-12 justify-content-center rounded">
                     <div className="dots-main-video dots-main-video2 rounded col-md-10">
-                        <iframe src="https://player.vimeo.com/video/995299128?autoplay=1&loop=1&title=0&background=1&muted=1" allowFullScreen>
+                        <iframe src="https://player.vimeo.com/video/1003081314?badge=0&autopause=0&player_id=0&app_id=58479" title="DONPER-company-introduction" allowFullScreen>
                         </iframe>
                     </div>
                 </section>
@@ -163,13 +163,13 @@ export default function PromotionCenter() {
                         <div className="row">
                             <div className="col-md-6 mb-6">
                                 <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/995299128?autoplay=1&loop=1&title=0&background=1&muted=1" allowFullScreen>
+                                    <iframe src="https://player.vimeo.com/video/1003088041?badge=0&autopause=0&player_id=0&app_id=5847958479" title="ICEUP-ICEMAKER-compare" allowFullScreen>
                                     </iframe>
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/995299128?autoplay=1&loop=1&title=0&background=1&muted=1" allowFullScreen>
+                                    <iframe src="https://player.vimeo.com/video/1003088016?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="ICEUP ICEMAKER-music" allowFullScreen>
                                     </iframe>
                                 </div>
                             </div>
