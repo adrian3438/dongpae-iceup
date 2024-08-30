@@ -17,7 +17,6 @@ interface Props {
 // ==============================================================
 
 export default function JobDetails({ params }: Props) {
-  console.log(params.id);
 
   return (
     <Fragment>

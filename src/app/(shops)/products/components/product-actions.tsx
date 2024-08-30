@@ -11,7 +11,6 @@ export default function ProductActions() {
 
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(quantity, color, size);
   };
 
   return (

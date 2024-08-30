@@ -10,7 +10,7 @@ interface Props {
 export default function SitemapPage({language} : Props) {
     return (
         <Fragment>
-            <Navbar navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
+            <Navbar lang={language} navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
 
             {/* ========== main content ========== */}
             <main className="content-wrapper py-20">
@@ -73,7 +73,7 @@ export default function SitemapPage({language} : Props) {
             </main>
 
             {/* ========== footer section ========== */}
-            <Footer/>
+            <Footer language={language}/>
         </Fragment>
     );
 }

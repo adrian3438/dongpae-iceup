@@ -24,6 +24,7 @@ interface NavbarProps {
   navClassName?: string;
   button?: ReactElement;
   navOtherClass?: string;
+  lang?:any,
 }
 // ===================================================================
 
@@ -32,7 +33,8 @@ export default function Navbar({
   logoAlt,
   stickyBox = true,
   navOtherClass = "navbar-other w-100 d-flex ms-auto",
-  navClassName = "navbar navbar-expand-lg center-nav transparent navbar-light"
+  navClassName = "navbar navbar-expand-lg center-nav transparent navbar-light",
+  lang
 }: NavbarProps) {
   useNestedDropdown();
   const sticky = useSticky(350);
@@ -43,7 +45,6 @@ export default function Navbar({
 
   // dynamically added navbar className
   const fixedClassName = "navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed";
-  const {t} = useTranslation()
   // all main header contents
   const headerContent = (
       <Fragment>
@@ -63,18 +64,18 @@ export default function Navbar({
               {/* ===================== nav ===================== */}
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  {t("header_1")}
+                {lang.header_1}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/brand/brand01" title={t("header_2")}/>
+                    <NextLink className="dropdown-item" href="/brand/brand01" title={lang.header_2}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                {t("header_3")}
+                {lang.header_3}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -117,54 +118,54 @@ export default function Navbar({
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                {t("header_4")}
+                {lang.header_4}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/catalogue" title={t("header_5")}/>
+                    <NextLink className="dropdown-item" href="/promotion-center/catalogue" title={lang.header_5}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/promotion-videos" title={t("header_6")}/>
+                    <NextLink className="dropdown-item" href="/promotion-center/promotion-videos" title={lang.header_6}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/promotion-center/blog" title={t("header_7")}/>
+                    <NextLink className="dropdown-item" href="/promotion-center/blog" title={lang.header_7}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                {t("header_8")}
+                {lang.header_8}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide01" title={t("header_9")}/>
+                    <NextLink className="dropdown-item" href="/guide/guide01" title={lang.header_9}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide02" title={t("header_10")}/>
+                    <NextLink className="dropdown-item" href="/guide/guide02" title={lang.header_10}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide03" title={t("header_11")}/>
+                    <NextLink className="dropdown-item" href="/guide/guide03" title={lang.header_11}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/guide/guide04" title={t("header_12")}/>
+                    <NextLink className="dropdown-item" href="/guide/guide04" title={lang.header_12}/>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                {t("header_13")}
+                {lang.header_13}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/faq" title={t("header_14")}/>
+                    <NextLink className="dropdown-item" href="/customer/faq" title={lang.header_14}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/inquiry" title={t("header_15")}/>
+                    <NextLink className="dropdown-item" href="/customer/inquiry" title={lang.header_15}/>
                   </li>
                   <li>
-                    <NextLink className="dropdown-item" href="/customer/buy" title={t("header_16")}/>
+                    <NextLink className="dropdown-item" href="/customer/buy" title={lang.header_16}/>
                   </li>
                 </ul>
               </li>

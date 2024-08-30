@@ -8,15 +8,16 @@ import Pagination from "../reuseable/Pagination";
 import CodeHighlight from "../reuseable/CodeHighlight";
 import { useTranslation } from "react-i18next";
 import ContactUsForm from "./ContactusForm";
-
-export default function Customer() {
-    const {t} = useTranslation()
+interface Props {
+    language : any
+}
+export default function Customer({language} : Props) {
     const pathName = usePathname();
     return (
         <>
             {pathName === '/customer/faq' && (<>
                 <section id="snippet-1" className="wrapper mb-15">
-                    <h2 className="mb-3">{t("faq_1")}</h2>
+                    <h2 className="mb-3">{language.faq_1}</h2>
                     <p>6건</p>
                     <div className="accordion accordion-wrapper">
                         <div className="card accordion-item">
@@ -154,7 +155,7 @@ export default function Customer() {
             </>)}
 
             {pathName === '/customer/inquiry' && (<>
-                <ContactUsForm/>
+                <ContactUsForm language={language}/>
             </>)}
 
             {pathName === '/customer/buy' && (<div className="min-vh-70">

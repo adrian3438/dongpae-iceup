@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "../../components/iceup/Navbar";
-import Footer from "../iceup/Footer";
 import MainBanner from "../iceup/MainBanner";
 import NextLink from "../reuseable/links/NextLink";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "components/iceup/Footer";
 interface Props {
     language?:any
 }
@@ -17,6 +17,7 @@ export default function Main({language} : Props) {
                 <Navbar
                     logoAlt="logo-light"
                     navClassName="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none bg-dark"
+                    lang={language}
                 />
             </header>
 
@@ -291,7 +292,7 @@ export default function Main({language} : Props) {
                 </div>
             </main>
 
-            <Footer/>
+            <Footer language={language}/>
         </Fragment>
     );
 }

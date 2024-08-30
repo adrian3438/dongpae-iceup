@@ -1,4 +1,3 @@
-'use client'
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
@@ -11,28 +10,29 @@ import { useTranslation } from "react-i18next";
 const ProductList = [
     { id: 1, title: 'ICEUP', url: '/product/product01' },
 ];
-
-export default function ProductsPage() {
-    const {t} = useTranslation()
+interface Props {
+    language : any
+}
+export default function ProductsPage({language} : Props) {
     return (
         <Fragment>
             {/* ========== header ========== */}
-            <Navbar navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
+            <Navbar lang={language} navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
 
             {/* ========== main content ========== */}
             <div className="container">
                 <div className="row">
                     <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
-                        <Sidebar title={t("header_3")} sidebarList={ProductList}/>
+                        <Sidebar title={language.header_3} sidebarList={ProductList}/>
                     </aside>
                     <div className="col-lg-9 mt-8">
-                        <Product/>
+                        <Product language={language}/>
                     </div>
                 </div>
             </div>
 
             {/* ========== footer section ========== */}
-            <Footer/>
+            <Footer language={language}/>
         </Fragment>
     );
 }

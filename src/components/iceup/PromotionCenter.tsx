@@ -6,11 +6,13 @@ import FigureImage from "../../components/reuseable/FigureImage";
 import NextLink from "../reuseable/links/NextLink";
 import Pagination from "../reuseable/Pagination";
 import { useTranslation } from "react-i18next";
-
-export default function PromotionCenter() {
+interface Props {
+    language : any
+}
+export default function PromotionCenter({language} : Props) {
     const pathName = usePathname();
     const router = useRouter()
-    const {t} = useTranslation()
+
     return (
         <>
             {pathName === '/promotion-center/catalogue' && (<>
@@ -117,7 +119,7 @@ export default function PromotionCenter() {
 
                 <section className="row justify-content-center mb-10">
                     <div className="col-md-10">
-                        <h3>{t("example_1")}</h3>
+                        <h3>{language.example_1}</h3>
                         <hr className="mt-5 mb-10"/>
                         <div className="row">
                             <div className="col-md-6 mb-6">

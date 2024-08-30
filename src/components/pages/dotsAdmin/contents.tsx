@@ -21,7 +21,6 @@ export default function ContentsPage ({
     const query = useSearchParams()
     const managerInfo = useAppSelector((state) => state.userData.users.users)
     const contentTypeList = useAppSelector((state) => (state.contentTypeData.contentType.contentType))
-    console.log(contentTypeList)
     const [data, setData] = useState<any>({
         // 컨텐츠 유형 , 우선공지 , 공지상단 , 검색키워드 , 제목
         contentType : '1', prirorityNews : 'N', noticePrirority : 'N', searchKeyword : [], subject : '',
