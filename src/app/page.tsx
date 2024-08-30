@@ -1,10 +1,11 @@
+import { fetchLanguage } from "utils/fetchLang";
 import Main from "../components/pages/Main";
 
-export default function Home() {
-  
+export default async function Home({searchParams : {lang}} : any) {
+  const language = await fetchLanguage(lang)
   return (
       <>
-        <Main />
+        <Main language={language}/>
       </>
   );
 }

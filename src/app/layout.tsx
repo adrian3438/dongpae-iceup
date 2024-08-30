@@ -37,11 +37,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <ScrollCue>
+        {/* <ScrollCue> */}
           <Container>
             <ThemeProvider>{children}</ThemeProvider>
           </Container>
-        </ScrollCue>
+        {/* </ScrollCue> */}
 
         <PageProgress />
         <Script

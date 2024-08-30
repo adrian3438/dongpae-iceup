@@ -1,11 +1,12 @@
 'use client'
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "components/iceup/Navbar";
 import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import PromotionCenter from "../iceup/PromotionCenter";
 import { useTranslation } from "react-i18next";
+import api from "lib/api";
 
 export default function PromotionCenterPage() {
     const {t} = useTranslation()
@@ -14,6 +15,12 @@ export default function PromotionCenterPage() {
         { id: 2, title: t("header_6"), url: '/promotion-center/promotion-videos'},
         { id: 3, title: t("header_7"), url: '/promotion-center/blog'},
     ];
+    async function getList () {
+        const response = await api.get(`/user/promotion/getContentsList.php?contentType=${1}&userLang=${'KR'}`)
+    }
+    useEffect(()=>{
+        getList()
+    }, [])
     return (
         <Fragment>
             {/* ========== header ========== */}

@@ -1,4 +1,3 @@
-'use client'
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Navbar from "../../components/iceup/Navbar";
@@ -7,10 +6,10 @@ import MainBanner from "../iceup/MainBanner";
 import NextLink from "../reuseable/links/NextLink";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
-
-export default function Main() { 
-    const {t} = useTranslation()
+interface Props {
+    language?:any
+}
+export default function Main({language} : Props) { 
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -87,7 +86,7 @@ export default function Main() {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Full Cube</p>
-                                            <p className="mb-0 fs-16">{t("main_1")}<br/>{t("main_2")}</p>
+                                            <p className="mb-0 fs-16">{language.main_1}<br/>{language.main_2}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
@@ -101,7 +100,7 @@ export default function Main() {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Half Cube</p>
-                                            <p className="mb-0 fs-16">{t("main_3")}<br/>{t("main_4")}</p>
+                                            <p className="mb-0 fs-16">{language.main_3}<br/>{language.main_4}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
@@ -120,36 +119,36 @@ export default function Main() {
                             </div>
 
                             <div className="col-lg-6">
-                                <h2 className="display-4 mb-3">{t("main_5")}</h2>
+                                <h2 className="display-4 mb-3">{language.main_5}</h2>
                                 <p className="lead fs-lg mb-8 pe-xxl-2">
-                                {t("main_6")}
-                                {t("main_7")}
+                                {language.main_6}
+                                {language.main_7}
                                 </p>
-                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="wrapper my-10">
                     <div className="container">
-                        <h2 className="mb-6">{t("main_8")}</h2>
+                        <h2 className="mb-6">{language.main_8}</h2>
                         <div className="row">
                             <div className="col-md-5 bg-blue rounded px-5 py-10"
                                  style={{background: 'url(/img/iceup/icebox.png) no-repeat 90% 100%'}}
                             >
-                                <h3 className="text-white">{t("main_9")}</h3>
+                                <h3 className="text-white">{language.main_9}</h3>
                                 <p className="text-white">얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>{t("main_11")}</h3>
+                                <h3>{language.main_11}</h3>
                                 <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>{t("main_12")}</h3>
+                                <h3>{language.main_12}</h3>
                                 <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
-                                <Link href="/" className="btn btn-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -157,7 +156,7 @@ export default function Main() {
                 <div className="wrapper">
                     <div className="container">
                         <div className="row">
-                            <h2 className="mb-6">{t("main_13")}</h2>
+                            <h2 className="mb-6">{language.main_13}</h2>
                             <div className="blog grid grid-view">
                                 <div className="row isotope gx-md-8 gy-8 mb-8">
                                     <div className="col-md-3">
@@ -203,7 +202,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={t("main_14")} className="link-dark" href="#"/>
+                                                    <NextLink title={language.main_14} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -231,7 +230,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={t("main_15")} className="link-dark" href="#"/>
+                                                    <NextLink title={language.main_15} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -259,7 +258,7 @@ export default function Main() {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={t("main_16")} className="link-dark" href="#"/>
+                                                    <NextLink title={language.main_16} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
@@ -285,7 +284,7 @@ export default function Main() {
                             <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
                             </p>
                             <div>
-                                <Link href="/" className="btn btn-outline-primary">{t("main_10")} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/" className="btn btn-outline-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
