@@ -7,12 +7,14 @@ import NextLink from "../reuseable/links/NextLink";
 import Pagination from "../reuseable/Pagination";
 import { useTranslation } from "react-i18next";
 interface Props {
-    language : any
+    data : any, language : any
 }
-export default function PromotionCenter({language} : Props) {
+export default function PromotionCenter({data, language} : Props) {
     const pathName = usePathname();
     const router = useRouter()
-
+    // console.log(data)
+    const {List, totalCnt} = data; 
+    console.log(List)
     return (
         <>
             {pathName === '/promotion-center/catalogue' && (<>
@@ -141,11 +143,12 @@ export default function PromotionCenter({language} : Props) {
 
             {pathName === '/promotion-center/blog' && (<>
                 <section className="row mb-10">
-                    <article className="item post col-md-4 mb-5" onClick={()=>router.push(`/promotion-center/blog/1`)}>
+                    {List?.map((list:any) => (
+                    <article className="item post col-md-4 mb-5" key={list.ID} onClick={()=>router.push(`/promotion-center/blog/${list?.ID}`)}>
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
                                 <Link href="/promotion-center/blog/1">
-                                    <FigureImage width={560} height={350} src="/img/blog_example_1.jpg"/>
+                                    <FigureImage width={560} height={350} src={'https://marineplaza.org/iceup-api/upload/promotion/performance_imageDetail_0_2023043007233879333018.jpg'}/>
                                     <span className="bg"/>
                                 </Link>
 
@@ -157,78 +160,13 @@ export default function PromotionCenter({language} : Props) {
                             <div className="card-body py-4">
                                 <div className="post-header">
                                     <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Best Pureit water purifier: 10 picks to get safe drinking water"} className="link-dark" href="/promotion-center/blog/1"/>
+                                        <NextLink title={list?.promSubject} className="link-dark" href={`/promotion-center/blog/${list?.ID}`}/>
                                     </h2>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article className="item post col-md-4 mb-5" onClick={()=>router.push(`/promotion-center/blog/2`)}>
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="/promotion-center/blog/1">
-                                    <FigureImage width={560} height={350} src="/img/blog_example_2.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Cuckoo Homesys gains attention with ice water purifiers"} className="link-dark" href="/promotion-center/blog/1"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article className="item post col-md-4 mb-5" onClick={()=>router.push(`/promotion-center/blog/3`)}>
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="/promotion-center/blog/1">
-                                    <FigureImage width={560} height={350} src="/img/blog_example_3.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Barista water purifiers gain traction in Korea"} className="link-dark" href="/promotion-center/blog/1"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article className="item post col-md-4 mb-5" onClick={()=>router.push(`/promotion-center/blog/4`)}>
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="/promotion-center/blog/1">
-                                    <FigureImage width={560} height={350} src="/img/blog_example_4.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Is filtered water healthier than tap water?"} className="link-dark" href="/promotion-center/blog/1"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    ))}
                 </section>
                 {/* <Pagination className="justify-content-center mb-10"/> */}
             </>)}

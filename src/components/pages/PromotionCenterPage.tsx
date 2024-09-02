@@ -9,19 +9,15 @@ import api from "lib/api";
 import Footer from "components/iceup/Footer";
 interface Props {
     language : any
+    data : any
 }
-export default function PromotionCenterPage({language} : Props) {
+export default function PromotionCenterPage({data, language} : Props) {
     const promotions = [
         { id: 1, title: language.header_5, url: '/promotion-center/catalogue'},
         { id: 2, title: language.header_6, url: '/promotion-center/promotion-videos'},
         { id: 3, title: language.header_7, url: '/promotion-center/blog'},
     ];
-    async function getList () {
-        const response = await api.get(`/user/promotion/getContentsList.php?contentType=${1}&userLang=${'KR'}`)
-    }
-    useEffect(()=>{
-        getList()
-    }, [])
+    
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -35,7 +31,7 @@ export default function PromotionCenterPage({language} : Props) {
                             <Sidebar title={language.header_4} sidebarList={promotions} />
                         </aside>
                         <div className="col-lg-9 mt-8">
-                            <PromotionCenter language={language}/>
+                            <PromotionCenter data={data} language={language}/>
                         </div>
                     </div>
                 </div>

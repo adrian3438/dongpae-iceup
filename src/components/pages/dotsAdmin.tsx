@@ -25,6 +25,8 @@ export default function AdminLoginPage () {
             if(res?.data?.result === true) {
                 dispatch(setUser({users : res.data}));
                 router.push(`/admin/common-code-management/common-code-list`);
+            }else{
+                alert(res.data.resultMsg)
             }
         }catch{
             alert('Server Error')
@@ -48,6 +50,7 @@ export default function AdminLoginPage () {
                         name="id" 
                         id="" 
                         placeholder="아이디"
+                        onKeyDown={handleEnter}
                     />
                 </div>
                 <div className="inputList">
@@ -58,7 +61,8 @@ export default function AdminLoginPage () {
                         type="password" 
                         onChange={handleChange} 
                         name="password" 
-                        id="" 
+                        id=""
+                        onKeyDown={handleEnter}
                         placeholder="비밀번호"
                     />
                 </div>

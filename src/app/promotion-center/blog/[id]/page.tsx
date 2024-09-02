@@ -5,9 +5,16 @@ import Footer from "../../../../components/iceup/Footer";
 import { useTranslation } from "react-i18next";
 import { fetchLanguage } from "utils/fetchLang";
 import BlogDetailPage from "components/pages/blogDetail";
-export default async function BlogDetail1({searchParams : {lang}} : any) {
+import { cookies } from "next/headers";
+import api from "lib/api";
+export default async function BlogDetail1({params, searchParams : {id, lang}} : any) {
     const language = await fetchLanguage(lang)
-    
+    const cookie = cookies()
+    const cookieLang : any = cookie.get('LANG') || 'kr'
+    const langValue = lang || cookieLang?.value
+    const response = await api.get(`/user/promotion/getContentDetail.php?ID=${params.id}&contentType=${1}&userLang=${langValue}`)
+    const data = response?.data?.result === true ? response?.data : null;
+    console.log(data)
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -15,6 +22,7 @@ export default async function BlogDetail1({searchParams : {lang}} : any) {
 
             {/* ========== main content ========== */}
             <BlogDetailPage
+                data={data}
                 language={language}
             />
 
