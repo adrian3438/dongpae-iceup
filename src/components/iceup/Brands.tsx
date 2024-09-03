@@ -82,7 +82,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-lg btn-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">냉동실 얼음틀</h4><p className="mb-0">음식물의 냄새와 세균감염에 노출</p></div>
                                 </div>
@@ -90,7 +90,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-lg btn-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">얼음정수기</h4><p className="mb-0">얼음저장고 관리 부실과 중금속 검출 문제 대두</p></div>
                                 </div>
@@ -98,7 +98,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-lg btn-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">물순환 반복에 의한 오염 취약</h4><p className="mb-0">음식물의 냄새와 세균감염에 노출</p></div>
                                 </div>
@@ -106,7 +106,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-lg btn-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">공통문제점</h4><p className="mb-0">얼음 탈빙시 핫가스 또는 히팅으로 인해 소비전력 증대 및 불량발생</p></div>
                                 </div>
@@ -114,7 +114,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-lg btn-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">상업용 제빙기</h4><p className="mb-0">얼음을 빼기 위해 저장고내 손이 들어감 : 위생상 치명적 문제점</p></div>
                                 </div>
@@ -130,32 +130,32 @@ export default function Brands({language} : Props) {
                     </p>
 
                     <div className="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
-                        <div className="col-md-6 col-lg-3">
-                            <span className={`icon btn btn-circle btn-lg pe-none mb-4 btn-soft-primary`}>
-                                <span className="number">&nbsp;</span>
+                        <div className="col-md-6 col-lg-3 pe-0">
+                            <span className={`icon btn btn-circle btn-lg pe-none mb-8 btn-soft-primary`}>
+                                <span className="number">01</span>
                             </span>
-                            <h4 className="mb-1">너겟 타입 얼음 제조 방식 채택</h4>
+                            <h4 className="mb-2">너겟 타입 얼음 제조 방식 채택</h4>
                             <p>북극의 얼음처럼 깨끗하고 신성한 얼음을 공급하기 위해 ICEUP 제빙기는 뷸렛 타입 얼음 제조 방식을 과감히 버리고 너겟 타입 얼음 제조 방식을 채택했습니다.</p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
-                            <span className={`icon btn btn-circle btn-lg pe-none mb-4 btn-soft-primary`}>
-                                <span className="number">&nbsp;</span>
+                        <div className="col-md-6 col-lg-3 pe-0">
+                            <span className={`icon btn btn-circle btn-lg pe-none mb-8 btn-primary`}>
+                                <span className="number">02</span>
                             </span>
-                            <h4 className="mb-1">오랜 시간 지속되는 얼음 만들기</h4>
+                            <h4 className="mb-2">오랜 시간 지속되는 얼음 만들기</h4>
                             <p>속이 꽉찬 얼음 생산으로 사용시간이 길게 지속됩니다.</p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
-                            <span className={`icon btn btn-circle btn-lg pe-none mb-4 btn-soft-primary`}>
-                                <span className="number">&nbsp;</span>
+                        <div className="col-md-6 col-lg-3 pe-0">
+                            <span className={`icon btn btn-circle btn-lg pe-none mb-8 btn-soft-primary`}>
+                                <span className="number">03</span>
                             </span>
-                            <h4 className="mb-1">얼음 생산 속도 향상</h4>
+                            <h4 className="mb-2">얼음 생산 속도 향상</h4>
                             <p>5명이 연속 사용하면 얼음 생산 시간을 기다려야 하는 가정용 정수기에 비에 얼음 생산 속도가 훨등히 빠르기 때문에 대기 시간이 필요 없습니다.</p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
-                            <span className={`icon btn btn-circle btn-lg pe-none mb-4 btn-soft-primary`}>
-                                <span className="number">&nbsp;</span>
+                        <div className="col-md-6 col-lg-3 pe-0">
+                            <span className={`icon btn btn-circle btn-lg pe-none mb-8 btn-soft-primary`}>
+                                <span className="number">04</span>
                             </span>
-                            <h4 className="mb-1">제빙기 노후 방지</h4>
+                            <h4 className="mb-2">제빙기 노후 방지</h4>
                             <p>뷸렛 타입 얼음은 주변에서 가장 많이 사용하는 얼음입니다. 뷸렛 타입 얼음을 제조하기 위해서는 노즐을 통해 물을 보내고 급랭시켜 얼음을 적당히 키운 후, 얼음을 노즐과 분리하기 위해 가열합니다. 이러한 방식은 제빙기의 노후를 촉진시킵니다.</p>
                         </div>
                     </div>
@@ -194,8 +194,10 @@ export default function Brands({language} : Props) {
                     </div>
                     <div className="col-lg-5"><h2 className="display-4 mb-3">iceup 브랜드와의 소통</h2>
                         <p className="lead fs-lg">iceup 제빙기는 국,내외적으로 검증된 제품이며, 많은 고객으로부터 문의를 받고 있습니다.</p>
-                        <p>iceup 임직원은 고객의 소리에 귀담아 들을 준비가 되어 있으며 사람의 건강을 위한 제빙기 개발을 위해 많은 노력을 기울이고 있습니다.</p>
-                        <p>iceup 24시간 온라인을 통해 고객 문의가 가능합니다. 언제든지 연락주시기 바랍니다.</p>
+                        <p>iceup 임직원은 고객의 소리에 귀담아 들을 준비가 되어 있으며 사람의 건강을 위한 제빙기 개발을 위해 많은 노력을 기울이고 있습니다.
+                            <br/>iceup 24시간 온라인을 통해 고객 문의가 가능합니다. 언제든지 연락주시기 바랍니다.
+                        </p>
+
                         <a className="btn btn-primary rounded-pill mt-2" href="/customer/inquiry">연락하기</a>
                     </div>
                 </div>

@@ -22,8 +22,8 @@ export default function BrandPage({language} : Props) {
             <section
                 className="wrapper image-wrapper bg-image bg-overlay text-white"
                 style={{backgroundImage: "url(/img/iceup/ice-maker-1.jpg)"}}>
-                <div className="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
-                    <div className="row">
+                <div className="container text-center min-vh-60 d-flex align-items-center">
+                    <div className="row w-100">
                         <div className="mx-auto">
                             <h1 className="display-1 text-white mb-3">Brand Introduction</h1>
                             <p className="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">
