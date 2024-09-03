@@ -14,7 +14,7 @@ export default function Sidebar({title, sidebarList}: SidebarProps): JSX.Element
     const pathName = usePathname();
     return (
         <>
-            <aside className="col-lg-12 sidebar mt-8 mt-lg-6">
+            <aside className="col-lg-12 sidebar mt-8 mt-lg-15">
                 {/* ========== categories section ========== */}
                 <div className="widget">
                     <h4 className="widget-title mb-3">{title}</h4>
