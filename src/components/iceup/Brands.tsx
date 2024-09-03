@@ -1,6 +1,8 @@
 'use client'
 
 import {usePathname} from "next/navigation";
+import {zoomInAnimate} from "../../utils/animation";
+import useLightBox from "../../hooks/useLightBox";
 
 interface Props {
     language : any
@@ -30,6 +32,7 @@ const images = [
 ];
 
 export default function Brands({language} : Props) {
+    useLightBox();
     const pathName = usePathname();
     return (
         <>
@@ -82,7 +85,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width: "23px", height: "23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">냉동실 얼음틀</h4><p className="mb-0">음식물의 냄새와 세균감염에 노출</p></div>
                                 </div>
@@ -90,7 +93,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width: "23px", height: "23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">얼음정수기</h4><p className="mb-0">얼음저장고 관리 부실과 중금속 검출 문제 대두</p></div>
                                 </div>
@@ -98,7 +101,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width: "23px", height: "23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">물순환 반복에 의한 오염 취약</h4><p className="mb-0">음식물의 냄새와 세균감염에 노출</p></div>
                                 </div>
@@ -106,7 +109,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width: "23px", height: "23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">공통문제점</h4><p className="mb-0">얼음 탈빙시 핫가스 또는 히팅으로 인해 소비전력 증대 및 불량발생</p></div>
                                 </div>
@@ -114,7 +117,7 @@ export default function Brands({language} : Props) {
                             <div className="col-md-6 col-lg-12 col-xl-6">
                                 <div className="d-flex flex-row">
                                     <div>
-                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width:"23px", height:"23px"}}></i></div>
+                                        <div className="icon btn btn-circle btn-sm btn-soft-sky pe-none me-5"><i style={{background: 'url(/img/iceup/ice.png)', width: "23px", height: "23px"}}></i></div>
                                     </div>
                                     <div><h4 className="mb-1">상업용 제빙기</h4><p className="mb-0">얼음을 빼기 위해 저장고내 손이 들어감 : 위생상 치명적 문제점</p></div>
                                 </div>
@@ -161,17 +164,28 @@ export default function Brands({language} : Props) {
                     </div>
                 </div>
 
-                <section className="wrapper image-wrapper bg-image bg-overlay text-white mb-17" style={{backgroundImage: 'url(/img/iceup/ice-cube.jpg'}}>
-                    <div className="container py-14 py-md-17 text-center">
+                <section
+                    className="wrapper image-wrapper bg-image bg-overlay"
+                    style={{backgroundImage: "url(/img/iceup/ice-cube.jpg"}}>
+                    <div className="container py-18 text-center">
                         <div className="row">
-                            <div className="col-xl-10 col-xxl-8 mx-auto text-center">
-                                <h2 className="display-4 text-white mt-2 mb-7">건강한 삶을 위한 iceup 제빙기란?</h2>
+                            <div className="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
+                                <a
+                                    href="https://player.vimeo.com/video/1003081314?badge=0&autopause=0&player_id=0&app_id=58479"
+                                    data-glightbox
+                                    className="btn btn-circle btn-white btn-play ripple mx-auto mb-5">
+                                    <i className="icn-caret-right"/>
+                                </a>
+                                <h2 className="display-4 px-lg-10 px-xl-13 px-xxl-10 mb-10 text-white">
+                                    건강한 삶을 위한 iceup 제빙기란?
+                                </h2>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section className="wrapper bg-light angled upper-end"></section>
 
-                <div className="row gy-10 gx-lg-8 gx-xl-12 align-items-center mb-17">
+                <div className="row gy-10 gx-lg-8 gx-xl-12 align-items-center my-17">
                     <div className="col-lg-7 position-relative">
                         <div className="shape bg-dot primary rellax w-18 h-18" style={{top: "0px", left: "-1.4rem", zIndex: 0}}></div>
                         <div className="row gx-md-5 gy-5">
