@@ -20,7 +20,7 @@ export default function Customer({language} : Props) {
                     <h2 className="mb-3">{language.faq_1}</h2>
                     <p>6건</p>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-1">
                                 <button
                                     className="collapsed"
@@ -42,7 +42,7 @@ export default function Customer({language} : Props) {
                         </div>
                     </div>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-2">
                                 <button
                                     className="collapsed"
@@ -64,7 +64,7 @@ export default function Customer({language} : Props) {
                         </div>
                     </div>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-3">
                                 <button
                                     className="collapsed"
@@ -86,7 +86,7 @@ export default function Customer({language} : Props) {
                         </div>
                     </div>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-4">
                                 <button
                                     className="collapsed"
@@ -108,7 +108,7 @@ export default function Customer({language} : Props) {
                         </div>
                     </div>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-5">
                                 <button
                                     className="collapsed"
@@ -130,7 +130,7 @@ export default function Customer({language} : Props) {
                         </div>
                     </div>
                     <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
+                        <div className="card accordion-item shadow">
                             <div className="card-header" id="faq-6">
                                 <button
                                     className="collapsed"
