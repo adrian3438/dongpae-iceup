@@ -8,8 +8,9 @@ interface Props {
     language : any
 }
 
-export default function Product() {
+export default function Product({language}: Props) {
     const pathName = usePathname();
+
     return (
         <>
             {pathName === '/product/product01' && (<>
