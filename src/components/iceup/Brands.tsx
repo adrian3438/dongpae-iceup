@@ -190,12 +190,12 @@ export default function Brands({language} : Props) {
                         <div className="shape bg-dot primary rellax w-18 h-18" style={{top: "0px", left: "-1.4rem", zIndex: 0}}></div>
                         <div className="row gx-md-5 gy-5">
                             <div className="col-md-6">
-                                <figure className="rounded mt-md-10 position-relative"><img src="/img/iceup/brand/main-banner.png" srcSet="/img/photos/g5@2x.jpg 2x" alt=""/></figure>
+                                <figure className="rounded mt-md-10 position-relative"><img src="/img/iceup/brand/main-banner.png" alt=""/></figure>
                             </div>
                             <div className="col-md-6">
                                 <div className="row gx-md-5 gy-5">
                                     <div className="col-md-12 order-md-2">
-                                        <figure className="rounded"><img src="/img/photos/g6.jpg" alt=""/></figure>
+                                        <figure className="rounded"><img src="/img/iceup/brand/iceup-communication.jpg" alt=""/></figure>
                                     </div>
                                     <div className="col-md-10">
                                         <div className="card bg-pale-primary text-center">
