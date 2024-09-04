@@ -12,22 +12,22 @@ const images = [
     {
         id: 1,
         className: "col-md-4 offset-md-2 align-self-end",
-        image: { "1x": "/img/photos/g1.jpg", "2x": "/img/photos/g1@2x.jpg 2x" }
+        image: { "1x": "/img/iceup/brand/top-view-cut-grapefruits-lemons-healthy-life-written-notepad-blue-white-surface.jpg"}
     },
     {
         id: 2,
         className: "col-md-6 align-self-end",
-        image: { "1x": "/img/photos/g2.jpg", "2x": "/img/photos/g2@2x.jpg 2x" }
+        image: { "1x": "/img/iceup/brand/still-life-with-iced-coffee-beverage.jpg" }
     },
     {
         id: 3,
         className: "col-md-6 offset-md-1",
-        image: { "1x": "/img/photos/g3.jpg", "2x": "/img/photos/g3@2x.jpg 2x" }
+        image: { "1x": "/img/iceup/brand/young-woman-practicing-yoga-postures-outdoors.jpg" }
     },
     {
         id: 4,
-        className: "col-md-4 align-self-start",
-        image: { "1x": "/img/photos/g4.jpg", "2x": "/img/photos/g4@2x.jpg 2x" }
+        className: "col-md-5 align-self-start",
+        image: { "1x": "/img/iceup/brand/cocktail-ice.jpg" }
     }
 ];
 
@@ -68,7 +68,7 @@ export default function Brands({language} : Props) {
                             {images.map(({id, className, image}) => (
                                 <div className={className} key={id}>
                                     <figure className="rounded">
-                                        <img src={image["1x"]} srcSet={image["2x"]} alt=""/>
+                                        <img src={image["1x"]} alt=""/>
                                     </figure>
                                 </div>
                             ))}
@@ -76,7 +76,7 @@ export default function Brands({language} : Props) {
                     </div>
 
                     <div className="col-lg-6">
-                        <h2 className="display-6 mb-3">iceup 제빙기에 대한 착각<br/> (먹어도 되는 얼음이 맞나 ?)</h2>
+                        <h2 className="display-6 mb-3" style={{whiteSpace:"nowrap"}}>iceup 제빙기에 대한 착각 (먹어도 되는 얼음이 맞나 ?)</h2>
                         <p className="lead fs-md mb-8 pe-xxl-2">
                             대부분의 사람들은 투명하고 차가운 얼음 속 진실에 큰 관심이 없습니다. 일상에서 사용되는 얼음 관리가 인간의 건강에 영향을 줄 수 있을 거라는 생각하기 쉽지 않습니다
                         </p>
@@ -190,16 +190,16 @@ export default function Brands({language} : Props) {
                         <div className="shape bg-dot primary rellax w-18 h-18" style={{top: "0px", left: "-1.4rem", zIndex: 0}}></div>
                         <div className="row gx-md-5 gy-5">
                             <div className="col-md-6">
-                                <figure className="rounded mt-md-10 position-relative"><img src="/img/photos/g5.jpg" srcSet="/img/photos/g5@2x.jpg 2x" alt=""/></figure>
+                                <figure className="rounded mt-md-10 position-relative"><img src="/img/iceup/brand/main-banner.png" srcSet="/img/photos/g5@2x.jpg 2x" alt=""/></figure>
                             </div>
                             <div className="col-md-6">
                                 <div className="row gx-md-5 gy-5">
                                     <div className="col-md-12 order-md-2">
-                                        <figure className="rounded"><img src="/img/photos/g6.jpg" srcSet="/img/photos/g6@2x.jpg 2x" alt=""/></figure>
+                                        <figure className="rounded"><img src="/img/photos/g6.jpg" alt=""/></figure>
                                     </div>
                                     <div className="col-md-10">
                                         <div className="card bg-pale-primary text-center">
-                                            <div className="card-body py-11 counter-wrapper"><h3 className="counter text-nowrap"><span>1,000+</span></h3><p className="mb-0">고객 만족 실현</p></div>
+                                            <div className="card-body py-11 counter-wrapper"><h3 className="counter text-nowrap"><span>100+</span></h3><p className="mb-0">고객 만족 실현</p></div>
                                         </div>
                                     </div>
                                 </div>
