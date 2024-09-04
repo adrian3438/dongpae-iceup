@@ -149,8 +149,7 @@ export default function ContactUsForm ({language} : Props) {
                         </div>
 
                         <div className="row gx-4 mt-8">
-                            <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> 
-                            {language.faq_15}
+                            <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> {language.faq_15}
                             <span className="text-red">*</span></h3>
                             <div className="col-md-4">
                                 <input required type="file" name="attachedFile" id="file_upload" onChange={handleChange} className="form-control"/>
