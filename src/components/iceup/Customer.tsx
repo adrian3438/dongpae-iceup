@@ -18,7 +18,7 @@ export default function Customer({language} : Props) {
             {pathName === '/customer/faq' && (<>
                 <section id="snippet-1" className="wrapper mb-15">
                     <h2 className="mb-3">{language.faq_1}</h2>
-                    <p>6건</p>
+                    <p></p>
                     <div className="accordion accordion-wrapper">
                         <div className="card accordion-item">
                             <div className="card-header" id="faq-1">
@@ -159,7 +159,7 @@ export default function Customer({language} : Props) {
             </>)}
 
             {pathName === '/customer/buy' && (<div className="min-vh-70">
-                내용 추가 예정
+                {language?.faq_18}
             </div>)}
         </>
     );

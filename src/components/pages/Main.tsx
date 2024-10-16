@@ -93,7 +93,7 @@ export default function Main({language} : Props) {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Nugget</p>
-                                            <p className="mb-0 fs-16">얼음 형태에 대한 설명<br/>두 줄 간단하게</p>
+                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 align-content-center">
@@ -107,13 +107,13 @@ export default function Main({language} : Props) {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Flake</p>
-                                            <p className="mb-0 fs-16">얼음 형태에 대한 설명<br/>두 줄 간단하게</p>
+                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p>Crescent</p>
-                                            <p className="mb-0 fs-16">얼음 형태에 대한 설명<br/>두 줄 간단하게</p>
+                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -138,17 +138,17 @@ export default function Main({language} : Props) {
                                  style={{background: 'url(/img/iceup/icebox.png) no-repeat 90% 100%'}}
                             >
                                 <h3 className="text-white">{language.main_9}</h3>
-                                <p className="text-white">얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
+                                <p className="text-white">{language.main_19}<br/>{language.main_20}</p>
                                 <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
                                 <h3>{language.main_11}</h3>
-                                <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
+                                <p>{language.main_19}<br/>{language.main_20}</p>
                                 <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                             <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
                                 <h3>{language.main_12}</h3>
-                                <p>얼음 보관방식에 대한 설명<br/>두 줄 간단하게 적어주세요</p>
+                                <p>{language.main_19}<br/>{language.main_20}</p>
                                 <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
@@ -175,14 +175,14 @@ export default function Main({language} : Props) {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title="제빙기 블랙타입" className="link-dark" href="#"/>
+                                                    <NextLink title={language.main_21} className="link-dark" href="#"/>
                                                 </h2>
                                             </div>
 
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>제품 간단 설명</span>
+                                                        <span>{language.main_22}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -210,7 +210,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>제품 간단 설명</span>
+                                                        <span>{language.main_22}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -238,7 +238,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>제품 간단 설명</span>
+                                                        <span>{language.main_22}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -266,7 +266,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>제품 간단 설명</span>
+                                                        <span>{language.main_22}</span>
                                                     </li>
                                                 </ul>
                                             </div>
