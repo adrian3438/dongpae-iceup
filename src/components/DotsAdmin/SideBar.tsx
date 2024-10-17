@@ -17,7 +17,11 @@ export default function AdminSideBar () {
             dispatch(setContentType({contentType : response?.data?.List}))
         }
     }
-    useEffect(()=> {getContentsLTypeList()}, [])
+    useEffect(()=> {
+        if(splitPath[2] === 'contents-management'){
+            getContentsLTypeList()
+        }
+    }, [pathname])
     return(
         <>
         {/* members. product. content. pr_video. certificate. inquiry. settings */}

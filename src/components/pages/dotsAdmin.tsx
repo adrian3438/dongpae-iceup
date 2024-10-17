@@ -5,6 +5,7 @@ import { useAppDispatch } from "store/hooks"
 import { setUser } from "store/Slices/adminInfoSlice"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import Cookies from "js-cookie"
 
 export default function AdminLoginPage () {
     const router = useRouter()
@@ -24,6 +25,7 @@ export default function AdminLoginPage () {
             const res = await api.get(`/admin/manager/adminLogin.php?managerLoginId=${login?.id}&managerPass=${login?.password}`)
             if(res?.data?.result === true) {
                 dispatch(setUser({users : res.data}));
+                Cookies.set('dissid' , res.data.uuid , {path : '/'})
                 router.push(`/admin/common-code-management/common-code-list`);
             }else{
                 alert(res.data.resultMsg)

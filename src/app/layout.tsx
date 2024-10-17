@@ -26,6 +26,8 @@ import '/public/css/admin.css'
 import Container from "components/Container";
 
 import Script from "next/script";
+import ReduxContainer from "components/ReduxContainer";
+import { cookies } from "next/headers";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,13 +36,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const cookie = cookies()
+  const cookieVaule : any = cookie.get('dissid') || '';
   return (
     <html lang="en">
       <body className={manrope.className}>
         {/* <ScrollCue> */}
-          <Container>
+        <ReduxContainer>
+          <Container ssid={cookieVaule?.value}>
             <ThemeProvider>{children}</ThemeProvider>
           </Container>
+        </ReduxContainer>
         {/* </ScrollCue> */}
 
         <PageProgress />

@@ -27,8 +27,8 @@ export default function CommonCodeListPage () {
             formData.append('codeId', id)
             formData.append('activeStatus', status === 'Y' ? 'N' : 'Y')
             const response = await api.post(`/admin/code/updContentsTypeActiveStatus.php`, formData)
-            if(response?.data?.result === true) getList()
-            else alert(response?.data?.resultMsg)
+            if(response?.data?.result === true) {getList()}
+            else{ alert(response?.data?.resultMsg)}
         }catch{alert('Server Error')}
     }
     useEffect(()=>{getList()
