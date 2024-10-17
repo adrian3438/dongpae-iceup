@@ -36,7 +36,7 @@ app.prepare().then(() => {
         return handle(req, res);
     });
 
-    const port = process.env.PORT || 3003;
+    const port = process.env.PORT || 3000;
 
     connection.connect((err) => {
         if (err) {
