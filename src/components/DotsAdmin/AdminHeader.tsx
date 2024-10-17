@@ -1,8 +1,16 @@
 'use client'
 
+import { useRouter } from "next/navigation";
+import { useAppSelector } from "../../store/hooks"
+import Cookies from 'js-cookie'
+
 export default function AdminHeader () {
+    const userInfo : any = useAppSelector((state) => state.userData.users.users);
+    const router = useRouter()
+    console.log(userInfo)
     function handleLogout () {
-        
+        Cookies.remove('dissid');
+        location.href = '/admin'
     }
     return(
         <>
@@ -11,7 +19,7 @@ export default function AdminHeader () {
                 <div>
                     <div>
                         <div>
-                            <span>관리자</span>
+                            <span>관리자 : {userInfo?.managerName}</span>
                             <i className="fa-regular fa-chevron-down"></i>
                         </div>
                     </div>

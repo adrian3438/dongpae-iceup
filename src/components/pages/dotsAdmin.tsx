@@ -24,9 +24,9 @@ export default function AdminLoginPage () {
             formData.append('managerPass', login?.password)
             const res = await api.get(`/admin/manager/adminLogin.php?managerLoginId=${login?.id}&managerPass=${login?.password}`)
             if(res?.data?.result === true) {
-                dispatch(setUser({users : res.data}));
                 Cookies.set('dissid' , res.data.uuid , {path : '/'})
-                router.push(`/admin/common-code-management/common-code-list`);
+                // router.push(`/admin/common-code-management/common-code-list`);
+                location.href = '/admin/common-code-management/common-code-list';
             }else{
                 alert(res.data.resultMsg)
             }

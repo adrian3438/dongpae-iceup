@@ -11,16 +11,30 @@ import { useAppDispatch } from "store/hooks"
 import Providers from "redux/provider"
 import { Provider } from "react-redux"
 import { store } from "store/store"
+import { setUser } from "../store/Slices/adminInfoSlice"
 interface Props {
     ssid : string
 }
 export default function Container ({children , ssid} : any) {
+    const router = useRouter()
     const pathname = usePathname()
     const splitPath = pathname.split('/')
     const [cookie, setCookie] = useCookies(['LANG'])
     const dispathch = useAppDispatch()
     async function getAdminInfo () {
         const response = await api.get(`/admin/manager/getManagerInfo.php?managerUuid=${ssid}`)
+        if(response?.data?.result === true) {
+            if(response?.data?.list?.length > 0) {
+                dispathch(setUser({users : response?.data?.list[0]}));
+            }
+            if(splitPath[1] === 'admin' && !splitPath[2]){
+                router.push('/admin/common-code-management/common-code-list')
+            }
+        }else {
+            if(splitPath[1] === 'admin' && splitPath[2])
+            alert('로그인이 필요합니다.');
+            router.push('/admin')
+        }
     }    
     useEffect(() => {
         if(cookie.LANG === undefined){
