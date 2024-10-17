@@ -4,6 +4,7 @@ import TextBox from "components/DotsAdmin/Element/TextBox"
 import api from "lib/api"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
+import { useAppSelector } from "store/hooks"
 interface Props {
     id : any
 }
@@ -11,7 +12,7 @@ export default function AdminAccountPage ({
     id
 } : Props) {
     const router = useRouter()
-    
+    const managerInfo = useAppSelector((state) => state.userData.users.users)
     const [data, setData] = useState<any>({
         id : '', pass : '', name : '', phone : '',
         mobile : '', email  : '', dept : ''
@@ -39,7 +40,8 @@ export default function AdminAccountPage ({
                 return;
             }
             const formData = new FormData()
-            formData.append('managerLogin', data?.id)
+            formData.append('ID', )
+            formData.append('managerLogin', managerInfo?.ID)
             if(data?.pass) {formData.append('managerPass', data?.pass)} 
             formData.append('managerName', data?.name)
             formData.append('managerPhone', data?.phone)
