@@ -49,7 +49,7 @@ export default function AdminAccountPage ({
             formData.append('managerEmail', data?.email)
             formData.append('managerDept', data?.dept)
             if(id){
-                const response = await api.post(`/admin/manager/updManager1.php`, formData)
+                const response = await api.post(`/admin/manager/updManager.php`, formData)
                 if(response?.data?.result === true) {
                     alert(response?.data?.resultMsg); 
                     router.back()
