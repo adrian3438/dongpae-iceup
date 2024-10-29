@@ -20,11 +20,10 @@ export default async function PromotionCenter({params, searchParams : {id, lang}
             contentType = '3';
             break;
         default:
-            contentType = '1'; // Default to '1' if id is not matched
+            contentType = '1';
             break;
     }
 
-    // Make the API request with the determined contentType
     const response = await api.get(`/user/promotion/getContentsList.php`, {
         params: {
             contentType,
@@ -37,8 +36,8 @@ export default async function PromotionCenter({params, searchParams : {id, lang}
         }
         
     });
-    console.log(contentType)
     const data = response?.data?.result === true ? response?.data : null
+    console.log(data)
     return (
         <>
             <PromotionCenterPage data={data} language={language}/>

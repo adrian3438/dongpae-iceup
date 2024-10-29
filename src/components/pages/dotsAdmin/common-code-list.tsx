@@ -6,6 +6,7 @@ import api from "lib/api";
 import { useAppSelector } from "store/hooks";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import calCulateIndex from "components/calculateIndex";
 
 
 export default function CommonCodeListPage () {
@@ -15,7 +16,7 @@ export default function CommonCodeListPage () {
     async function getList () {
         try {   
             const response = await api.get(`/admin/code/getContentsTypeList.php`)
-            if(response?.data?.result === true) {setData(response?.data?.List)}
+            if(response?.data?.result === true) {setData(response?.data?.List); setTotalCount(response?.data?.List?.length)}
             else {alert(response?.data?.resultMsg); setData([])}
         }catch{
             alert('Server Error')
@@ -73,7 +74,7 @@ export default function CommonCodeListPage () {
                             {data?.map((list:any, index:number) => (
                                 <tr key={list?.codeId} style={{cursor : 'pointer'}}>
                                     <td onClick={()=>router.push(`/admin/common-code-management/common-code?id=${list?.codeId}`)}>
-                                        <span className="readOnly">{1}</span>
+                                        <span className="readOnly">{calCulateIndex(1 , 25 , totalCount , index)}</span>
                                     </td>
                                     <td onClick={()=>router.push(`/admin/common-code-management/common-code?id=${list?.codeId}`)}>
                                         <span className="readOnly">{list?.codeName}</span>

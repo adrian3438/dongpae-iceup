@@ -1,4 +1,5 @@
 'use client'
+import calCulateIndex from "components/calculateIndex";
 import SelectContentsModifyBox from "components/DotsAdmin/Contents/SelectEditBox";
 import ListContentsTypeBox from "components/DotsAdmin/List/ListContentsTypeBox";
 import ListFilter from "components/DotsAdmin/List/ListFilter";
@@ -95,7 +96,7 @@ export default function ContentsListPage ({
                     <div>
 
                         <ListContentsTypeBox
-                            
+                            contentsType={contentsType}
                         />
 
                         <ListSearchBox
@@ -124,7 +125,7 @@ export default function ContentsListPage ({
                             <tr key={index}>
                                 <td>
                                     <span className="readOnly">
-                                        {1}
+                                        {calCulateIndex(page , size , totalCount , index)}
                                     </span>
                                 </td>
                                 <td>

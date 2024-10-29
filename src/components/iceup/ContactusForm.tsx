@@ -41,6 +41,15 @@ export default function ContactUsForm ({language} : Props) {
 
     async function handleSubmit (e: React.FormEvent) {
         // e.preventDefault()
+        if(!data?.agreeTerms) {alert('Please check the required agreement.'); return;}
+        if(!data?.company) {alert('Please enter your company name.'); return;}
+        if(!data?.name) {alert('Please enter your name.'); return;}
+        if(!data?.position) {alert('Please enter your position.'); return;}
+        if(!data?.email) {alert('Please enter your email.'); return;}
+        if(!data?.number) {alert('Please enter your number.'); return;}
+        if(!data?.type) {alert('Please select your inquiry type.'); return;}
+        if(!data?.message) {alert('Please enter your message.'); return;}
+
         const formData : any = new FormData()
         formData.append('inquiryCompanyName', data?.company)
         formData.append('inquiryName', data?.name)
@@ -56,7 +65,8 @@ export default function ContactUsForm ({language} : Props) {
         try {
           const response = await api.post(`/user/inquiry/setInquiry.php`, formData)
           if(response?.data?.result === true) {
-            alert(response?.data?.resultMsg)
+            alert(response?.data?.resultMsg); 
+            window.location.reload()
           }else{
             alert(response?.data?.resultMsg)
           }
@@ -151,7 +161,7 @@ export default function ContactUsForm ({language} : Props) {
                         <div className="row gx-4 mt-8">
                             <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> 
                             {language.faq_15}
-                            <span className="text-red">*</span></h3>
+                            <span className="text-red"></span></h3>
                             <div className="col-md-4">
                                 <input required type="file" name="attachedFile" id="file_upload" onChange={handleChange} className="form-control"/>
                             </div>
