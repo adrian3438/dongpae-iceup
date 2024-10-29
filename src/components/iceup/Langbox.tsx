@@ -32,18 +32,18 @@ export default function LangBox () {
                 aria-expanded="false"
                 data-bs-toggle="dropdown"
                 className="nav-link dropdown-item dropdown-toggle">
-            {lang === 'kr' && 'KO'}
             {lang === 'en' && 'EN'}
+            {lang === 'kr' && 'KO'}
             </a>
             <ul className="dropdown-menu">
             <li className="nav-item">
-                <button className="dropdown-item" onClick={(e)=>handleLang(e,'kr')}>
-                KO
+                <button className="dropdown-item" onClick={(e)=>handleLang(e,'en')}>
+                EN
                 </button>
             </li>
             <li className="nav-item">
-                <button className="dropdown-item" onClick={(e)=>handleLang(e,'en')}>
-                EN
+                <button className="dropdown-item" onClick={(e)=>handleLang(e,'kr')}>
+                KO
                 </button>
             </li>
             </ul>

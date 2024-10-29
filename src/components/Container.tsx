@@ -38,8 +38,8 @@ export default function Container ({children , ssid} : any) {
     }    
     useEffect(() => {
         if(cookie.LANG === undefined){
-            setCookie('LANG', 'kr', {path : '/'})
-            i18n.changeLanguage('kr')
+            setCookie('LANG', 'en', {path : '/'})
+            i18n.changeLanguage('en')
         }else{
             i18n.changeLanguage(cookie?.LANG)
         }
