@@ -20,16 +20,19 @@ export default function ProductsPage({language} : Props) {
             <Navbar lang={language} navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
 
             {/* ========== main content ========== */}
-            <div className="container">
+            <div className="mt-8">
+                <Product language={language}/>
+            </div>
+            {/*<div className="container">
                 <div className="row">
                     <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
                         <Sidebar title={language.header_3} sidebarList={ProductList}/>
                     </aside>
-                    <div className="col-lg-9 mt-8">
+                    <div className="mt-8">
                         <Product language={language}/>
                     </div>
                 </div>
-            </div>
+            </div>*/}
 
             {/* ========== footer section ========== */}
             <Footer language={language}/>
