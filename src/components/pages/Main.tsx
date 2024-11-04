@@ -9,7 +9,7 @@ import Footer from "components/iceup/Footer";
 interface Props {
     language?:any
 }
-export default function Main({language} : Props) { 
+export default function Main({language} : Props) {
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -57,8 +57,8 @@ export default function Main({language} : Props) {
                             <div className="py-6 col-md-6 border-start text-center">
                                 <img src="/img/iceup/main-finger.png" alt="Finger"/>
                             </div>
-                            <div className="py-6 col-md-6 border-start border-end text-center">
-                                <img src="/img/iceup/main-iceup.png" alt="Iceup"/>
+                            <div className="py-6 col-md-6 border-start border-end text-center overflow-hidden">
+                                <img src="/img/iceup/main-iceup.jpg" alt="Iceup" className="h-100"/>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function Main({language} : Props) {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Nugget</p>
-                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
+                                            <p className="mb-0 fs-16">{language.main_17}</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 align-content-center">
@@ -107,13 +107,13 @@ export default function Main({language} : Props) {
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p className="fw-bold">Flake</p>
-                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
+                                            <p className="mb-0 fs-16">{language.main_18}</p>
                                         </div>
                                         <div className="bg-white border rounded p-5 pb-16 mt-5"
                                              style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
                                         >
                                             <p>Crescent</p>
-                                            <p className="mb-0 fs-16">{language.main_17}<br/>{language.main_18}</p>
+                                            <p className="mb-0 fs-16">{language.main_19}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -125,12 +125,12 @@ export default function Main({language} : Props) {
                                 {language.main_6}
                                 {language.main_7}
                                 </p>
-                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
+                                {/*<Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>*/}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="wrapper my-10">
+                {/*<div className="wrapper my-10">
                     <div className="container">
                         <h2 className="mb-6">{language.main_8}</h2>
                         <div className="row">
@@ -153,8 +153,8 @@ export default function Main({language} : Props) {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="wrapper">
+                </div>*/}
+                <div className="wrapper my-10">
                     <div className="container">
                         <div className="row">
                             <h2 className="mb-6">{language.main_13}</h2>
@@ -163,7 +163,7 @@ export default function Main({language} : Props) {
                                     <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
-                                                <Link href="#">
+                                                <Link href="/product/product01">
                                                     <Image src="/img/iceup/product-01.png" alt="test" width={560} height={350} className="w-100 h-auto"/>
                                                     <span className="bg"/>
                                                 </Link>
@@ -175,7 +175,7 @@ export default function Main({language} : Props) {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={language.main_21} className="link-dark" href="#"/>
+                                                    <Link className="link-dark" href="/product/product01">{language.main_21}</Link>
                                                 </h2>
                                             </div>
 
@@ -191,7 +191,7 @@ export default function Main({language} : Props) {
                                     <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
-                                                <Link href="#">
+                                                <Link href="/product/product01#section07">
                                                     <Image src="/img/iceup/product-02.png" alt="test" width={560} height={350} className="w-100 h-auto"/>
                                                     <span className="bg"/>
                                                 </Link>
@@ -203,14 +203,14 @@ export default function Main({language} : Props) {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={language.main_14} className="link-dark" href="#"/>
+                                                    <Link className="link-dark" href="/product/product01#section07">{language.main_14}</Link>
                                                 </h2>
                                             </div>
 
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_22}</span>
+                                                        <span>{language.main_23}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -219,7 +219,7 @@ export default function Main({language} : Props) {
                                     <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
-                                                <Link href="#">
+                                                <Link href="/product/product01#section04">
                                                     <Image src="/img/iceup/product-04.png" alt="test" width={560} height={350} className="w-100 h-auto"/>
                                                     <span className="bg"/>
                                                 </Link>
@@ -231,14 +231,14 @@ export default function Main({language} : Props) {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={language.main_15} className="link-dark" href="#"/>
+                                                    <Link className="link-dark" href="/product/product01#section04">{language.main_15}</Link>
                                                 </h2>
                                             </div>
 
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_22}</span>
+                                                        <span>{language.main_24}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -247,7 +247,7 @@ export default function Main({language} : Props) {
                                     <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
-                                                <Link href="#">
+                                                <Link href="/product/product01#section08">
                                                     <Image src="/img/iceup/product-03.png" alt="test" width={560} height={350} className="w-100 h-auto"/>
                                                     <span className="bg"/>
                                                 </Link>
@@ -259,14 +259,14 @@ export default function Main({language} : Props) {
 
                                             <div className="post-header">
                                                 <h2 className="post-title h3 mb-3">
-                                                    <NextLink title={language.main_16} className="link-dark" href="#"/>
+                                                    <Link className="link-dark" href="/product/product01#section08">{language.main_16}</Link>
                                                 </h2>
                                             </div>
 
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_22}</span>
+                                                        <span>{language.main_25}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -285,7 +285,7 @@ export default function Main({language} : Props) {
                             <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
                             </p>
                             <div>
-                                <Link href="/" className="btn btn-outline-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
+                                <Link href="/customer/inquiry" className="btn btn-outline-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>

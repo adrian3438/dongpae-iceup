@@ -11,40 +11,40 @@ export default function Product({language} : Props) {
         <>
             {pathName === '/product/product01' && (
                 <div className="mb-15">
-                    <div>
+                    <div id="section01">
                         <img src="/img/iceup/product-1-1.png" alt="ICEUP" className="w-100"/>
                     </div>
-                    <div className="position-relative">
+                    <div className="position-relative" id="section08">
                         <img src="/img/iceup/product-1-2.png" alt="ICEUP" className="w-100"/>
                         <div className="position-absolute end-0 top-50 pe-15">
                             <h2 className="fs-20">{language.product_5}</h2>
                             <p className="fs-20">{language.product_6}<br/>{language.product_6_2}<br/>{language.product_6_3}</p>
                         </div>
                     </div>
-                    <div className="position-relative">
+                    <div className="position-relative" id="section02">
                         <img src="/img/iceup/product-1-3.png" alt="ICEUP" className="w-100"/>
                         <div className="position-absolute end-0 top-50 pe-10">
                             <h2 className="fs-20">{language.product_7}</h2>
                             <p className="fs-20">{language.product_8}<br/>{language.product_8_2}<br/>{language.product_8_3}</p>
                         </div>
                     </div>
-                    <div>
+                    <div id="section03">
                         <img src="/img/iceup/product-1-4.png" alt="ICEUP" className="w-100"/>
                     </div>
-                    <div>
+                    <div id="section04">
                         <img src="/img/iceup/product-1-5.png" alt="ICEUP" className="w-100"/>
                     </div>
-                    <div className="position-relative">
+                    <div id="section05" className="position-relative">
                         <img src="/img/iceup/product-1-6.png" alt="ICEUP" className="w-100"/>
                         <div className="position-absolute end-0 top-50 pe-20">
                             <h2 className="fs-20">{language.product_11}</h2>
                             <p className="fs-20">{language.product_12}</p>
                         </div>
                     </div>
-                    <div>
+                    <div id="section06">
                         <img src="/img/iceup/product-1-7.png" alt="ICEUP" className="w-100"/>
                     </div>
-                    <div>
+                    <div id="section07">
                         <img src="/img/iceup/product-1-8.png" alt="ICEUP" className="w-100"/>
                     </div>
                     <div className="container">
