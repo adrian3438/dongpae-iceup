@@ -16,140 +16,40 @@ export default function Customer({language} : Props) {
     return (
         <>
             {pathName === '/customer/faq' && (<>
-                <section id="snippet-1" className="wrapper mb-15">
+                <section className="wrapper mb-15">
                     <h2 className="mb-3">{language.faq_1}</h2>
-                    <p></p>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-1">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-1"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-1">
-                                    Question1
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-1" className="accordion-collapse collapse" aria-labelledby="faq-1">
-                                <div className="card-body">
-                                    <p>
-                                        Answer1
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_18}</h4>
+                        <p>{language.faq_19}</p>
+                        <p>{language.faq_20}</p>
+                        <p>{language.faq_21}</p>
                     </div>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-2">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-2"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-2">
-                                    Question2
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-2" className="accordion-collapse collapse" aria-labelledby="faq-2">
-                                <div className="card-body">
-                                    <p>
-                                        Answer2
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_22}</h4>
+                        <p>{language.faq_23}</p>
+                        <p>{language.faq_24}</p>
                     </div>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-3">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-3"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-3">
-                                    Question3
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-3" className="accordion-collapse collapse" aria-labelledby="faq-3">
-                                <div className="card-body">
-                                    <p>
-                                        Answer3
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_25}</h4>
+                        <p>{language.faq_26}</p>
+                        <p>{language.faq_27}</p>
                     </div>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-4">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-4"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-4">
-                                    Question4
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-4" className="accordion-collapse collapse" aria-labelledby="faq-4">
-                                <div className="card-body">
-                                    <p>
-                                        Answer4
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_28}</h4>
+                        <p>{language.faq_29}</p>
+                        <p>{language.faq_30}</p>
                     </div>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-5">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-5"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-5">
-                                    Question5
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-5" className="accordion-collapse collapse" aria-labelledby="faq-5">
-                                <div className="card-body">
-                                    <p>
-                                        Answer5
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_31}</h4>
+                        <p>{language.faq_32}</p>
                     </div>
-                    <div className="accordion accordion-wrapper">
-                        <div className="card accordion-item">
-                            <div className="card-header" id="faq-6">
-                                <button
-                                    className="collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq-collapse-6"
-                                    aria-expanded="false"
-                                    aria-controls="faq-collapse-6">
-                                    Question6
-                                </button>
-                            </div>
-
-                            <div id="faq-collapse-6" className="accordion-collapse collapse" aria-labelledby="faq-6">
-                                <div className="card-body">
-                                    <p>
-                                        Answer6
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mb-10">
+                        <h4>{language.faq_33}</h4>
+                        <p>{language.faq_34}</p>
+                        <p>{language.faq_35}</p>
+                        <p>{language.faq_36}</p>
+                        <p>{language.faq_37}</p>
+                        <p>{language.faq_38}</p>
                     </div>
                 </section>
             </>)}
@@ -159,7 +59,18 @@ export default function Customer({language} : Props) {
             </>)}
 
             {pathName === '/customer/buy' && (<div className="min-vh-70">
-                {language?.faq_18}
+                <section className="wrapper mb-15">
+                    <h2 className="mb-3">{language.faq_39}</h2>
+                    <div className="mb-10">
+                        <h4>{language.faq_40}</h4>
+                        <p>{language.faq_41}</p>
+                        <p>{language.faq_42}</p>
+                        <p>{language.faq_43}</p>
+                        <p>{language.faq_44}</p>
+                        <p>{language.faq_45}</p>
+                        <p>{language.faq_46}</p>
+                    </div>
+                </section>
             </div>)}
         </>
     );

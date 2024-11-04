@@ -13,7 +13,7 @@ export default function PromotionCenter({data, language} : Props) {
     const pathName = usePathname();
     const router = useRouter()
     // console.log(data)
-    const {List, totalCnt} = data; 
+    const {List, totalCnt} = data;
     console.log(List)
     return (
         <>
@@ -108,7 +108,7 @@ export default function PromotionCenter({data, language} : Props) {
                         </div>
                     </article>
                 </section>
-                <Pagination className="justify-content-center mb-10"/>
+                {/* <Pagination className="justify-content-center mb-10"/> */}
             </>)}
 
             {pathName === '/promotion-center/promotion-videos' && (<>
