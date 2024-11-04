@@ -38,7 +38,7 @@ export default function Product({language} : Props) {
                         <img src="/img/iceup/product-1-6.png" alt="ICEUP" className="w-100"/>
                         <div className="position-absolute end-0 top-50 pe-20">
                             <h2 className="fs-20">{language.product_11}</h2>
-                            <p className="fs-20">{language.product_12}<br/>{language.product_12_2}</p>
+                            <p className="fs-20">{language.product_12}</p>
                         </div>
                     </div>
                     <div>
