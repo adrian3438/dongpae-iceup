@@ -41,7 +41,7 @@ export default function PromotionVideo() {
             if (result) {
                 setData((prev: any) => ({
                     ...prev,
-                    videoType: result.videoType,
+                    videoType: 3,
                     videoNameKr: result.videoNameKr,
                     videoNameEn: result.videoNameEn,
                     videoUrlKr: result.videoUrlKr,
@@ -53,12 +53,12 @@ export default function PromotionVideo() {
         }
     }
 
-    async function getPromotionType() {
+    /*async function getPromotionType() {
         const res = await axios.get(`/admin/contents/setup/getPromotionVideoTypeList2.php?page=1&size=999&keyword=&sortColumn=idx&sortOrder=asc`);
         if (res.data.result === true) {
             setVideoType(res.data.list);
         }
-    }
+    }*/
 
     async function handleSave() {
         const formData = new FormData();
@@ -77,6 +77,7 @@ export default function PromotionVideo() {
         if (res.data.result === true) {
             alert(type === 'regist' ? "등록이 완료되었습니다." : "수정이 완료되었습니다.");
             // 수정된 부분: router.push()와 router.back()의 사용
+
             if (type === 'regist') {
                 router.push('/admin/pr-video/promotion-video-list');
             } else {
@@ -122,12 +123,7 @@ export default function PromotionVideo() {
                                         <div className="selectBox">
                                             <select name="videoType" id="videoType" onChange={handleChange} value={data.videoType}>
                                                 <option value={''} disabled className="videoType">유형을 선택해 주세요.</option>
-                                                <option value={3}>회사소개</option>
-                                                {/*{videoType?.map((type: any) => (
-                                                    <option key={type.codeId} value={type.codeId}>
-                                                        {type.codeName}
-                                                    </option>
-                                                ))}*/}
+                                                <option value={3}>홍보영상</option>
                                             </select>
                                         </div>
                                     </div>

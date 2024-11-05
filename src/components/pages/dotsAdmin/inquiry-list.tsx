@@ -54,7 +54,7 @@ export default function InquiryListPage ({
                             size={size}
                         />
                     </div>
-                    
+
                     <div>
 
                         <ListInquiryTypeBox
@@ -96,7 +96,7 @@ export default function InquiryListPage ({
                                     {list?.inquiryType === 'T' && '테스터'}
                                     {list?.inquiryType === 'N' && '영양제'}
                                     {list?.inquiryType === 'F' && '식품'}
-                                    {list?.inquiryType === 'O' && '기타'} 
+                                    {list?.inquiryType === 'O' && '기타'}
                                     </span>
                                 </td>
                                 <td>
