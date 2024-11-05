@@ -61,11 +61,13 @@ export default function ContactUsForm ({language} : Props) {
         if(cookie?.LANG === 'kr'){formData.append('inquiryLang', 'KR')}
         if(cookie?.LANG === 'en'){formData.append('inquiryLang', 'EN')}
         if(data?.attachedFile)formData.append('files_length', data?.attachedFile)
+        formData.append('privacyAgree', data?.agreeTerms ? 'Y' : 'N')
         formData.append('advertiseAgree', data?.adagree ? 'Y' : 'N')
+
         try {
           const response = await api.post(`/user/inquiry/setInquiry.php`, formData)
           if(response?.data?.result === true) {
-            alert(response?.data?.resultMsg); 
+            alert(response?.data?.resultMsg);
             window.location.reload()
           }else{
             alert(response?.data?.resultMsg)
@@ -73,7 +75,7 @@ export default function ContactUsForm ({language} : Props) {
         }catch {alert('Server Error')}
         // router.refresh()
       };
-    return( 
+    return(
         <>
         <div className="container">
             <h2 className="display-5 text-center">{language.faq_2}</h2>
@@ -115,7 +117,7 @@ export default function ContactUsForm ({language} : Props) {
                                         required
                                         type="email"
                                         name="email"
-                                        onChange={handleChange} 
+                                        onChange={handleChange}
                                         id="form_email"
                                         className="form-control"
                                         placeholder={language.faq_7}
@@ -159,8 +161,7 @@ export default function ContactUsForm ({language} : Props) {
                         </div>
 
                         <div className="row gx-4 mt-8">
-                            <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> 
-                            {language.faq_15}
+                            <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> {language.faq_15}
                             <span className="text-red"></span></h3>
                             <div className="col-md-4">
                                 <input required type="file" name="attachedFile" id="file_upload" onChange={handleChange} className="form-control"/>
@@ -175,7 +176,7 @@ export default function ContactUsForm ({language} : Props) {
                                     </label>
                                     <input className="form-check-input" onChange={handleCheckboxChange} name="agreeTerms" type="checkbox" id="flexCheck1"/>
                                 </div>
-                                
+
                             </div>
                             <div className="form-check">
                                 <div className="d-inline-block m-auto mb-5">
@@ -184,7 +185,7 @@ export default function ContactUsForm ({language} : Props) {
                                     </label>
                                     <input className="form-check-input" onChange={handleCheckboxChange} name="adagree" type="checkbox" id="flexCheck2"/>
                                 </div>
-                                
+
                             </div>
                             <input type="submit" onClick={handleSubmit} value={language.faq_17} className="btn btn-primary rounded btn-send mb-3"/>
                         </div>
