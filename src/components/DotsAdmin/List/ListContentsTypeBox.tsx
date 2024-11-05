@@ -3,10 +3,14 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useAppSelector } from "store/hooks"
 interface Props {
-    contentsType : string
+    page? : any,
+    size? : any,
+    keyword? : any,
+    column? : any,
+    order? : any,
+    contentsType? : any
 }
 export default function ListContentsTypeBox ({contentsType} : Props) {
-    console.log(contentsType)
     const contentTypeList = useAppSelector((state) => (state.contentTypeData.contentType.contentType))
     const router = useRouter()
     const path = usePathname()

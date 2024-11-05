@@ -3,7 +3,12 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 interface Props {
-    keyword?:string
+    page? : any,
+    size? : any,
+    keyword? : string,
+    column? : string,
+    order? : string
+    contentsType? : any
 }
 export default function ListSearchBox ({
     keyword
