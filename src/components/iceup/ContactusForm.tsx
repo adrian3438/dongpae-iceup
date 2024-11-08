@@ -13,7 +13,7 @@ export default function ContactUsForm ({language} : Props) {
         position : "", // 직급
         email: "", // 이메일
         number: "", // 연락처
-        type : "S", // 문의 유형
+        questionType : "", // 문의 유형
         message: "", // 문의내용
         attachedFile : null, // 첨부파일
         agreeTerms: false, // 필수동의
@@ -47,8 +47,9 @@ export default function ContactUsForm ({language} : Props) {
         if(!data?.position) {alert('Please enter your position.'); return;}
         if(!data?.email) {alert('Please enter your email.'); return;}
         if(!data?.number) {alert('Please enter your number.'); return;}
-        if(!data?.type) {alert('Please select your inquiry type.'); return;}
+        if(!data?.questionType) {alert('Please select your inquiry type.'); return;}
         if(!data?.message) {alert('Please enter your message.'); return;}
+        console.log('data : ', data);
 
         const formData : any = new FormData()
         formData.append('inquiryCompanyName', data?.company)
@@ -56,7 +57,7 @@ export default function ContactUsForm ({language} : Props) {
         formData.append('inquiryPosition', data?.position)
         formData.append('inquiryEmail', data?.email)
         formData.append('inquiryPhone', data?.number)
-        formData.append('inquiryType', data?.type)
+        formData.append('inquiryType', data?.questionType)
         formData.append('inquiryContent' , data?.message)
         if(cookie?.LANG === 'kr'){formData.append('inquiryLang', 'KR')}
         if(cookie?.LANG === 'en'){formData.append('inquiryLang', 'EN')}
@@ -68,6 +69,7 @@ export default function ContactUsForm ({language} : Props) {
           const response = await api.post(`/user/inquiry/setInquiry.php`, formData)
           if(response?.data?.result === true) {
             alert(response?.data?.resultMsg);
+            return;
             window.location.reload()
           }else{
             alert(response?.data?.resultMsg)
@@ -130,11 +132,11 @@ export default function ContactUsForm ({language} : Props) {
                         <div className="row gx-4 mt-8">
                             <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">2</span> {language.faq_8} <span className="text-red">*</span></h3>
                             <div className="dots-dongpae-form2">
-                                <div><input type="radio" id="questionType01" name="questionType"/><label htmlFor="questionType01" className="form-control text-center p-0">{language.faq_9}</label></div>
-                                <div><input type="radio" id="questionType02" name="questionType"/><label htmlFor="questionType02" className="form-control text-center p-0">{language.faq_10}</label></div>
-                                <div><input type="radio" id="questionType03" name="questionType"/><label htmlFor="questionType03" className="form-control text-center p-0">{language.faq_11}</label></div>
-                                <div><input type="radio" id="questionType04" name="questionType"/><label htmlFor="questionType04" className="form-control text-center p-0">{language.faq_12}</label></div>
-                                <div><input type="radio" id="questionType05" name="questionType"/><label htmlFor="questionType05" className="form-control text-center p-0">{language.faq_13}</label></div>
+                                <div><input type="radio" id="questionType01" name="questionType" onChange={handleChange} value="C"/><label htmlFor="questionType01" className="form-control text-center p-0">{language.faq_9}</label></div>
+                                <div><input type="radio" id="questionType02" name="questionType" onChange={handleChange} value="D"/><label htmlFor="questionType02" className="form-control text-center p-0">{language.faq_10}</label></div>
+                                <div><input type="radio" id="questionType03" name="questionType" onChange={handleChange} value="E"/><label htmlFor="questionType03" className="form-control text-center p-0">{language.faq_11}</label></div>
+                                <div><input type="radio" id="questionType04" name="questionType" onChange={handleChange} value="I"/><label htmlFor="questionType04" className="form-control text-center p-0">{language.faq_12}</label></div>
+                                <div><input type="radio" id="questionType05" name="questionType" onChange={handleChange} value="O"/><label htmlFor="questionType05" className="form-control text-center p-0">{language.faq_13}</label></div>
                             </div>
                         </div>
 
