@@ -52,7 +52,7 @@ export default function ContactUsForm ({language} : Props) {
         console.log('data : ', data);
 
         const formData : any = new FormData()
-        formData.append('inquiryCompanyName', data?.company)
+        formData.append('companyName', data?.company)
         formData.append('inquiryName', data?.name)
         formData.append('inquiryPosition', data?.position)
         formData.append('inquiryEmail', data?.email)
