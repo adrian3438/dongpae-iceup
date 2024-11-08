@@ -4,8 +4,7 @@ import {usePathname, useRouter} from "next/navigation";
 import Link from "next/link";
 import FigureImage from "../../components/reuseable/FigureImage";
 import NextLink from "../reuseable/links/NextLink";
-import Pagination from "../reuseable/Pagination";
-import { useTranslation } from "react-i18next";
+
 interface Props {
     data : any, language : any
 }

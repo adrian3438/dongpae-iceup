@@ -1,12 +1,6 @@
 'use client'
 
 import {usePathname} from "next/navigation";
-import Link from "next/link";
-import FigureImage from "../../components/reuseable/FigureImage";
-import NextLink from "../reuseable/links/NextLink";
-import Pagination from "../reuseable/Pagination";
-import CodeHighlight from "../reuseable/CodeHighlight";
-import { useTranslation } from "react-i18next";
 import ContactUsForm from "./ContactusForm";
 interface Props {
     language : any

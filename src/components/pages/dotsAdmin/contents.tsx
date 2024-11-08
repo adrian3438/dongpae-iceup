@@ -255,12 +255,12 @@ export default function ContentsPage ({
                                     name={'description'}
                                 /> : ''
                                 }
-                                {!id && 
+                                {!id ?
                                 <Summernote
                                     initData={data?.description}
                                     setData={setData}
                                     name={'description'}
-                                />
+                                /> : ""
                                 }
                             </td>
                         </tr>

@@ -1,5 +1,5 @@
 import api from "lib/api";
-import PromotionCenterPage from "../../../components/pages/PromotionCenterPage";
+import PromotionCenterPage from "components/pages/PromotionCenterPage";
 import { fetchLanguage } from "utils/fetchLang";
 import { cookies } from "next/headers";
 

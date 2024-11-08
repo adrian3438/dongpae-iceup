@@ -1,5 +1,5 @@
 import { fetchLanguage } from "utils/fetchLang";
-import BrandPage from "../../../components/pages/BrandPage";
+import BrandPage from "components/pages/BrandPage";
 
 export default async function Brand({searchParams : {lang}} : any) {
     const language = await fetchLanguage(lang)
