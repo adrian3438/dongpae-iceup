@@ -15,8 +15,20 @@ export default function InquiryPage ({id} : any) {
     async function save () {
 
     }
-    async function reply () {
-
+    async function reply (status : string) {
+        if(status !== data?.replyStatus){
+            const confirmMsg = status === 'R' ? '답변 처리를 하시겠습니까?' : '답변 전으로 복원하시겠습니까?';
+            const confirm = window.confirm(confirmMsg);
+            if(confirm) {
+                try {
+                    const formData = new FormData()
+                    formData.append('inquiryId' , id)
+                    formData.append('replyStatus' , status)
+                    const response = await api.post(`/admin/inquiry/updInquiryReplyStatus.php`, formData)
+                    if(response?.data?.result === true) { alert(response?.data?.resultMsg); router.back(); }
+                }catch { alert('Server Error'); }
+            }
+        }
     }
     useEffect(()=>{
         async function fetchDetail () {
@@ -92,8 +104,8 @@ export default function InquiryPage ({id} : any) {
                     :''
                     }
                     <div>
-                        <span>답변전</span>
-                        <span>답변완료</span>
+                        <span onClick={() => reply("U")}>답변전</span>
+                        <span onClick={() => reply("R")}>답변완료</span>
                     </div>
                 </div>
                 <h5>{}</h5>
@@ -106,11 +118,11 @@ export default function InquiryPage ({id} : any) {
                             <div>
                                 <span>문의 유형</span>
                                 <span>
-                                    {data?.inquiryType === 'S' && '스마일리더 앱'}
-                                    {data?.inquiryType === 'T' && '테스터'}
-                                    {data?.inquiryType === 'N' && '영양제'}
-                                    {data?.inquiryType === 'F' && '식품'}
-                                    {data?.inquiryType === 'O' && '기타'} 
+                                    {data?.inquiryType === 'C' && '기업용 제빙기'}
+                                    {data?.inquiryType === 'D' && '대리점 모집'}
+                                    {data?.inquiryType === 'E' && '해외수출'}
+                                    {data?.inquiryType === 'I' && '투자문의'}
+                                    {data?.inquiryType === 'O' && '기타문의'}
                                 </span>
                             </div>
                         </li>
@@ -167,7 +179,7 @@ export default function InquiryPage ({id} : any) {
                         }}>
                         </div>
                     </div>
-                    
+
                     <div className="fileName">
                         <span>첨부파일</span>
                         {data?.attachedFilename ?
@@ -178,8 +190,8 @@ export default function InquiryPage ({id} : any) {
                         }
                     </div>
                 </div>
-                
-                {data?.replyStatus === 'U' ?
+
+                {/*{data?.replyStatus === 'U' ?
 
                 <div className="answerBox">
                     <h5>문의답변</h5>
@@ -195,25 +207,25 @@ export default function InquiryPage ({id} : any) {
                 <div className="inquiry_table">
                     <div className="inquiry_details">
                         <span>답변내용</span>
-                        <div dangerouslySetInnerHTML={{__html : data?.replyList?.length > 0 && 
+                        <div dangerouslySetInnerHTML={{__html : data?.replyList?.length > 0 &&
                             data?.replyList[0]?.replyContent}}>
                         </div>
                     </div>
                 </div>
-                }
+                }*/}
 
 
-                <div className="btnBox">
-                    {/* <button className="blackBtn">초기화</button> */}
+                {/*<div className="btnBox">
+                     <button className="blackBtn">초기화</button>
                     {data?.replyStatus === 'U' ?
                     <>
                     <button className="blueBtn" onClick={()=>reply()}>답변하기</button>
                     </>
                     : ''
                     }
-                </div>
+                </div>*/}
             </div>
-            
+
         </div>
         </>
     )
