@@ -7,6 +7,7 @@ import ListSizeBox from "components/DotsAdmin/List/ListSizeBox";
 import api from "lib/api";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import useCalCulateIndex from "../../useCalculate";
 
 interface Props {
     inquiryType : string
@@ -34,7 +35,7 @@ export default function InquiryListPage ({
         }catch {alert('Server Error')}
     }
     useEffect(()=>{
-        getList()
+        getList();
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, size, keyword, column, order, inquiryType, replyStatus])
     return(
@@ -88,7 +89,7 @@ export default function InquiryListPage ({
                             {data?.map((list:any, index:number) => (
                             <tr key={list?.ID}>
                                 <td>
-                                    <span className="readOnly">-</span>
+                                    <span className="readOnly">{useCalCulateIndex(page, size, totalCount, index)}</span>
                                 </td>
                                 <td>
                                     <span className="readOnly">

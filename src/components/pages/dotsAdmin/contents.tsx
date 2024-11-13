@@ -25,7 +25,7 @@ export default function ContentsPage ({
         // 컨텐츠 유형 , 우선공지 , 공지상단 , 검색키워드 , 제목
         contentType : '1', prirorityNews : 'N', noticePrirority : 'N', searchKeyword : [], subject : '',
         // 보도자료 언론사 , 보도자료URL , 페이스북 , 링크드인 , 유튜브 , 트위터
-        pressCenter : '', pressUrl : '', facebook : '', linkedIn : '', youtube : '', twitter : '', 
+        pressCenter : '', pressUrl : '', facebook : '', linkedIn : '', youtube : '', twitter : '',
         // 전시기간 , 전시장소 , 전시 사업분야 , 전시 웹사이트 , 발췌내용
         exhibitionTerm : '', exhibitionPlace : '', exhibitionDivision : '', exhibitionWebsite  : '', excerpt : '',
         // 컨텐츠 내용 , 썸네일 이미지 , 첨부 파일 , 보도일자
@@ -54,7 +54,7 @@ export default function ContentsPage ({
             const formData = new FormData()
             if(id){
                 formData.append('contentDetailId', id)
-                formData.append('lang', lang) 
+                formData.append('lang', lang)
             }
             formData.append('managerId', managerInfo?.ID || 1);
             formData.append('contentType' , data?.contentType)
@@ -151,7 +151,7 @@ export default function ContentsPage ({
     }, []);
     return(
         <>
-        
+
         <div className="contentBox add">
             <h3>Contents</h3>
             <div className="flexBox">
@@ -267,7 +267,7 @@ export default function ContentsPage ({
                     </tbody>
                 </table>
             </div>
-            
+
         </div>
         </>
     )

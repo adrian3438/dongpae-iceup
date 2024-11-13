@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 export default function AdminHeader () {
     const userInfo : any = useAppSelector((state) => state.userData.users.users);
     const router = useRouter()
-    console.log(userInfo)
+    // console.log(userInfo)
     function handleLogout () {
         Cookies.remove('dissid');
         location.href = '/admin'

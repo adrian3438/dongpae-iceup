@@ -48,7 +48,6 @@ export default function PromotionVideo() {
                     videoUrlEn: result.videoUrlEn,
                     videoPublishDate: result.videoPublishDate,
                 }));
-                console.log(data);
             }
         }
     }

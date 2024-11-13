@@ -76,14 +76,14 @@ export default function PromotionVideoList () {
                         />
 
                         <div>
-                            <ListContentsTypeBox
+                            {/*<ListContentsTypeBox
                                 page={page}
                                 size={size}
                                 keyword={keyword}
                                 column={column}
                                 order={order}
                                 contentsType={contentsType}
-                            />
+                            />*/}
 
                             <AdminListSearchBox
                                 page={page}

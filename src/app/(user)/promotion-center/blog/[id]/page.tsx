@@ -14,7 +14,7 @@ export default async function BlogDetail1({params, searchParams : {id, lang}} : 
     const langValue = lang || cookieLang?.value
     const response = await api.get(`/user/promotion/getContentDetail.php?ID=${params.id}&contentType=${1}&userLang=${langValue}`)
     const data = response?.data?.result === true ? response?.data : null;
-    console.log(data)
+
     return (
         <Fragment>
             {/* ========== header ========== */}

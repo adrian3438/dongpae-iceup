@@ -49,7 +49,6 @@ export default function ContactUsForm ({language} : Props) {
         if(!data?.number) {alert('Please enter your number.'); return;}
         if(!data?.questionType) {alert('Please select your inquiry type.'); return;}
         if(!data?.message) {alert('Please enter your message.'); return;}
-        console.log('data : ', data);
 
         const formData : any = new FormData()
         formData.append('companyName', data?.company)

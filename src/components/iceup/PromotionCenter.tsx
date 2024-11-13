@@ -4,6 +4,8 @@ import {usePathname, useRouter} from "next/navigation";
 import Link from "next/link";
 import FigureImage from "../../components/reuseable/FigureImage";
 import NextLink from "../reuseable/links/NextLink";
+import {useEffect, useState} from "react";
+import api from "../../lib/api";
 
 interface Props {
     data : any, language : any
@@ -13,7 +15,25 @@ export default function PromotionCenter({data, language} : Props) {
     const router = useRouter()
     // console.log(data)
     const {List, totalCnt} = data;
-    console.log(List)
+
+
+    const [videoData, setVideoData] = useState<number[]>([]);
+    async function getVideoList() {
+        try {
+            const response = await api.get(`/user/promotion/getPrVideoList.php`)
+            if(response?.data?.result === true) {
+                setVideoData(response?.data?.List);
+            } else {
+                alert(response?.data?.resultMsg);
+            }
+        }catch{
+            alert('Server Error')
+        }
+    }
+    useEffect(() => {
+        getVideoList();
+    }, []);
+
     return (
         <>
             {pathName === '/promotion-center/catalogue' && (<>
@@ -146,8 +166,8 @@ export default function PromotionCenter({data, language} : Props) {
                     <article className="item post col-md-4 mb-5" key={list.ID} onClick={()=>router.push(`/promotion-center/blog/${list?.ID}`)}>
                         <div className="card">
                             <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="/promotion-center/blog/1">
-                                    <FigureImage width={560} height={350} src={'https://marineplaza.org/iceup-api/upload/promotion/performance_imageDetail_0_2023043007233879333018.jpg'}/>
+                                <Link href={`/promotion-center/blog/${list.ID}`}>
+                                    <FigureImage width={560} height={350} src={list.thumnailFile}/>
                                     <span className="bg"/>
                                 </Link>
 

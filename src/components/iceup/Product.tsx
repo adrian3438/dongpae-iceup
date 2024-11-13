@@ -1,12 +1,27 @@
 'use client'
 
-import {usePathname} from "next/navigation";
-import { useTranslation } from "react-i18next";
+import {usePathname, useSearchParams} from "next/navigation";
+import {useEffect} from "react";
 interface Props {
     language : any
 }
 export default function Product({language} : Props) {
     const pathName = usePathname();
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const hash = window.location.hash;
+
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 200);
+            }
+        }
+    }, [pathName, searchParams]);
+
     return (
         <>
             {pathName === '/product/product01' && (
