@@ -10,6 +10,7 @@ import { useAppSelector } from "store/hooks"
 import Head from "next/head"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
+import PdfUploadBox from "../../DotsAdmin/Element/PdfUploadBox";
 interface Props {
     id : any
     lang : any
@@ -76,6 +77,7 @@ export default function ContentsPage ({
             formData.append('linkedInUrl', data?.linkedIn ? data?.linkedIn : '');
             formData.append('youtubeUrl', data?.youtube ? data?.youtube  :'');
             formData.append('twitterUrl', data?.twitter ? data?.twitter : '');
+            formData.append('attachedFile', data?.attachedFile ? data?.attachedFile : '');
             if(id) {
                 const response = await api.post(`/admin/contents/updContent.php`, formData)
                 if(response?.data?.result === true) {
@@ -190,6 +192,11 @@ export default function ContentsPage ({
                             setData={setData}
                             setPreview={setPreviewImage}
                         />
+
+                        {data?.contentType === '2' && (
+                            <PdfUploadBox setData={setData}/>
+                        )}
+
                         <TextBox
                             title={'제목'}
                             name={'subject'}
@@ -220,15 +227,15 @@ export default function ContentsPage ({
                             value={data?.twitter}
                             setData={setData}
                         />
-                        <tr>
+                        {/*<tr>
                             <th>보도일자 <span className="star">*</span></th>
                             <td>
                                 <div className="dateBox">
                                     <input type="date" value={data?.date} name="date" id="date"/>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
+                        </tr>*/}
+                        {/*<tr>
                             <th>검색 키워드 <span className="star">*</span></th>
                             <td>
                                 <ChipInputBox
@@ -237,7 +244,7 @@ export default function ContentsPage ({
                                 />
                                 <p className="infoTxt">검색 키워드는 디케이락 회원이 등록된 컨텐츠을 검색할 경우 사용됩니다. 개별 키워드 입력 후 엔터키로 등록하시면 됩니다.</p>
                             </td>
-                        </tr>
+                        </tr>*/}
                         <TextAreaBox
                             title={'발췌'}
                             name={'excerpt'}

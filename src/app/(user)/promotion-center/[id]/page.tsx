@@ -34,7 +34,6 @@ export default async function PromotionCenter({params, searchParams : {id, lang}
             sortColumn: 'date',
             sortOrder: 'desc'
         }
-
     });
     const data = response?.data?.result === true ? response?.data : null
     // console.log(data)

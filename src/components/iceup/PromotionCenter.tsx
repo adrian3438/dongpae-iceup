@@ -7,6 +7,7 @@ import NextLink from "../reuseable/links/NextLink";
 import {useEffect, useState} from "react";
 import api from "../../lib/api";
 import PromotionVideoList from "./PromotionVideoList";
+import Catalog from "./Catalog";
 
 interface Props {
     data : any, language : any
@@ -21,96 +22,7 @@ export default function PromotionCenter({data, language} : Props) {
     return (
         <>
             {pathName === '/promotion-center/catalogue' && (<>
-                <section className="row mb-10">
-                    <article className="item post col-md-4 mb-5">
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="#">
-                                    <FigureImage width={560} height={350} src="/img/catalog_example_1.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Countertop Ice Maker"} className="link-dark" href="#"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article className="item post col-md-4 mb-5">
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="#">
-                                    <FigureImage width={560} height={350} src="/img/catalog_example_2.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"Silonn Ice Maker Countertop"} className="link-dark" href="#"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article className="item post col-md-4 mb-5">
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="#">
-                                    <FigureImage width={560} height={350} src="/img/catalog_example_3.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"La Nouvelle Ice Maker"} className="link-dark" href="#"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article className="item post col-md-4 mb-5">
-                        <div className="card">
-                            <figure className="card-img-top overlay overlay-1 hover-scale">
-                                <Link href="#">
-                                    <FigureImage width={560} height={350} src="/img/catalog_example_4.jpg"/>
-                                    <span className="bg"/>
-                                </Link>
-
-                                <figcaption>
-                                    <h5 className="from-top mb-0">Read More</h5>
-                                </figcaption>
-                            </figure>
-
-                            <div className="card-body py-4">
-                                <div className="post-header">
-                                    <h2 className="post-title h3 mt-3 mb-3 text-center">
-                                        <NextLink title={"E-Macht 2 In 1 Countertop Ice Maker"} className="link-dark" href="#"/>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
+                <Catalog language={language}/>
                 {/* <Pagination className="justify-content-center mb-10"/> */}
             </>)}
 
