@@ -13,17 +13,17 @@ export default function Footer({language} : any) {
                     <div className="row justify-content-between align-content-center">
                         <div className="col-md-auto">
                             <div className="row mt-2">
-                                <div className="col-md-auto lh-1">
+                                {/*<div className="col-md-auto lh-1">
                                     <NextLink title={language.footer_1} href="#"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
                                     <NextLink title={language.footer_2} href="#"/>
+                                </div>*/}
+                                <div className="col-md-auto lh-1">
+                                    <NextLink title={language.footer_3} href="/customer/buy"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
-                                    <NextLink title={language.footer_3} href="#"/>
-                                </div>
-                                <div className="col-md-auto border-start lh-1">
-                                    <NextLink title={language.footer_4} href="#"/>
+                                    <NextLink title={language.footer_4} href="/customer/inquiry"/>
                                 </div>
                             </div>
                         </div>
