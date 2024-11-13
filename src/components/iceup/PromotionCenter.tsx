@@ -6,6 +6,7 @@ import FigureImage from "../../components/reuseable/FigureImage";
 import NextLink from "../reuseable/links/NextLink";
 import {useEffect, useState} from "react";
 import api from "../../lib/api";
+import PromotionVideoList from "./PromotionVideoList";
 
 interface Props {
     data : any, language : any
@@ -16,23 +17,6 @@ export default function PromotionCenter({data, language} : Props) {
     // console.log(data)
     const {List, totalCnt} = data;
 
-
-    const [videoData, setVideoData] = useState<number[]>([]);
-    async function getVideoList() {
-        try {
-            const response = await api.get(`/user/promotion/getPrVideoList.php`)
-            if(response?.data?.result === true) {
-                setVideoData(response?.data?.List);
-            } else {
-                alert(response?.data?.resultMsg);
-            }
-        }catch{
-            alert('Server Error')
-        }
-    }
-    useEffect(() => {
-        getVideoList();
-    }, []);
 
     return (
         <>
@@ -130,35 +114,9 @@ export default function PromotionCenter({data, language} : Props) {
                 {/* <Pagination className="justify-content-center mb-10"/> */}
             </>)}
 
-            {pathName === '/promotion-center/promotion-videos' && (<>
-                <section className="row mb-12 justify-content-center rounded">
-                    <div className="dots-main-video dots-main-video2 rounded col-md-10">
-                        <iframe src="https://player.vimeo.com/video/1003081314?badge=0&autopause=0&player_id=0&app_id=58479" title="DONPER-company-introduction" allowFullScreen>
-                        </iframe>
-                    </div>
-                </section>
-
-                <section className="row justify-content-center mb-10">
-                    <div className="col-md-10">
-                        <h3>{language.example_1}</h3>
-                        <hr className="mt-5 mb-10"/>
-                        <div className="row">
-                            <div className="col-md-6 mb-6">
-                                <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/1003088041?badge=0&autopause=0&player_id=0&app_id=5847958479" title="ICEUP-ICEMAKER-compare" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="dots-main-video rounded">
-                                    <iframe src="https://player.vimeo.com/video/1003088016?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="ICEUP ICEMAKER-music" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </>)}
+            {pathName === '/promotion-center/promotion-videos' && (
+                <PromotionVideoList language={language}/>
+            )}
 
             {pathName === '/promotion-center/blog' && (<>
                 <section className="row mb-10">

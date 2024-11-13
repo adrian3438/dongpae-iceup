@@ -17,7 +17,7 @@ export default function PromotionCenterPage({data, language} : Props) {
         { id: 2, title: language.header_6, url: '/promotion-center/promotion-videos'},
         { id: 3, title: language.header_7, url: '/promotion-center/blog'},
     ];
-    
+
     return (
         <Fragment>
             {/* ========== header ========== */}

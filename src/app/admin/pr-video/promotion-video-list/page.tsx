@@ -139,10 +139,11 @@ export default function PromotionVideoList () {
                                         <span className="readOnly">{list?.videoNameKr}</span>
                                     </td>
                                     <td>
-                                        <span className="readOnly"><a href={list?.videoUrlKr} target="_blank"><i className="fa-brands fa-youtube" aria-hidden="true"></i></a></span>
+                                        {/*<span className="readOnly"><a href={list?.videoUrlKr} target="_blank"><i className="fa-brands fa-youtube" aria-hidden="true"></i></a></span>*/}
+                                        <span className="readOnly"><a href={list?.videoUrlKr} target="_blank">링크</a></span>
                                     </td>
-                                    <td onClick={()=>router.push(`/admin/pr-video/promotion-video?t=${list?.videoId}`)}>
-                                        <span className="readOnly">{list?.videoPublishDate}</span>
+                                    <td onClick={() => router.push(`/admin/pr-video/promotion-video?t=${list?.videoId}`)}>
+                                    <span className="readOnly">{list?.videoPublishDate}</span>
                                     </td>
                                     <td onClick={()=>router.push(`/admin/pr-video/promotion-video?t=${list?.videoId}`)}>
                                         <span className="readOnly">{list?.videoMdate}</span>

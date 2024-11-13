@@ -231,5 +231,6 @@
 
 
     "example_1" : "Company",
-    "test" : "Test"
+    "test" : "Test",
+    "lang": "en"
 }
