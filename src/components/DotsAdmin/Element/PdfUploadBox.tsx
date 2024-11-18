@@ -6,7 +6,6 @@ export default function PdfUploadBox ({
     setData
 } : Props) {
     function handleChange (e:any){
-        console.log('test');
         const {name , files} = e.target;
         const reader = new FileReader()
         if(files[0]) {reader.readAsDataURL(files[0])}
