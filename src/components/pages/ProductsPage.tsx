@@ -5,15 +5,13 @@ import Footer from "components/iceup/Footer";
 import Sidebar from "../iceup/Sidebar";
 import Product from "../iceup/Product";
 import { useTranslation } from "react-i18next";
+import Product2 from "../iceup/Product2";
 
-
-const ProductList = [
-    { id: 1, title: 'ICEUP', url: '/product/product01' },
-];
 interface Props {
     language : any
+    id: any
 }
-export default function ProductsPage({language} : Props) {
+export default function ProductsPage({language, id} : Props) {
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -21,18 +19,9 @@ export default function ProductsPage({language} : Props) {
 
             {/* ========== main content ========== */}
             <div className="mt-8">
-                <Product language={language}/>
+                {id === 'product01' && <Product language={language}/>}
+                {id === 'product02' && <Product2 language={language}/>}
             </div>
-            {/*<div className="container">
-                <div className="row">
-                    <aside className="col-lg-3 sidebar mt-8 mt-lg-6">
-                        <Sidebar title={language.header_3} sidebarList={ProductList}/>
-                    </aside>
-                    <div className="mt-8">
-                        <Product language={language}/>
-                    </div>
-                </div>
-            </div>*/}
 
             {/* ========== footer section ========== */}
             <Footer language={language}/>

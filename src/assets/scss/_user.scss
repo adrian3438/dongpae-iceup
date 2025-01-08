@@ -163,5 +163,47 @@ body {
 .sitemap ul {list-style: none}
 .sitemap > div > ul > li > ul > li{
   margin-top:15px;
+}
 
+
+/* Main */
+.vimeo-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  vertical-align: top;
+}
+.main-swiper {
+  .link {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    color: #4B4B4B;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 20px;
+    opacity: 0.65;
+    font-weight: bold;
+    padding: 5px 20px;
+    img {
+      margin-left: 5px;
+      width: auto !important;
+    }
+  }
+}
+.go-link {
+  margin-top: 100px;
+  margin-bottom: 0;
+  > a {
+    color: #4B4B4B;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 13px 20px;
+    img {
+      margin-left: 5px;
+      width: auto !important;
+    }
+  }
 }

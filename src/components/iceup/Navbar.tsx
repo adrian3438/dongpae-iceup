@@ -79,42 +79,13 @@ export default function Navbar({
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NextLink className="dropdown-item" href="/product/product01" title="ICEUP"/>
+                    <NextLink className="dropdown-item" href="/product/product01" title="Ice Maker"/>
+                  </li>
+                  <li>
+                    <NextLink className="dropdown-item" href="/product/product02" title="Module"/>
                   </li>
                 </ul>
               </li>
-
-              {/*<li className="nav-item dropdown">
-                <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                  사업영역
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="유통"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="제빵"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="가공"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="사우나/스파"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="연구실"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="화학산업"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="식당"/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="#" title="기타"/>
-                  </li>
-                </ul>
-              </li>*/}
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
@@ -134,23 +105,9 @@ export default function Navbar({
               </li>
 
               <li className="nav-item dropdown">
-                <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
+                <a href="/location" className="nav-link dropdown-toggle">
                 {lang.header_8}
                 </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <NextLink className="dropdown-item" href="/guide/guide01" title={lang.header_9}/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="/guide/guide02" title={lang.header_10}/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="/guide/guide03" title={lang.header_11}/>
-                  </li>
-                  <li>
-                    <NextLink className="dropdown-item" href="/guide/guide04" title={lang.header_12}/>
-                  </li>
-                </ul>
               </li>
 
               <li className="nav-item dropdown">
@@ -178,7 +135,7 @@ export default function Navbar({
           <ul className="navbar-nav flex-row align-items-center ms-auto">
 
             <LangBox/>
-            
+
             <li className="nav-item">
               <a href="/sitemap" className="nav-link">
                 SITEMAP

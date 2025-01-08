@@ -6,6 +6,7 @@ import NextLink from "../reuseable/links/NextLink";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "components/iceup/Footer";
+import MainBlogList from "../iceup/MainBlogList";
 interface Props {
     language?:any
 }
@@ -24,140 +25,106 @@ export default function Main({language} : Props) {
             {/* ========== main content ========== */}
             <main className="content-wrapper">
                 <MainBanner/>
-
-                <div className="wrapper dots-bg-color1">
+                <div className="wrapper py-12">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-md-6 border-start">
-                                &nbsp;<br/>
-                                &nbsp;
-                            </div>
-                            <div className="col-md-6 border-start border-end">
-                                &nbsp;<br/>
-                                &nbsp;
-                            </div>
-                        </div>
-                    </div>
-                    <hr className="m-0"/>
-                    <div className="container">
-                        <div className="row">
-                            <div className="py-3 col-md-6 border-start">
-                                <p className="text-white fs-35 fw-bold">Finger</p>
-                                <p className="text-white mb-0">Cooling and Heating method</p>
-                            </div>
-                            <div className="py-3 col-md-6 border-start border-end">
-                                <p className="text-white fs-35 fw-bold">Iceup</p>
-                                <p className="text-white mb-0">24hours cooling, longer life span ice maker</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr className="m-0"/>
-                    <div className="container">
-                        <div className="row">
-                            <div className="py-6 col-md-6 border-start text-center">
-                                <img src="/img/iceup/main-finger.png" alt="Finger"/>
-                            </div>
-                            <div className="py-6 col-md-6 border-start border-end text-center overflow-hidden">
-                                <img src="/img/iceup/main-iceup.jpg" alt="Iceup" className="h-100"/>
-                            </div>
-                        </div>
-                    </div>
-                    <hr className="m-0"/>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6 border-start">
-                                &nbsp;<br/>
-                                &nbsp;
-                            </div>
-                            <div className="col-md-6 border-start border-end">
-                                &nbsp;<br/>
-                                &nbsp;
-                            </div>
+                        <div className="row justify-content-between">
+                            <div className="col-md-5 fs-45 lh-xxs mb-6 text-navy">{language?.main_26}</div>
+                            <div className="col-md-6">{language?.main_27}</div>
                         </div>
                     </div>
                 </div>
-
-                <div className="wrapper bg-pale-ash py-5">
+                <div className="wrapper">
                     <div className="container">
-                        <div className="row gx-lg-8 gy-8 py-10 align-items-center justify-content-between">
-                            <div className="col-lg-5 order-lg-2">
-                                <div className="row gx-md-5 gy-5">
-                                    <div className="col-md-6 align-content-center">
-                                        <div className="bg-white border rounded p-5 pb-16"
-                                             style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
-                                        >
-                                            <p className="fw-bold">Full Cube</p>
-                                            <p className="mb-0 fs-16">{language.main_1}<br/>{language.main_2}</p>
-                                        </div>
-                                        <div className="bg-white border rounded p-5 pb-16 mt-5"
-                                             style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
-                                        >
-                                            <p className="fw-bold">Nugget</p>
-                                            <p className="mb-0 fs-16">{language.main_17}</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 align-content-center">
-                                        <div className="bg-white border rounded p-5 pb-16"
-                                             style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
-                                        >
-                                            <p className="fw-bold">Half Cube</p>
-                                            <p className="mb-0 fs-16">{language.main_3}<br/>{language.main_4}</p>
-                                        </div>
-                                        <div className="bg-white border rounded p-5 pb-16 mt-5"
-                                             style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
-                                        >
-                                            <p className="fw-bold">Flake</p>
-                                            <p className="mb-0 fs-16">{language.main_18}</p>
-                                        </div>
-                                        <div className="bg-white border rounded p-5 pb-16 mt-5"
-                                             style={{background: 'url(/img/iceup/cube.png) no-repeat 90% 90%'}}
-                                        >
-                                            <p>Crescent</p>
-                                            <p className="mb-0 fs-16">{language.main_19}</p>
-                                        </div>
+                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1003088041?h=4647f51639&autoplay=1&loop=1&muted=1&controls=0" allowFullScreen></iframe>
+                    </div>
+                </div>
+                <div className="wrapper my-15">
+                    <div className="container">
+                        <div className="bg-soft-blue rounded-4">
+                            <div className="row align-items-stretch justify-content-center">
+                                <div className="col-md-6 p-5">
+                                    <div className="bg-soft-ash text-center d-flex align-items-center justify-content-center h-100 shadow rounded-4">
+                                        <Image src="/img/iceup/dongpae_international_logo_color.png" alt="DONGPAE International" width={502} height={127}/>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="col-lg-6">
-                                <h2 className="display-4 mb-3">{language.main_5}</h2>
-                                <p className="lead fs-lg mb-8 pe-xxl-2">
-                                {language.main_6}
-                                {language.main_7}
-                                </p>
-                                {/*<Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>*/}
+                                <div className="col-md-6 p-5">
+                                    <h3 className="fs-45">The Pioneer of Nugget Type Ice Maker Technology.</h3>
+                                    <p>At Dongpae International, we are at the forefront of innovation in the ice maker
+                                        industry, specializing in nugget type ice technology. Our mission is to deliver the
+                                        highest quality nugget ice solutions that enhance the experiences of both
+                                        residential and commercial customers worldwide.</p>
+                                    <p>With years of expertise and a commitment to excellence, Dongpae International
+                                        designs and manufactures state-of-the-art ice makers that are renowned for
+                                        their reliability, efficiency, and superior ice quality. Our nugget ice machines are
+                                        perfect for a variety of settings, including restaurants, cafes, healthcare facilities,
+                                        and home kitchens, providing the perfect blend of functionality and style.</p>
+                                    <p className="go-link">
+                                        <Link href="#" className="shadow">Go to Dongpae International <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/*<div className="wrapper my-10">
+                <div className="wrapper my-15">
                     <div className="container">
-                        <h2 className="mb-6">{language.main_8}</h2>
-                        <div className="row">
-                            <div className="col-md-5 bg-blue rounded px-5 py-10"
-                                 style={{background: 'url(/img/iceup/icebox.png) no-repeat 90% 100%'}}
-                            >
-                                <h3 className="text-white">{language.main_9}</h3>
-                                <p className="text-white">{language.main_19}<br/>{language.main_20}</p>
-                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
+                        <h3 className="text-center display-4 mb-8">Features</h3>
+                        <p className="text-center mb-10">
+                            ICEUP is the most innovative ice maker you’ve ever met, designed to revolutionize the way you think about ice production.<br/>
+                            With cutting-edge technology and a commitment to quality, ICEUP delivers consistent, high-performance results that cater to homes, shops, and factories alike.
+                        </p>
+                        <div className="row justify-content-between">
+                            <div className="col-md-5">
+                                <Image src="/img/iceup/dongpae-iceup-features-ice.png" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
-                            <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>{language.main_11}</h3>
-                                <p>{language.main_19}<br/>{language.main_20}</p>
-                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
+                            <div className="col-md-6">
+                                <h4 className="mb-10">| A LOT OF ICE</h4>
+                                <p>ICEUP produces ice at an impressive speed, ensuring you always have plenty of ice on
+                                    hand. Whether it’s for a busy café, a restaurant, or an event, ICEUP keeps up with high
+                                    demand effortlessly.</p>
                             </div>
-                            <div className="col-md-3 rounded border ms-md-1 px-5 py-10">
-                                <h3>{language.main_12}</h3>
-                                <p>{language.main_19}<br/>{language.main_20}</p>
-                                <Link href="/" className="btn btn-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
+                        </div>
+                        <div className="row justify-content-between mt-5">
+                            <div className="col-md-5">
+                                <Image src="/img/iceup/dongpae-iceup-features-ice_1.png" alt="" width={720} height={481} className="w-100 h-auto"/>
+                            </div>
+                            <div className="col-md-6">
+                                <h4 className="mb-10">| SAVE TIME</h4>
+                                <p>Thanks to its rapid ice-making technology, ICEUP drastically reduces waiting times.
+                                    Forget the delays and keep your operations running smoothly with a steady supply of ice,
+                                    exactly when you need it.</p>
+                            </div>
+                        </div>
+                        <div className="row justify-content-between mt-5">
+                            <div className="col-md-5">
+                                <Image src="/img/iceup/dongpae-iceup-features-ice_2.png" alt="" width={720} height={481} className="w-100 h-auto"/>
+                            </div>
+                            <div className="col-md-6">
+                                <h4 className="mb-10">| MANY PEOPLE</h4>
+                                <p>Designed to meet the needs of large gatherings and high-traffic environments,
+                                    ICEUP ensures that everyone gets their ice without any shortages. Perfect for
+                                    accommodating crowds, it’s a must-have for places that serve many people daily.</p>
+                            </div>
+                        </div>
+                        <div className="row justify-content-between mt-5">
+                            <div className="col-md-5">
+                                <Image src="/img/iceup/dongpae-iceup-features-ice_3.png" alt="" width={720} height={481} className="w-100 h-auto"/>
+                            </div>
+                            <div className="col-md-6">
+                                <h4 className="mb-10">| SAFE FOR HEALTH</h4>
+                                <p>ICEUP eliminates the need for scooping ice by hand, reducing the risk of contamination.
+                                    With its hygienic design, you can trust ICEUP to deliver clean and safe ice, every single time.</p>
+                                <p>Choose ICEUP for its speed, efficiency, and commitment to quality and hygiene.
+                                    It’s the perfect solution for all your ice-making needs!</p>
                             </div>
                         </div>
                     </div>
-                </div>*/}
+                </div>
+
                 <div className="wrapper my-10">
                     <div className="container">
                         <div className="row">
-                            <h2 className="mb-6">{language.main_13}</h2>
+                            <h2 className="mb-6 text-center">{language.main_13}</h2>
                             <div className="blog grid grid-view">
                                 <div className="row isotope gx-md-8 gy-8 mb-8">
                                     <div className="col-md-3">
@@ -278,11 +245,13 @@ export default function Main({language} : Props) {
                     </div>
                 </div>
 
+                <MainBlogList language={language}/>
+
                 <div className="wrapper my-10">
-                    <div className="container py-10 bg-pale-ash rounded">
+                    <div className="container py-10 bg-soft-blue rounded">
                         <div className="row text-center">
                             <p>Not only do we have a large selection of commercial ice cube makers to buy or rent,<br/>
-                            <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
+                                <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
                             </p>
                             <div>
                                 <Link href="/customer/inquiry" className="btn btn-outline-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
