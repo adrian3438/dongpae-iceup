@@ -18,7 +18,7 @@ export default function ProductsPage({language, id} : Props) {
             <Navbar lang={language} navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"/>
 
             {/* ========== main content ========== */}
-            <div className="mt-8">
+            <div className="mt-8 container">
                 {id === 'product01' && <Product language={language}/>}
                 {id === 'product02' && <Product2 language={language}/>}
             </div>

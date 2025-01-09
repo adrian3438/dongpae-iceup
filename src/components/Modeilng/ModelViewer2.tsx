@@ -65,7 +65,7 @@ const ModelViewer2: FC = () => {
                     />
                 </Html>
             </Canvas>
-            <div className="features">
+            <div className="features col-md-5">
                 {buttonIndex === 0 && (
                     <div>
                         <h2>Video</h2>

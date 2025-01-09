@@ -63,14 +63,9 @@ export default function Navbar({
 
               {/* ===================== nav ===================== */}
               <li className="nav-item dropdown">
-                <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">
-                {lang.header_1}
+                <a href="/brand" className="nav-link dropdown-toggle">
+                  {lang.header_1}
                 </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <NextLink className="dropdown-item" href="/brand/brand01" title={lang.header_2}/>
-                  </li>
-                </ul>
               </li>
 
               <li className="nav-item dropdown">

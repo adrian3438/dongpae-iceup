@@ -196,7 +196,6 @@ body {
   margin-bottom: 0;
   > a {
     color: #4B4B4B;
-    transform: translateX(-50%);
     background-color: #fff;
     border-radius: 30px;
     font-weight: bold;
@@ -205,5 +204,19 @@ body {
       margin-left: 5px;
       width: auto !important;
     }
+    &.shadow {
+      padding: 7px 20px;
+    }
   }
+}
+
+.brand-bg-area01 {
+  padding: 100px 0;
+  background: url("/img/iceup/ice-cube.png") no-repeat 100% 0;
+  background-size: 40% auto;
+}
+.brand-bg-area02 {
+  padding: 100px 0 100px 50%;
+  background: url("/img/iceup/growth.png") no-repeat 0 0;
+  background-size: 50% auto;
 }

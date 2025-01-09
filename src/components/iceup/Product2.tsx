@@ -6,7 +6,7 @@ interface Props {
 export default function Product2({language} : Props) {
     return (
         <>
-            <div style={{height:"80vh"}} className="d-flex">
+            <div style={{height:"80vh"}} className="d-flex align-items-center justify-content-between">
             <ModelViewer2/>
             </div>
         </>
