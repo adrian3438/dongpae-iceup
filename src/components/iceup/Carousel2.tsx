@@ -14,10 +14,10 @@ export default function Carousel2() {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
   const slideImages = [
-    { id: 1, url: "/img/iceup/dongpae-iceup-main-1.png" },
-    { id: 2, url: "/img/iceup/dongpae-iceup-main-2.png" },
-    { id: 3, url: "/img/iceup/dongpae-iceup-main-3.png" },
-    { id: 4, url: "/img/iceup/dongpae-iceup-main-4.png" },
+    { id: 1, url: "/img/iceup/dongpae-iceup-main-1.png", linkUrl: "/product/product01"},
+    { id: 2, url: "/img/iceup/dongpae-iceup-main-2.png", linkUrl: "/product/product01" },
+    { id: 3, url: "/img/iceup/dongpae-iceup-main-3.png", linkUrl: "/product/product01" },
+    { id: 4, url: "/img/iceup/dongpae-iceup-main-4.png", linkUrl: "/product/product01" },
   ];
 
   return (
@@ -29,13 +29,13 @@ export default function Carousel2() {
         navigation={{ prevEl, nextEl }}
         modules={[FreeMode, Navigation, Thumbs]}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}>
-        {slideImages.map(({ url, id }) => (
+        {slideImages.map(({ url, id, linkUrl }) => (
           <SwiperSlide
             key={id}
             style={{ backgroundImage: `url(${url})` }}
             className="bg-overlay bg-overlay-400 bg-dark bg-image"
           >
-              <Link href="#" className="link">GO TO 3D CONFIGURATOR <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
+              <Link href={linkUrl} className="link">GO TO 3D CONFIGURATOR <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
           </SwiperSlide>
         ))}
       </SwiperCarousel>
