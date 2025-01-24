@@ -46,7 +46,7 @@ const ModelViewer2: FC = () => {
                         onClick={() => setButtonIndex(0)}
                     />
                 </Html>
-                <Html position={[-0.5, 0.5, 0]} distanceFactor={10}>
+                {/* <Html position={[-0.5, 0.5, 0]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
                         onClick={() => setButtonIndex(1)}
@@ -63,16 +63,20 @@ const ModelViewer2: FC = () => {
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
                         onClick={() => setButtonIndex(3)}
                     />
-                </Html>
+                </Html> */}
             </Canvas>
             <div className="features col-md-5">
                 {buttonIndex === 0 && (
                     <div>
-                        <h2>Video</h2>
-                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1003088041?h=4647f51639&autoplay=1&loop=1&muted=1&controls=0" allowFullScreen></iframe>
+                        <h2>60kg Ice Making Module</h2>
+                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1035854486?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
+                        <br/><br/>
+
+                        <h2>25kg Ice Making Module</h2>
+                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1035854351?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
                     </div>
                 )}
-                {buttonIndex === 1 && (
+                {/* {buttonIndex === 1 && (
                     <div>
                         <h2>Feature</h2>
                         <ul>
@@ -103,7 +107,7 @@ const ModelViewer2: FC = () => {
                             <li>test2</li>
                         </ul>
                     </div>
-                )}
+                )} */}
             </div>
         </>
     );
