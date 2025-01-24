@@ -44,12 +44,25 @@ const CameraController: FC<{ newPosition: [number, number, number]; targetPositi
     return <OrbitControls ref={controlsRef} enableZoom={true} />;
 };
 
+interface Props {
+    language: any;
+}
 
-const ModelViewer: FC = () => {
+const ModelViewer = ({language}: Props) => {
+
+    console.log('language : ', language);
     const { scene, animations } = useGLTF('/model/dongpae-iceup-model.glb');
     const [buttonIndex, setButtonIndex] = useState<number>();
 
-    const [cameraPosition, setCameraPosition] = useState<[number, number, number]>([0, 0, 5]);
+        // closeBanner 함수 정의
+        const closeBanner = () => {
+            const banner = document.getElementById('top-banner');
+            if (banner) {
+                banner.style.display = 'none';
+            }
+        };
+
+    const [cameraPosition, setCameraPosition] = useState<[number, number, number]>([-2, 1, 5]);
     const [cameraTarget, setCameraTarget] = useState<[number, number, number]>([0, 0, 0]);
     useEffect(() => {
         const coverMesh = scene.getObjectByName("cover_cover_0");
@@ -63,8 +76,8 @@ const ModelViewer: FC = () => {
                 setCameraTarget([0, 1.9, 1.1]);
                 break;
             case 1:
-                setCameraPosition([0, 0.5, 2]);
-                setCameraTarget([0, 1, 0.6]);
+                setCameraPosition([1.0, 0.5, 2.0]);
+                setCameraTarget([0, 0.6, 0.7]);
                 break;
             case 2:
                 const mixer = new THREE.AnimationMixer(scene);
@@ -97,12 +110,12 @@ const ModelViewer: FC = () => {
                 setCameraTarget([0, 0, 1]);
                 break;
             case 3:
-                setCameraPosition([-1.4, -0.9, 2.5])
+                setCameraPosition([-1.4, -0.8, 2.5])
                 setCameraTarget([0, -1.5, 0]);
                 break;
             case 4:
-                setCameraPosition([-1, 4.5, 1.9]);
-                setCameraTarget([0, 2.5, 0]);
+                setCameraPosition([-1.2, 4.2, 1.7]);
+                setCameraTarget([0, 2.5, 0.5]);
                 break;
         }
     }, [buttonIndex]);
@@ -156,37 +169,60 @@ const ModelViewer: FC = () => {
                     />
                 </Html>
             </Canvas>
+            
             <div className="features col-md-5">
+
+                      {/* Top Banner */}
+                <div id="top-banner" className="container-fluid bg-light py-3 border-bottom fixed-top">
+                    <div className="row align-items-center">
+                        <div className="col-md-11">
+                            <h2>{language?.product_35}</h2>
+                            <p>{language?.product_36}</p>
+                        </div>
+                        <div className="col-md-1 text-end">
+                            <button
+                                className="btn-close"
+                                aria-label="Close"
+                                onClick={closeBanner} // onClick에서 closeBanner 호출
+                            >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                        
                 {buttonIndex === 0 && (
                     <div>
-                        <h2>직관적인 UX</h2>
-                        <p>터치 버튼으로 손쉬운 조작이 가능하며 직관적인 디자인으로 기능을 쉽게 파악할 수 있습니다.</p>
+                        <h2>{language?.product_28}</h2>
+                        <p>{language?.product_29}</p>
                     </div>
                 )}
                 {buttonIndex === 1 && (
                     <div>
-                        {/*<h2>파란색 조명</h2>*/}
+                        {/*<h2>Blue Lighting</h2>*/}
                         <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046295111?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
                         <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046292241?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
                     </div>
                 )}
                 {buttonIndex === 2 && (
                     <div>
-                        <h2>분리형 받힘</h2>
-                        <p>탈부착이 가능해 청소와 관리가 편리하며, 다양한 용기의 높이에 맞춰 조정할 수 있어 실용성이 뛰어납니다.</p>
+                        <h2>{language?.product_31}</h2>
+                        <p>{language?.product_32}</p>
                     </div>
                 )}
                 {buttonIndex === 3 && (
                     <div>
-                        <h2>깔끔한 디자인</h2>
-                        <p>어느장소에도 어울리는 디자인을 적용하였습니다.</p>
+                        <h2>{language?.product_33}</h2>
+                        <p>{language?.product_34}</p>
                     </div>
                 )}
                 {buttonIndex === 4 && (
                     <div>
                         <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1044842889?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
+                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1044842412?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
                     </div>
                 )}
+
             </div>
         </>
     );

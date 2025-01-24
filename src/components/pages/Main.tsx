@@ -35,7 +35,7 @@ export default function Main({language} : Props) {
                 </div>
                 <div className="wrapper">
                     <div className="container">
-                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1003088041?h=4647f51639&autoplay=1&loop=1&muted=1&controls=0" allowFullScreen></iframe>
+                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046292226?h=4647f51639&autoplay=1&loop=1&muted=1&controls=0" allowFullScreen></iframe>
                     </div>
                 </div>
                 <div className="wrapper my-15">
