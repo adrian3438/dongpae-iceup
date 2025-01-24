@@ -11,9 +11,9 @@ interface Props {language : any}
 export default function CustomerPage({language} : Props) {
     const {t} = useTranslation()
     const customer = [
-        { id: 1, title: language.header_14, url: '/customer/faq' },
+        // { id: 1, title: language.header_14, url: '/customer/faq' },
         { id: 2, title: language.header_15, url: '/customer/inquiry' },
-        { id: 3, title: language.header_16, url: '/customer/buy' }
+        // { id: 3, title: language.header_16, url: '/customer/buy' }
     ];
     return (
         <Fragment>

@@ -110,15 +110,15 @@ export default function Navbar({
                 {lang.header_13}
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
+                  {/* <li>
                     <NextLink className="dropdown-item" href="/customer/faq" title={lang.header_14}/>
-                  </li>
+                  </li> */}
                   <li>
                     <NextLink className="dropdown-item" href="/customer/inquiry" title={lang.header_15}/>
                   </li>
-                  <li>
+                  {/* <li>
                     <NextLink className="dropdown-item" href="/customer/buy" title={lang.header_16}/>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
             </ul>
