@@ -59,7 +59,7 @@ export default function Main({language} : Props) {
                                         perfect for a variety of settings, including restaurants, cafes, healthcare facilities,
                                         and home kitchens, providing the perfect blend of functionality and style.</p>
                                     <p className="go-link">
-                                        <Link href="#" className="shadow">Go to Dongpae International <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
+                                        <Link href="https://dongpae.co.kr/" className="shadow">Go to Dongpae International <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
                                     </p>
                                 </div>
                             </div>
