@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default async function MainBlogList({language}: Props) {
-    console.log(language.lang)
     const response = await api.get(`/user/promotion/getContentsList.php`, {
         params: {
             contentType: 1,
@@ -22,7 +21,7 @@ export default async function MainBlogList({language}: Props) {
             sortOrder: 'desc'
         }
     });
-    const data = response?.data?.result === true ? response?.data : null
+    const data = response?.data?.result === true ? response?.data : null;
 
     return (
         <div className="wrapper my-10">

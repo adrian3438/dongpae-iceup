@@ -121,7 +121,7 @@
     "brand_44" : "The entire system is engineered to minimize energy waste while still maintaining high ice production capacity. By optimizing the energy usage throughout the ice-making process, ICEUP offers a solution that is not only cost-effective but also eco-friendly, making it a sustainable choice for modern ice production.",
     "brand_45" : "WATCH VIDEOS",
     "brand_46" : "Contact Us",
-    
+
 
 
 
@@ -152,7 +152,7 @@
     "product_25" : "Perfect for iced coffee.",
     "product_26" : "Small ice cubes cool drinks quickly and melt slowly.",
     "product_27" : "They help maintain the flavor of your drink for longer.",
-    "product_28" : "Intuitive UX", 
+    "product_28" : "Intuitive UX",
     "product_29" : "Easy operation with touch buttons and intuitive design allows users to understand functions easily.",
     "product_30" : "Fast Ice Making",
     "product_31" : "Detachable Support",
@@ -267,5 +267,7 @@
     "faq_16_1" : "(Optional) Accept the use of receiving and using advertising information.",
     "faq_17" : "Submit Inquiry",
     "example_1" : "Company",
-    "test" : "Test"
+    "test" : "Test",
+
+    "lang": "en"
 }

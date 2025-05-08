@@ -5,11 +5,12 @@ import { Fragment, useState } from "react";
 import type Swiper from "swiper";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper as SwiperCarousel, SwiperSlide } from "swiper/react";
-import Link from "next/link";
-import Image from "next/image";
 
+interface Props {
+  language: any;
+}
 
-export default function Carousel3() {
+export default function Carousel3({language}: Props) {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>();
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);

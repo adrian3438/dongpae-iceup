@@ -22,7 +22,7 @@ export default function BrandPage({language} : Props) {
 
             <section className="wrapper bg-dark">
                 <div className="swiper-container swiper-thumbs-container swiper-fullscreen nav-dark">
-                    <Carousel3/>
+                    <Carousel3 language={language}/>
                 </div>
             </section>
 
