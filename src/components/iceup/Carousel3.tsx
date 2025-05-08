@@ -36,12 +36,12 @@ export default function Carousel3({language}: Props) {
           >
               <div className="container d-flex align-items-center h-100">
                   <div className="w-100">
-                      <h1 className="text-white text-center fs-70 mb-20">Brand</h1>
-                      <h2 className="text-white fs-35 mb-7">Revolutionizing Ice Making, <span style={{color: "#04DCFF"}}>ICEUP</span></h2>
-                      <p className="text-white fs-20">At ICEUP, we bring you the perfect blend of innovation, efficiency, and<br/>
-                          reliability in ice-making technology. Whether for home, business, or industrial use,<br/>
-                          our cutting-edge ice makers are designed to meet the demands of any setting<br/>
-                          with unparalleled performance.</p>
+                      <h1 className="text-white text-center fs-70 mb-20">{language.brand_47}</h1>
+                      <h2 className="text-white fs-35 mb-7">{language.brand_48} <span style={{color: "#04DCFF"}}>{language.brand_49}</span></h2>
+                      <p className="text-white fs-20">{language.brand_50}<br/>
+                      {language.brand_51}<br/>
+                      {language.brand_52}<br/>
+                      {language.brand_53}</p>
                   </div>
               </div>
           </SwiperSlide>
