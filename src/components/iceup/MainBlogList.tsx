@@ -28,7 +28,7 @@ export default async function MainBlogList({language}: Props) {
         <div className="wrapper my-10">
             <div className="container">
                 <div className="row">
-                    <h2 className="mb-6 text-center">Our Blog</h2>
+                    <h2 className="mb-6 text-center">{language.main_44}</h2>
                     <section className="row mb-10">
                         {data?.List?.map((list: any) => (
                             <article className="item post col-md-4 mb-5" key={list.ID}>

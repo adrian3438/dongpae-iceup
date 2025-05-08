@@ -8,6 +8,7 @@ import { Swiper as SwiperCarousel, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function Carousel3() {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>();
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);

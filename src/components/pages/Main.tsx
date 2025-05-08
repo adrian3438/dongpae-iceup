@@ -28,7 +28,7 @@ export default function Main({language} : Props) {
                 <div className="wrapper py-12">
                     <div className="container">
                         <div className="row justify-content-between">
-                            <div className="col-md-5 fs-45 lh-xxs mb-6 text-navy">{language?.main_26}</div>
+                            <div className="col-md-5  lh-xxs mb-6 text-navy"><h3 className="fs-45">{language?.main_25_01}</h3></div>
                             <div className="col-md-6">{language?.main_27}</div>
                         </div>
                     </div>
@@ -48,18 +48,11 @@ export default function Main({language} : Props) {
                                     </div>
                                 </div>
                                 <div className="col-md-6 p-5">
-                                    <h3 className="fs-45">The Pioneer of Nugget Type Ice Maker Technology.</h3>
-                                    <p>At Dongpae International, we are at the forefront of innovation in the ice maker
-                                        industry, specializing in nugget type ice technology. Our mission is to deliver the
-                                        highest quality nugget ice solutions that enhance the experiences of both
-                                        residential and commercial customers worldwide.</p>
-                                    <p>With years of expertise and a commitment to excellence, Dongpae International
-                                        designs and manufactures state-of-the-art ice makers that are renowned for
-                                        their reliability, efficiency, and superior ice quality. Our nugget ice machines are
-                                        perfect for a variety of settings, including restaurants, cafes, healthcare facilities,
-                                        and home kitchens, providing the perfect blend of functionality and style.</p>
+                                    <h3 className="fs-45">{language?.main_22}</h3>
+                                    <p>{language?.main_23}</p>
+                                    <p>{language?.main_24}</p>
                                     <p className="go-link">
-                                        <Link href="https://dongpae.co.kr/" className="shadow">Go to Dongpae International <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
+                                        <Link href="https://dongpae.co.kr/" className="shadow">{language?.main_25}<Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
                                     </p>
                                 </div>
                             </div>
@@ -68,20 +61,18 @@ export default function Main({language} : Props) {
                 </div>
                 <div className="wrapper my-15">
                     <div className="container">
-                        <h3 className="text-center display-4 mb-8">Features</h3>
+                        <h3 className="text-center display-4 mb-8">{language?.main_26}</h3>
                         <p className="text-center mb-10">
-                            ICEUP is the most innovative ice maker you’ve ever met, designed to revolutionize the way you think about ice production.<br/>
-                            With cutting-edge technology and a commitment to quality, ICEUP delivers consistent, high-performance results that cater to homes, shops, and factories alike.
+                            {language?.main_27}<br/>
+                            {language?.main_28}
                         </p>
                         <div className="row justify-content-between">
                             <div className="col-md-5">
                                 <Image src="/img/iceup/dongpae-iceup-features-ice.png" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
-                                <h4 className="mb-10">| A LOT OF ICE</h4>
-                                <p>ICEUP produces ice at an impressive speed, ensuring you always have plenty of ice on
-                                    hand. Whether it’s for a busy café, a restaurant, or an event, ICEUP keeps up with high
-                                    demand effortlessly.</p>
+                                <h4 className="mb-10">{language?.main_29}</h4>
+                                <p>{language?.main_30}</p>
                             </div>
                         </div>
                         <div className="row justify-content-between mt-5">
@@ -89,10 +80,8 @@ export default function Main({language} : Props) {
                                 <Image src="/img/iceup/dongpae-iceup-features-ice_1.png" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
-                                <h4 className="mb-10">| SAVE TIME</h4>
-                                <p>Thanks to its rapid ice-making technology, ICEUP drastically reduces waiting times.
-                                    Forget the delays and keep your operations running smoothly with a steady supply of ice,
-                                    exactly when you need it.</p>
+                                <h4 className="mb-10">{language?.main_31}</h4>
+                                <p>{language?.main_32}</p>
                             </div>
                         </div>
                         <div className="row justify-content-between mt-5">
@@ -100,10 +89,8 @@ export default function Main({language} : Props) {
                                 <Image src="/img/iceup/dongpae-iceup-features-ice_2.png" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
-                                <h4 className="mb-10">| MANY PEOPLE</h4>
-                                <p>Designed to meet the needs of large gatherings and high-traffic environments,
-                                    ICEUP ensures that everyone gets their ice without any shortages. Perfect for
-                                    accommodating crowds, it’s a must-have for places that serve many people daily.</p>
+                                <h4 className="mb-10">{language?.main_33}</h4>
+                                <p>{language?.main_34}</p>
                             </div>
                         </div>
                         <div className="row justify-content-between mt-5">
@@ -111,11 +98,9 @@ export default function Main({language} : Props) {
                                 <Image src="/img/iceup/dongpae-iceup-features-ice_3.png" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
-                                <h4 className="mb-10">| SAFE FOR HEALTH</h4>
-                                <p>ICEUP eliminates the need for scooping ice by hand, reducing the risk of contamination.
-                                    With its hygienic design, you can trust ICEUP to deliver clean and safe ice, every single time.</p>
-                                <p>Choose ICEUP for its speed, efficiency, and commitment to quality and hygiene.
-                                    It’s the perfect solution for all your ice-making needs!</p>
+                                <h4 className="mb-10">{language?.main_35}</h4>
+                                <p>{language?.main_36}</p>
+                                <p>{language?.main_37}</p>
                             </div>
                         </div>
                     </div>
@@ -149,7 +134,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_22}</span>
+                                                        <span>{language.main_38}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -177,7 +162,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_23}</span>
+                                                        <span>{language.main_39}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -205,7 +190,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_24}</span>
+                                                        <span>{language.main_40}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -233,7 +218,7 @@ export default function Main({language} : Props) {
                                             <div className="post-footer">
                                                 <ul className="post-meta">
                                                     <li className="post-date">
-                                                        <span>{language.main_25}</span>
+                                                        <span>{language.main_41}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -250,8 +235,8 @@ export default function Main({language} : Props) {
                 <div className="wrapper my-10">
                     <div className="container py-10 bg-soft-blue rounded">
                         <div className="row text-center">
-                            <p>Not only do we have a large selection of commercial ice cube makers to buy or rent,<br/>
-                                <strong>but we also specialize in keeping ice machines in peak performance year-round.</strong>
+                            <p>{language?.main_42}<br/>
+                                <strong>{language?.main_43}</strong>
                             </p>
                             <div>
                                 <Link href="/customer/inquiry" className="btn btn-outline-primary">{language.main_10} <i className="uil uil-arrow-right"></i></Link>
