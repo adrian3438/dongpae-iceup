@@ -133,8 +133,8 @@ export default function ContactUsForm ({language} : Props) {
                             <div className="dots-dongpae-form2">
                                 <div><input type="radio" id="questionType01" name="questionType" onChange={handleChange} value="C"/><label htmlFor="questionType01" className="form-control text-center p-0">{language.faq_9}</label></div>
                                 <div><input type="radio" id="questionType02" name="questionType" onChange={handleChange} value="D"/><label htmlFor="questionType02" className="form-control text-center p-0">{language.faq_10}</label></div>
-                                <div><input type="radio" id="questionType03" name="questionType" onChange={handleChange} value="E"/><label htmlFor="questionType03" className="form-control text-center p-0">{language.faq_11}</label></div>
-                                <div><input type="radio" id="questionType04" name="questionType" onChange={handleChange} value="I"/><label htmlFor="questionType04" className="form-control text-center p-0">{language.faq_12}</label></div>
+                                {/* <div><input type="radio" id="questionType03" name="questionType" onChange={handleChange} value="E"/><label htmlFor="questionType03" className="form-control text-center p-0">{language.faq_11}</label></div>
+                                <div><input type="radio" id="questionType04" name="questionType" onChange={handleChange} value="I"/><label htmlFor="questionType04" className="form-control text-center p-0">{language.faq_12}</label></div> */}
                                 <div><input type="radio" id="questionType05" name="questionType" onChange={handleChange} value="O"/><label htmlFor="questionType05" className="form-control text-center p-0">{language.faq_13}</label></div>
                             </div>
                         </div>

@@ -49,7 +49,7 @@ export default function Navbar({
   const headerContent = (
       <Fragment>
         <div className="navbar-brand w-100">
-          <NextLink href="/" title={<img alt="logo" src={`/img/iceup/${logo}.svg`} />} />
+          <NextLink href="/" title={<img alt="logo" src={`/img/iceup/${logo}.png`} />} />
         </div>
 
         <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -99,11 +99,11 @@ export default function Navbar({
                 </ul>
               </li>
 
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a href="/location" className="nav-link dropdown-toggle">
                 {lang.header_8}
                 </a>
-              </li>
+              </li> */}
 
               <li className="nav-item dropdown">
                 <a href="#" data-bs-toggle="dropdown" className="nav-link dropdown-toggle">

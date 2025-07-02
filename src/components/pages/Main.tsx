@@ -111,8 +111,8 @@ export default function Main({language} : Props) {
                         <div className="row">
                             <h2 className="mb-6 text-center">{language.main_13}</h2>
                             <div className="blog grid grid-view">
-                                <div className="row isotope gx-md-8 gy-8 mb-8">
-                                    <div className="col-md-3">
+                                <div className="row justify-content-center isotope gx-md-8 gy-8 mb-8">
+                                    <div className="col-md-6">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
                                                 <Link href="/product/product01">
@@ -140,7 +140,7 @@ export default function Main({language} : Props) {
                                             </div>
                                         </article>
                                     </div>
-                                    <div className="col-md-3">
+                                    <div className="col-md-6">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
                                                 <Link href="/product/product01#section07">
@@ -168,7 +168,7 @@ export default function Main({language} : Props) {
                                             </div>
                                         </article>
                                     </div>
-                                    <div className="col-md-3">
+                                    {/* <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
                                                 <Link href="/product/product01#section04">
@@ -195,8 +195,8 @@ export default function Main({language} : Props) {
                                                 </ul>
                                             </div>
                                         </article>
-                                    </div>
-                                    <div className="col-md-3">
+                                    </div> */}
+                                    {/* <div className="col-md-3">
                                         <article>
                                             <figure className="overlay overlay-1 hover-scale rounded mb-6">
                                                 <Link href="/product/product01#section08">
@@ -223,7 +223,7 @@ export default function Main({language} : Props) {
                                                 </ul>
                                             </div>
                                         </article>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

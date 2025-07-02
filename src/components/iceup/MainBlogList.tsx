@@ -15,7 +15,7 @@ export default async function MainBlogList({language}: Props) {
             contentType: 1,
             userLang: language.lang === 'ko' ? 'KR' : 'EN',
             page: 1,
-            size: 3,
+            size: 2,
             keyword: '',
             sortColumn: 'date',
             sortOrder: 'desc'
@@ -28,9 +28,9 @@ export default async function MainBlogList({language}: Props) {
             <div className="container">
                 <div className="row">
                     <h2 className="mb-6 text-center">{language.main_44}</h2>
-                    <section className="row mb-10">
+                    <section className="row justify-content-center mb-10">
                         {data?.List?.map((list: any) => (
-                            <article className="item post col-md-4 mb-5" key={list.ID}>
+                            <article className="item post col-md-6 mb-4" key={list.ID}>
                                 <div className="card">
                                     <figure className="card-img-top overlay overlay-1 hover-scale">
                                         <Link href={`/promotion-center/blog/${list.ID}`}>

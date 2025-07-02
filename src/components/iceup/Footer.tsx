@@ -19,10 +19,10 @@ export default function Footer({language} : any) {
                                 <div className="col-md-auto border-start lh-1">
                                     <NextLink title={language.footer_2} href="#"/>
                                 </div>*/}
-                                <div className="col-md-auto lh-1">
+                                {/* <div className="col-md-auto lh-1">
                                     <NextLink title={language.footer_3} href="/customer/buy"/>
-                                </div>
-                                <div className="col-md-auto border-start lh-1">
+                                </div> */}
+                                <div className="col-md-auto  lh-1">
                                     <NextLink title={language.footer_4} href="/customer/inquiry"/>
                                 </div>
                             </div>

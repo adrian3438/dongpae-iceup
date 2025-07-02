@@ -10,7 +10,7 @@ export default function Footer4() {
         <div className="row gy-6 gy-lg-0">
           <div className="col-md-4 col-lg-3">
             <div className="widget">
-              <img className="mb-4" src="/img/logo-dark.png" srcSet="/img/logo-dark@2x.png 2x" alt="" />
+              <img className="mb-4" src="/img/ICEUP_logo_white.png" srcSet="/img/logo-dark@2x.png 2x" alt="" />
 
               <p className="mb-4">
                 © 2022 Sandbox. <br className="d-none d-lg-block" />
