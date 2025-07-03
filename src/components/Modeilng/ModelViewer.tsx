@@ -220,77 +220,77 @@ const ModelViewer = ({language, modelId, view}: Props) => {
                 {buttonIndex === 5 && (
                   <div>
                       <table className="table table-responsive table-bordered">
-                          <thead className="bg-pale-gray">
+                          <thead>
                           <tr>
-                              <th className="text-center bg-navy text-white">{language?.product_38}</th>
-                              <th className="text-center bg-navy text-white">{language?.product_39}</th>
-                              <th className="text-center bg-navy text-white">Specification</th>
+                              <th className="text-center bg-navy text-white py-2">{language?.product_38}</th>
+                              <th className="text-center bg-navy text-white py-2">{language?.product_39}</th>
+                              <th className="text-center bg-navy text-white py-2">Specification</th>
                           </tr>
                           </thead>
                           <tbody>
                           <tr>
-                              <th rowSpan={6} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_40}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_41}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>330 x 500 x 1,250 mm</td>
+                              <th rowSpan={6} className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_40}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_41}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>330 x 500 x 1,250 mm</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_42}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>44.5 kg</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_42}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>44.5 kg</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_43}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_43}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_44}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>2,700 L</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_44}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>2,700 L</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_45}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>60 kg/day</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_45}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>60 kg/day</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_46}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>4 ~ 38 ℃</td>
-                          </tr>
-
-                          <tr>
-                              <th rowSpan={3} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_47}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_48}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>6 L</td>
-                          </tr>
-                          <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_49}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>2 L</td>
-                          </tr>
-                          <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_50}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>4 kg</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_46}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>4 ~ 38 ℃</td>
                           </tr>
 
                           <tr>
-                              <th rowSpan={4} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_51_01}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_51}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_60}</td>
+                              <th rowSpan={3} className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_47}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_48}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>6 L</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_52}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_61}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_49}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>2 L</td>
                           </tr>
                           <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_53}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_62}</td>
-                          </tr>
-                          <tr>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_54}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_63}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_50}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>4 kg</td>
                           </tr>
 
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_55}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_56}</td>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_57}<br/><br/>
-                                  {language?.product_58}<br/><br/>
+                              <th rowSpan={4} className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_51_01}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_51}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_60}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_52}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_61}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_53}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_62}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_54}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_63}</td>
+                          </tr>
+
+                          <tr>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_55}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_56}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_57}<br/>{language?.lang === 'en' && <br/>}
+                                  {language?.product_58}<br/>{language?.lang === 'en' && <br/>}
                                   {language?.product_59}
                               </td>
                           </tr>

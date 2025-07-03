@@ -71,30 +71,30 @@ const ModelViewer2 = ({language, modelId, view}: Props) => {
                       <table className="table table-responsive table-bordered">
                           <thead className="bg-pale-gray">
                           <tr>
-                              <th className="text-center bg-navy text-white">{language?.product_64}</th>
-                              <th className="text-center bg-navy text-white">Specification</th>
+                              <th className="text-center bg-navy text-white py-2">{language?.product_64}</th>
+                              <th className="text-center bg-navy text-white py-2">Specification</th>
                           </tr>
                           </thead>
                           <tbody>
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_65}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>Auger Type</td>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_65}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>Auger Type</td>
                           </tr>
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_66}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>60 kg/day</td>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_66}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>60 kg/day</td>
                           </tr>
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_67}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>121 x 216 x 305 mm</td>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_67}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>121 x 216 x 305 mm</td>
                           </tr>
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_68}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>R134a, R404A, R600a, R290</td>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_68}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>R134a, R404A, R600a, R290</td>
                           </tr>
                           <tr>
-                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_69}</th>
-                              <td className="text-center" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
+                              <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_69}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
                           </tr>
 
                           </tbody>
