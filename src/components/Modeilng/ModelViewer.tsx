@@ -5,6 +5,7 @@ import {Html, OrbitControls, useGLTF } from '@react-three/drei';
 import {FC, useEffect, useRef, useState} from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
+import {useRouter} from "next/navigation";
 
 interface ModelProps {
     url: string;
@@ -19,7 +20,7 @@ const Model: FC<ModelProps> = ({ url }) => {
         scene.position.sub(center);
     }, [scene]);
 
-    return <primitive object={scene} scale={0.6} />;
+    return <primitive object={scene} scale={0.65} />;
 };
 
 const CameraController: FC<{ newPosition: [number, number, number]; targetPosition: [number, number, number] }> = ({ newPosition, targetPosition }) => {
@@ -46,13 +47,21 @@ const CameraController: FC<{ newPosition: [number, number, number]; targetPositi
 
 interface Props {
     language: any;
+    modelId: string;
+    view: string;
 }
 
-const ModelViewer = ({language}: Props) => {
+const ModelViewer = ({language, modelId, view}: Props) => {
+    const router = useRouter();
 
-    console.log('language : ', language);
     const { scene, animations } = useGLTF('/model/dongpae-iceup-model.glb');
-    const [buttonIndex, setButtonIndex] = useState<number>();
+    const [buttonIndex, setButtonIndex] = useState<number>(5);
+
+    useEffect(() => {
+        if(!view) {
+            setButtonIndex(5);
+        }
+    }, [view]);
 
         // closeBanner 함수 정의
         const closeBanner = () => {
@@ -117,13 +126,17 @@ const ModelViewer = ({language}: Props) => {
                 setCameraPosition([-1.2, 4.2, 1.7]);
                 setCameraTarget([0, 2.5, 0.5]);
                 break;
+            default:
+                setCameraPosition([-2, 1, 5]);
+                setCameraTarget([0, 0, 0]);
+                break;
         }
     }, [buttonIndex]);
 
 
     return (
         <>
-            <Canvas className="model-canvas" style={{width: "50%", position:"relative"}}>
+            <Canvas className="model-canvas" style={{position:"relative", width: '50%'}}>
                 <ambientLight intensity={1}/>
                 <directionalLight position={[10, 30, 20]} intensity={1}/>
                 <directionalLight position={[10, -180, -90]} intensity={1}/>
@@ -141,39 +154,54 @@ const ModelViewer = ({language}: Props) => {
                 <Html position={[-0.05, 2.75, 0.1]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => setButtonIndex(4)}
+                        onClick={() => {
+                            setButtonIndex(4);
+                            router.push(`/product/${modelId}?view=${buttonIndex}`);
+                        }}
                     />
                 </Html>
                 <Html position={[-0.05, 2.3, 0.95]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => setButtonIndex(0)}
+                        onClick={() => {
+                            setButtonIndex(0);
+                            router.push(`/product/${modelId}?view=${buttonIndex}`);
+                        }}
                     />
                 </Html>
                 <Html position={[-0.05, 1.2, 0.95]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => setButtonIndex(1)}
+                        onClick={() => {
+                            setButtonIndex(1);
+                            router.push(`/product/${modelId}?view=${buttonIndex}`);
+                        }}
                     />
                 </Html>
                 <Html position={[-0.05, -0.1, 0.95]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => setButtonIndex(2)}
+                        onClick={() => {
+                            setButtonIndex(2);
+                            router.push(`/product/${modelId}?view=${buttonIndex}`);
+                        }}
                     />
                 </Html>
                 <Html position={[-0.05, -1.2, 0.95]} distanceFactor={10}>
                     <div
                         style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => setButtonIndex(3)}
+                        onClick={() => {
+                            setButtonIndex(3);
+                            router.push(`/product/${modelId}?view=${buttonIndex}`);
+                        }}
                     />
                 </Html>
             </Canvas>
-            
+
             <div className="features col-md-5">
 
                       {/* Top Banner */}
-                <div id="top-banner" className="container-fluid bg-light py-3 border-bottom fixed-top">
+                {/*<div id="top-banner" className="container-fluid bg-light py-3 border-bottom fixed-top">
                     <div className="row align-items-center">
                         <div className="col-md-11">
                             <h2>{language?.product_35}</h2>
@@ -188,33 +216,113 @@ const ModelViewer = ({language}: Props) => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div>*/}
+                {buttonIndex === 5 && (
+                  <div>
+                      <table className="table table-responsive table-bordered">
+                          <thead className="bg-pale-gray">
+                          <tr>
+                              <th className="text-center bg-navy text-white">{language?.product_38}</th>
+                              <th className="text-center bg-navy text-white">{language?.product_39}</th>
+                              <th className="text-center bg-navy text-white">Specification</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <th rowSpan={6} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_40}</th>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_41}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>330 x 500 x 1,250 mm</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_42}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>44.5 kg</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_43}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_44}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>2,700 L</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_45}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>60 kg/day</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_46}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>4 ~ 38 ℃</td>
+                          </tr>
 
-                        
+                          <tr>
+                              <th rowSpan={3} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_47}</th>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_48}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>6 L</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_49}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>2 L</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_50}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>4 kg</td>
+                          </tr>
+
+                          <tr>
+                              <th rowSpan={4} className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_51_01}</th>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_51}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_60}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_52}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_61}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_53}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_62}</td>
+                          </tr>
+                          <tr>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_54}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_63}</td>
+                          </tr>
+
+                          <tr>
+                              <th className="text-center bg-pale-navy" style={{verticalAlign: 'middle'}}>{language?.product_55}</th>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_56}</td>
+                              <td className="text-center" style={{verticalAlign: 'middle'}}>{language?.product_57}<br/><br/>
+                                  {language?.product_58}<br/><br/>
+                                  {language?.product_59}
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                )}
+
                 {buttonIndex === 0 && (
-                    <div>
-                        <h2>{language?.product_28}</h2>
-                        <p>{language?.product_29}</p>
-                    </div>
+                  <div>
+                      <h2>{language?.product_28}</h2>
+                      <p>{language?.product_29}</p>
+                  </div>
                 )}
                 {buttonIndex === 1 && (
-                    <div>
-                        {/*<h2>Blue Lighting</h2>*/}
-                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046295111?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
-                        <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046292241?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
-                    </div>
+                  <div>
+                      {/*<h2>Blue Lighting</h2>*/}
+                      <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046295111?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
+                      <iframe title="vimeo-player" className="vimeo-player" src="https://player.vimeo.com/video/1046292241?h=4647f51639&autoplay=1&loop=1&muted=1&controls=1" allowFullScreen></iframe>
+                  </div>
                 )}
                 {buttonIndex === 2 && (
-                    <div>
-                        <h2>{language?.product_31}</h2>
-                        <p>{language?.product_32}</p>
-                    </div>
+                  <div>
+                      <h2>{language?.product_31}</h2>
+                      <p>{language?.product_32}</p>
+                  </div>
                 )}
                 {buttonIndex === 3 && (
-                    <div>
-                        <h2>{language?.product_33}</h2>
-                        <p>{language?.product_34}</p>
-                    </div>
+                  <div>
+                      <h2>{language?.product_33}</h2>
+                      <p>{language?.product_34}</p>
+                  </div>
                 )}
                 {buttonIndex === 4 && (
                     <div>

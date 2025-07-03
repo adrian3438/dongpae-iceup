@@ -55,46 +55,36 @@ export default function BrandPage({language} : Props) {
                     </div>
                     <div className="row justify-content-between">
                         <div className="col-md-6">
-                            <p className="mb-1"><Image src="/img/iceup/brand-01.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
+                            {/*<p className="mb-1"><Image src="/img/iceup/brand-01.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>*/}
                             <p className="mb-1"><Image src="/img/iceup/brand-02.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
-                            <p className="mb-1"><Image src="/img/iceup/brand-03.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
+                            {/*<p className="mb-1"><Image src="/img/iceup/brand-03.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>*/}
                             <p className="mb-1"><Image src="/img/iceup/brand-04.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
                             <p className="mb-0"><Image src="/img/iceup/brand-05.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
                         </div>
                         <div className="col-md-6">
+                            <h3 className="mb-9">{language?.brand_54}</h3>
                             <div className="mb-14">
-                                <h4 className="mb-9">{language.brand_24}</h4>
-                                <p>{language.brand_25}<br/>
-                                {language.brand_25_01}
+                                <h4 className="mb-9">{language?.brand_55}</h4>
+                                <p>{language?.brand_56}
                                 </p>
-                                <p>{language.brand_26}<br/>
-                                    {language.brand_27}</p>
+                                <p>{language?.brand_57}<br/>
+                                    {language.brand_58}<br/>
+                                    {language.brand_59}<br/>
+                                    {language.brand_60}
+                                </p>
                             </div>
                             <div className="mb-14">
-                                <h4 className="mb-9">{language.brand_28}</h4>
-                                <p>{language.brand_29}<br/>
-                                {language.brand_30}
+                                <h4 className="mb-9">{language.brand_61}</h4>
+                                <p>{language.brand_62}<br/>
+                                    {language.brand_63}<br/>
+                                    {language.brand_64}
                                 </p>
-                                <p><span className="fw-bold">{language.brand_31}</span><br/>
-                                {language.brand_32}</p>
-                                <p><span className="fw-bold">{language.brand_33}</span><br/>
-                                {language.brand_34}</p>
-                                <p><span className="fw-bold">{language.brand_35}</span><br/>
-                                {language.brand_36}</p>
-                            </div>
-                            <div className="mb-14">
-                                <h4 className="mb-9">{language.brand_37}</h4>
-                                <p>{language.brand_38}
-                                </p>
-                                <p>{language.brand_39}</p>
+                                <p>{language.brand_65}</p>
                             </div>
                             <div className="mb-6">
-                                <h4 className="mb-9">{language.brand_40}</h4>
-                                <p>{language.brand_41}<br/>
-                                {language.brand_42}
-                                </p>
-                                <p>{language.brand_43}<br/>
-                                {language.brand_44}</p>
+                                <h4 className="mb-9">{language.brand_66}</h4>
+                                <p>{language.brand_67}</p>
+                                <p>{language.brand_68} {language.brand_69}</p>
                             </div>
                             <div className="go-link mt-0">
                                 <Link href="/promotion-center/promotion-videos" className="shadow d-inline-block me-7">{language.brand_45} <Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>

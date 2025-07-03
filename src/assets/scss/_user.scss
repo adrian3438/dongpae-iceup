@@ -202,7 +202,8 @@ body {
     padding: 13px 20px;
     img {
       margin-left: 5px;
-      width: auto !important;
+      width: 20px !important;
+      height: auto;
     }
     &.shadow {
       padding: 7px 20px;
@@ -224,4 +225,17 @@ body {
 
 body > canvas {
   display: none !important;
+}
+
+
+.model-canvas {
+  canvas {
+    height: 100% !important;
+    aspect-ratio: 1 / 1.5;
+  }
+}
+@media (max-width: 767px) {
+  .model-canvas {
+    width: 100% !important;
+  }
 }

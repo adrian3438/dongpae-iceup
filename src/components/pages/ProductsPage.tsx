@@ -9,9 +9,10 @@ import Product2 from "../iceup/Product2";
 
 interface Props {
     language : any
-    id: any
+    id: any;
+    view: string;
 }
-export default function ProductsPage({language, id} : Props) {
+export default function ProductsPage({language, id, view} : Props) {
     return (
         <Fragment>
             {/* ========== header ========== */}
@@ -19,8 +20,8 @@ export default function ProductsPage({language, id} : Props) {
 
             {/* ========== main content ========== */}
             <div className="mt-8 container">
-                {id === 'product01' && <Product language={language}/>}
-                {id === 'product02' && <Product2 language={language}/>}
+                {id === 'product01' && <Product language={language} modelId={id} view={view}/>}
+                {id === 'product02' && <Product2 language={language} modelId={id} view={view}/>}
             </div>
 
             {/* ========== footer section ========== */}
