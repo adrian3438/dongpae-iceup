@@ -6,6 +6,7 @@ import { useCookies } from "react-cookie"
 import { useTranslation } from "react-i18next"
 interface Props {language : any}
 export default function ContactUsForm({ language = "ko" }: Props) {
+     
     const [fileName, setFileName] = useState("");
      const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -176,19 +177,21 @@ export default function ContactUsForm({ language = "ko" }: Props) {
                         <div className="row gx-4 mt-8">
                             <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> {language.faq_15}
                             <span className="text-red"></span></h3>
-                           <div className="col-md-4">
+                           <div className="col-md-3">
                             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <label htmlFor="custom_file" className="btn btn-outline-primary">
-                                    {chooseFileText}
-                                </label>
-                                <span>{fileName || noFileText}</span>
-                                <input
-                                    id="custom_file"
-                                    type="file"
-                                    name="attachedFile"
-                                    onChange={handleFileChange}
-                                    style={{ display: "none" }}
-                                />
+                            <label htmlFor="custom_file" className="btn btn-outline-primary">
+                                {language.faq_20}
+                            </label>
+                            <span style={{ width: "200px", whiteSpace: "nowrap" }}>
+                            {fileName || language.faq_21}
+                            </span>
+                            <input
+                                id="custom_file"
+                                type="file"
+                                name="attachedFile"
+                                onChange={handleFileChange}
+                                style={{ display: "none" }}
+                            />
                                 </div>
                                 </div>
                         </div>
