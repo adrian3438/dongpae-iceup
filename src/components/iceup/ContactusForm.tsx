@@ -5,7 +5,20 @@ import { useState } from "react"
 import { useCookies } from "react-cookie"
 import { useTranslation } from "react-i18next"
 interface Props {language : any}
-export default function ContactUsForm ({language} : Props) {
+export default function ContactUsForm({ language = "ko" }: Props) {
+    const [fileName, setFileName] = useState("");
+     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFileName(e.target.files[0].name);
+    } else {
+      setFileName("");
+    }
+  };
+
+  const chooseFileText = language === "ko" ? "파일 선택" : "Choose File";
+  const noFileText = language === "ko" ? "선택된 파일 없음" : "No file selected";
+
+
     const [cookie, setCookie] = useCookies()
     const [data, setData] = useState({
         company : "", // 회사명
@@ -19,7 +32,6 @@ export default function ContactUsForm ({language} : Props) {
         agreeTerms: false, // 필수동의
         adagree : false // 선택광고동의
     });
-    const [fileName, setFileName] = useState<string>('')
     function handleChange (e : any) {
         const {name , type, value, files} = e.target
         if(type === 'file'){
@@ -164,9 +176,21 @@ export default function ContactUsForm ({language} : Props) {
                         <div className="row gx-4 mt-8">
                             <h3 className="display-7 mb-5"><span className="dots-number bg-navy text-white text-center fs-16 d-inline-block">4</span> {language.faq_15}
                             <span className="text-red"></span></h3>
-                            <div className="col-md-4">
-                                <input required type="file" name="attachedFile" id="file_upload" onChange={handleChange} className="form-control"/>
-                            </div>
+                           <div className="col-md-4">
+                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                <label htmlFor="custom_file" className="btn btn-outline-primary">
+                                    {chooseFileText}
+                                </label>
+                                <span>{fileName || noFileText}</span>
+                                <input
+                                    id="custom_file"
+                                    type="file"
+                                    name="attachedFile"
+                                    onChange={handleFileChange}
+                                    style={{ display: "none" }}
+                                />
+                                </div>
+                                </div>
                         </div>
 
                         <div className="col-12 text-center mt-10">
@@ -179,7 +203,7 @@ export default function ContactUsForm ({language} : Props) {
                                 </div>
 
                             </div>
-                            <div className="form-check">
+                            {/* <div className="form-check">
                                 <div className="d-inline-block m-auto mb-5">
                                     <label className="form-check-label" htmlFor="flexCheck2">
                                     {language.faq_16_1}
@@ -187,7 +211,7 @@ export default function ContactUsForm ({language} : Props) {
                                     <input className="form-check-input" onChange={handleCheckboxChange} name="adagree" type="checkbox" id="flexCheck2"/>
                                 </div>
 
-                            </div>
+                            </div> */}
                             <input type="submit" onClick={handleSubmit} value={language.faq_17} className="btn btn-primary rounded btn-send mb-3"/>
                         </div>
                     </form>

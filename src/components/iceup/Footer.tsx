@@ -13,17 +13,17 @@ export default function Footer({language} : any) {
                     <div className="row justify-content-between align-content-center">
                         <div className="col-md-auto">
                             <div className="row mt-2">
-                                {/*<div className="col-md-auto lh-1">
-                                    <NextLink title={language.footer_1} href="#"/>
+                                <div className="col-md-auto lh-1">
+                                    <NextLink title={language.header_1} href="/brand"/>
                                 </div>
                                 <div className="col-md-auto border-start lh-1">
-                                    <NextLink title={language.footer_2} href="#"/>
-                                </div>*/}
-                                {/* <div className="col-md-auto lh-1">
-                                    <NextLink title={language.footer_3} href="/customer/buy"/>
-                                </div> */}
-                                <div className="col-md-auto  lh-1">
-                                    <NextLink title={language.footer_4} href="/customer/inquiry"/>
+                                    <NextLink title={language.header_3} href="/product/product01"/>
+                                </div>
+                                <div className="col-md-auto border-start lh-1">
+                                    <NextLink title={language.header_4} href="/promotion-center/catalogue"/>
+                                </div>
+                                <div className="col-md-auto border-start lh-1">
+                                    <NextLink title={language.header_13} href="/customer/inquiry"/>
                                 </div>
                             </div>
                         </div>
@@ -62,8 +62,11 @@ export default function Footer({language} : any) {
                             <p className="text-white">&copy; Dongpae International Co., Ltd All rights reserved.</p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+
+            
         </footer>
     );
 }
