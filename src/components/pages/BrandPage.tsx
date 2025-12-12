@@ -56,7 +56,7 @@ export default function BrandPage({language} : Props) {
                     <div className="row justify-content-between">
                         <div className="col-md-6">
                             {/*<p className="mb-1"><Image src="/img/iceup/brand-01.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>*/}
-                            <p className="mb-1"><Image src="/img/iceup/brand-02-new.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
+                            <p className="mb-1"><Image src="/img/iceup/brand-02-amend.jpg" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
                             {/*<p className="mb-1"><Image src="/img/iceup/brand-03.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>*/}
                             <p className="mb-1"><Image src="/img/iceup/brand-04.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>
                             <p className="mb-0"><Image src="/img/iceup/brand-05.png" alt="" width={728} height={408} style={{width: "100%", height:"auto"}}/></p>

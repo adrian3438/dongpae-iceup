@@ -68,7 +68,7 @@ export default function Main({language} : Props) {
                         </p>
                         <div className="row justify-content-between">
                             <div className="col-md-5">
-                                <Image src="/img/iceup/dongpae-iceup-features-ice.png" alt="" width={720} height={481} className="w-100 h-auto"/>
+                                <Image src="/img/iceup/dongpae-iceup-features-ice.jpg" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
                                 <h4 className="mb-10">{language?.main_29}</h4>
@@ -86,7 +86,7 @@ export default function Main({language} : Props) {
                         </div>
                         <div className="row justify-content-between mt-5">
                             <div className="col-md-5">
-                                <Image src="/img/iceup/dongpae-iceup-features-ice_2.png" alt="" width={720} height={481} className="w-100 h-auto"/>
+                                <Image src="/img/iceup/dongpae-iceup-features-ice_2.jpg" alt="" width={720} height={481} className="w-100 h-auto"/>
                             </div>
                             <div className="col-md-6">
                                 <h4 className="mb-10">{language?.main_33}</h4>

@@ -230,7 +230,7 @@ const ModelViewer = ({language, modelId, view}: Props) => {
                           <tbody>
                           <tr>
                               <th rowSpan={6} className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_40}</th>
-                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_41}</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_41}<br/>{language?.product_41_01}</td>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>330 x 500 x 1,250 mm</td>
                           </tr>
                           <tr>
