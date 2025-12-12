@@ -59,7 +59,7 @@ export default function Footer({language} : any) {
                             </p>
 
                             {/*<SocialLinks className="nav social social-white"/>*/}
-                            <p className="text-white">&copy; Dongpae International Co., Ltd All rights reserved.</p>
+                            <p className="text-white">&copy; HICOMP All rights reserved.</p>
                         </div>
                     </div>
                 </div>

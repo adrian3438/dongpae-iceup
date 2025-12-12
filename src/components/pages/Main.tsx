@@ -52,7 +52,7 @@ export default function Main({language} : Props) {
                                     <p>{language?.main_23}</p>
                                     <p>{language?.main_24}</p>
                                     <p className="go-link">
-                                        <Link href="https://dongpae.co.kr/" className="shadow">{language?.main_25}<Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
+                                        <Link href="https://hicomp.co.kr/" className="shadow">{language?.main_25}<Image src="/img/iceup/arrow.png" alt="" width={44} height={19}/></Link>
                                     </p>
                                 </div>
                             </div>
