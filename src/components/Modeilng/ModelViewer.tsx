@@ -136,7 +136,7 @@ const ModelViewer = ({language, modelId, view}: Props) => {
 
     return (
         <>
-            <Canvas className="model-canvas" style={{position:"relative", width: '50%'}}>
+            <Canvas className="model-canvas" style={{position: "relative", width: '50%'}}>
                 <ambientLight intensity={1}/>
                 <directionalLight position={[10, 30, 20]} intensity={1}/>
                 <directionalLight position={[10, -180, -90]} intensity={1}/>
@@ -148,59 +148,69 @@ const ModelViewer = ({language, modelId, view}: Props) => {
                 <directionalLight position={[-40, 40, -10]} intensity={1}/>
                 <directionalLight position={[50, 50, 30]} intensity={1}/>
                 <directionalLight position={[1, 1, 1]} intensity={1}/>
+                <directionalLight position={[15, 32, 26]} intensity={1}/>
+                <directionalLight position={[10, -130, -30]} intensity={1}/>
+                <directionalLight position={[-40, -80, 13]} intensity={1}/>
+                <directionalLight position={[180, 50, 50]} intensity={1}/>
+                <directionalLight position={[-5, 10, -10]} intensity={1}/>
+                <directionalLight position={[50, -50, 90]} intensity={1}/>
+                <directionalLight position={[-45, 50, -40]} intensity={1}/>
+                <directionalLight position={[-35, 40, -90]} intensity={1}/>
+                <directionalLight position={[30, 70, 199]} intensity={1}/>
+                <directionalLight position={[5, 5, 5]} intensity={1}/>
                 <OrbitControls enableZoom={true}/>
                 <CameraController newPosition={cameraPosition} targetPosition={cameraTarget}/>
                 <Model url={`/model/dongpae-iceup-model.glb`}/>
                 <Html position={[-0.05, 2.75, 0.1]} distanceFactor={10}>
                     <div
-                        style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => {
-                            setButtonIndex(4);
-                            router.push(`/product/${modelId}?view=${buttonIndex}`);
-                        }}
+                      style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
+                      onClick={() => {
+                          setButtonIndex(4);
+                          router.push(`/product/${modelId}?view=${buttonIndex}`);
+                      }}
                     />
                 </Html>
                 <Html position={[-0.05, 2.3, 0.95]} distanceFactor={10}>
                     <div
-                        style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => {
-                            setButtonIndex(0);
-                            router.push(`/product/${modelId}?view=${buttonIndex}`);
-                        }}
+                      style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
+                      onClick={() => {
+                          setButtonIndex(0);
+                          router.push(`/product/${modelId}?view=${buttonIndex}`);
+                      }}
                     />
                 </Html>
                 <Html position={[-0.05, 1.2, 0.95]} distanceFactor={10}>
                     <div
-                        style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => {
-                            setButtonIndex(1);
-                            router.push(`/product/${modelId}?view=${buttonIndex}`);
-                        }}
+                      style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
+                      onClick={() => {
+                          setButtonIndex(1);
+                          router.push(`/product/${modelId}?view=${buttonIndex}`);
+                      }}
                     />
                 </Html>
                 <Html position={[-0.05, -0.1, 0.95]} distanceFactor={10}>
                     <div
-                        style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => {
-                            setButtonIndex(2);
-                            router.push(`/product/${modelId}?view=${buttonIndex}`);
-                        }}
+                      style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
+                      onClick={() => {
+                          setButtonIndex(2);
+                          router.push(`/product/${modelId}?view=${buttonIndex}`);
+                      }}
                     />
                 </Html>
                 <Html position={[-0.05, -1.2, 0.95]} distanceFactor={10}>
                     <div
-                        style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
-                        onClick={() => {
-                            setButtonIndex(3);
-                            router.push(`/product/${modelId}?view=${buttonIndex}`);
-                        }}
+                      style={{background: '#00E5FF', padding: '5px', borderRadius: '5px', pointerEvents: 'auto', cursor: 'pointer',}}
+                      onClick={() => {
+                          setButtonIndex(3);
+                          router.push(`/product/${modelId}?view=${buttonIndex}`);
+                      }}
                     />
                 </Html>
             </Canvas>
 
             <div className="features col-md-5">
 
-                      {/* Top Banner */}
+                {/* Top Banner */}
                 {/*<div id="top-banner" className="container-fluid bg-light py-3 border-bottom fixed-top">
                     <div className="row align-items-center">
                         <div className="col-md-11">
