@@ -44,7 +44,7 @@ export default function Main({language} : Props) {
                             <div className="row align-items-stretch justify-content-center">
                                 <div className="col-md-6 p-5">
                                     <div className="bg-soft-ash text-center d-flex align-items-center justify-content-center h-100 shadow rounded-4">
-                                        <Image src="/img/iceup/dongpae_international_logo_color.png" alt="DONGPAE International" width={502} height={127}/>
+                                        <Image src="/img/iceup/dongpae-international-logo-color.png" alt="DONGPAE International" width={502} height={127}/>
                                     </div>
                                 </div>
                                 <div className="col-md-6 p-5">
