@@ -31,21 +31,21 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iceup.co.kr"),
-  title: "ICEUP : Dongpae International",
+  title: "ICEUP",
   description: "Flake Type Ice Maker",
   keywords: ["purifier", "ice maker"],
-  authors: [{ name: "ICEUP : Dongpae International", url: "https://iceup.co.kr" }],
+  authors: [{ name: "ICEUP", url: "https://iceup.co.kr" }],
   openGraph: {
-    title: "ICEUP : Dongpae International",
+    title: "ICEUP",
     description: "Global leader in ICE MAKER",
     url: "https://iceup.co.kr",
-    siteName: "ICEUP : Dongpae International",
+    siteName: "ICEUP",
     images: [
       {
         url: "/og-image.png",  // 이제 절대경로가 아니어도 됨!
         width: 1200,
         height: 630,
-        alt: "ICEUP : Dongpae International Open Graph Image",
+        alt: "ICEUP Open Graph Image",
       },
     ],
     locale: "en_US",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ICEUP : Dongpae International",
+    title: "ICEUP",
     description: "ICE MAKER World Leader",
     images: ["/og-image.png"],
   },
