@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "ICEUP",
     images: [
       {
-        url: "/og-image.png",  // 이제 절대경로가 아니어도 됨!
+        url: "/og-image.png?ver=20260313",  // 이제 절대경로가 아니어도 됨!
         width: 1200,
         height: 630,
         alt: "ICEUP Open Graph Image",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ICEUP",
     description: "ICE MAKER World Leader",
-    images: ["/og-image.png"],
+    images: ["/og-image.png?ver=20260313"],
   },
 };
 
