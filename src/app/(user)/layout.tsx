@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "ICEUP",
     images: [
       {
-        url: "/og-image.png?ver=20260313",  // 이제 절대경로가 아니어도 됨!
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ICEUP Open Graph Image",
