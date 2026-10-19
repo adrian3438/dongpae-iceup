@@ -72,29 +72,35 @@ const ModelViewer2 = ({language, modelId, view}: Props) => {
                           <thead className="bg-pale-gray">
                           <tr>
                               <th className="text-center bg-navy text-white py-2">{language?.product_64}</th>
-                              <th className="text-center bg-navy text-white py-2">Specification</th>
+                              <th className="text-center bg-navy text-white py-2">ICEN M25K</th>
+                              <th className="text-center bg-navy text-white py-2">ICEN M60K(A)</th>
                           </tr>
                           </thead>
                           <tbody>
                           <tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_65}</th>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>Auger Type</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>Auger Type</td>
                           </tr>
                           <tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_66}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>25 kg/day</td>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>60 kg/day</td>
                           </tr>
                           <tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_67}</th>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>125 x 196 x 265 mm</td>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>121 x 216 x 305 mm</td>
                           </tr>
                           <tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_68}</th>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>R134a, R404A, R600a, R290</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>R134a, R404A, R600a, R290</td>
                           </tr>
                           <tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_69}</th>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz</td>
+                              <td className="text-center py-1" style={{verticalAlign: 'middle'}}>220 V~, 60 Hz<br/> 115 V~, 60 Hz</td>
                           </tr>
 
                           </tbody>

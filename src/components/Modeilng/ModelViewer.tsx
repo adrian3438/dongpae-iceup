@@ -296,14 +296,14 @@ const ModelViewer = ({language, modelId, view}: Props) => {
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_63}</td>
                           </tr>
 
-                          <tr>
+                          {/*<tr>
                               <th className="text-center bg-pale-navy py-1" style={{verticalAlign: 'middle'}}>{language?.product_55}</th>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_56}</td>
                               <td className="text-center py-1" style={{verticalAlign: 'middle'}}>{language?.product_57}<br/>{language?.lang === 'en' && <br/>}
                                   {language?.product_58}<br/>{language?.lang === 'en' && <br/>}
                                   {language?.product_59}
                               </td>
-                          </tr>
+                          </tr>*/}
                           </tbody>
                       </table>
                   </div>
